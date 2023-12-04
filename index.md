@@ -1,5 +1,3 @@
-Here you can say lots of fun things about your site.
+Software! What a marvel of creation! 
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+This is a collection of pieces I write on my journey of becoming a master software creator
