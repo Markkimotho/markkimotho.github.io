@@ -10,6 +10,13 @@ echo "Build and deploy started at $(date)" > $LOGFILE
 echo "Adding changes to git..." | tee -a $LOGFILE
 git add . >> $LOGFILE 2>&1
 
+# Check for changes to commit
+if [ -z "$(git status --porcelain)" ]; then
+    echo "No changes to commit." | tee -a $LOGFILE
+    echo "Build and deployment completed successfully at $(date)." | tee -a $LOGFILE
+    exit 0
+fi
+
 # Commit changes with a message
 echo "Committing changes..." | tee -a $LOGFILE
 git commit -m "Build and deploy at $(date)" >> $LOGFILE 2>&1
