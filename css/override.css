@@ -43,3 +43,11 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+/* Adjust image size for blog posts */
+img {
+  max-width: 100%;   /* Ensures images don’t overflow the content area */
+  height: auto;      /* Maintains the aspect ratio */
+  display: block;    /* Prevents images from aligning next to text */
+  margin: 20px auto; /* Adds space around the image and centers it */
+}
