@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Archive
+permalink: /archives/
 ---
 
-# Blog Archive
 
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
