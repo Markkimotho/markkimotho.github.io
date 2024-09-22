@@ -5,7 +5,7 @@ Welcome to the repository for Mark Kimotho's blog. This space is dedicated to sh
 ## Contact
 
 - **Email:** kimothomark93@gmail.com
-- **GitHub:** [Markkimotho](https://github.com/Markkimotho)
+- **Blog:** [Mark's Substack](https://ktinega.substack.com)
 - **LinkedIn:** [Mark Tinega](https://www.linkedin.com/in/mark-tinega)
 
 Thank you for visiting my blog. I hope you find the content engaging and useful!
