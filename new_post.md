@@ -46,5 +46,5 @@ EOL
 echo "New post created: $file"
 
 # Open the newly created file in the default text editor.
-# Replace `code` with the command for your preferred editor (e.g., `nano`, `vim`).
+# Replace `code` with the command for the preferred editor (e.g., `nano`, `vim`).
 code $file
