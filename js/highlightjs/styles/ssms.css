@@ -1,3 +1,18 @@
+/* SSMS style for SQL code */
+.hljs {
+    background: #0d0d0d;
+    color: #fff;
+  }
+  
+  .hljs-keyword {
+    color: #569cd6;
+  }
+  
+  .hljs-string {
+    color: #d69d85;
+  }
+
+
 .hljs.language-tsql {
     display: block;
     overflow-x: auto;

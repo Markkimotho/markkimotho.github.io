@@ -51,3 +51,25 @@ img {
   display: block;    /* Prevents images from aligning next to text */
   margin: 20px auto; /* Adds space around the image and centers it */
 }
+
+/* Custom styling for the blog */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
