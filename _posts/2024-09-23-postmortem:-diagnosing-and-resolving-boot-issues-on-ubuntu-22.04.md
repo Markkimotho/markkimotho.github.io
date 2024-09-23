@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Postmortem: Diagnosing and Resolving Boot Issues on Ubuntu 22.04"
+title: "Postmortem: Resolving Black Screen Boot Issues on Ubuntu 22.04"
 date: 2024-09-23
 tags: [postmortem, ubuntu, black screen]
 ---
 
-## Postmortem: Diagnosing and Resolving Boot Issues on Ubuntu 22.04
+## Postmortem: Resolving Black Screen Boot Issues on Ubuntu 22.04
 
 <p align="center">
   <img src="/images/tech-fails.gif" alt="Tech Failures">
