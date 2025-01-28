@@ -2,144 +2,137 @@
   type: map
   contents:
     - name: Full Name
-      value: MARK (K) TINEGA
+      value: Mark (K) Tinega
+    - name: Contact
+      value: kimothomark93@gmail.com | +254 (0)746 905 309
     - name: Location
       value: Nairobi, Kenya
-    - name: Phone
-      value: +254 (0)746 905 309
-    - name: Email
-      value: kimothomark93@gmail.com
-    - name: Profiles
-      value: Github | Substack Articles | Personal website
-
-- title: Professional Summary
-  type: text
-  contents: Software professional with 2+ years of experience in building scalable, highly available fintech and backend systems. Specialized in designing high-availability systems and RESTful APIs that process millions of financial transactions. Proven track record of maintaining 99.999% system uptime, reducing security incidents, and improving operational efficiency through robust architecture design and modern development practices including TDD and CI/CD.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Software/DevOps Engineer - Freelance
-      institution: Upwork
-      year: 2023 - Present
-      description:
-        - Developed and integrated APIs, including a custom SMS service using Africa's Talking API and a real-time notification system
-        - Worked on setting up continuous integration and deployment pipelines on GitHub
-
-    - title: Software Solution Architect – Fintech
-      institution: Huawei Technologies
-      year: 2023 - 2024
-      description:
-        - Designed and deployed scalable architectures for mobile money platforms serving millions of users
-        - Improved project efficiency through implementation of Acceptance Test Plans
-        - Reduced integration errors by implementing robust architectural patterns
-        - Enhanced development velocity through optimization of agile practices
-        - Drafted functional requirement specifications and configuration documents
-
-    - title: Software Service Engineer – Infrastructure
-      institution: Huawei Technologies
-      year: 2023 - 2023
-      description:
-        - Maintained critical overdraft system with 99.999% uptime
-        - Reduced security incidents by 2% through enhanced security measures
-        - Implemented automated monitoring and alerting systems
-
-    - title: Backend Software Engineer
-      institution: Zuyu
-      year: 2023 - 2024
-      description:
-        - Developed secure authentication APIs using MERN stack with TypeScript
-        - Implemented role-based access control system
-        - Optimized API performance through caching strategies
-
-    - title: Data Analyst (Intern)
-      institution: SHOFCO
-      year: 2021
-      description:
-        - Automated data processing and reporting using Python
-        - Analyzed data trends to support decision-making
-        - Streamlined report generation through process automation
+    - name: Languages
+      value: English (Professional)
 
 - title: Education
   type: time_table
   contents:
-    - title: Software Engineering
-      institution: ALX-Africa(Holberton School)
-      year: 2022 - 2023
-      description:
-        - Intensive 12-month software engineering program (70 hours/week)
-        - Focus: Low-Level Programming, High-Level Programming, DevOps
-        - Relevant coursework: Machine Learning, Neural Networks, Computer Vision
-
     - title: BSc. Mathematics and Computer Science
-      institution: Kenyatta University
+      institution: Kenyatta University, Nairobi, Kenya
       year: 2018 - 2023
       description:
         - Major in Applied Mathematics and Computer Science
-        - Relevant Coursework: Data Structures, Algorithms, Neural Networks, Machine Learning, 
-          Low-Level Programming, Computer Networks, Database Systems
+        - GPA: 3.11
+        - title: Key Coursework
+          contents:
+            - Data Structures and Algorithms
+            - Neural Networks
+            - Probability and Statistics
+            - Linear Algebra
+            - Object-Oriented Programming
+    
+    - title: Software Engineering
+      institution: ALX-Africa (Holberton School), Nairobi, Kenya
+      year: 2022 - 2023
+      description:
+        - Intensive 12-month software engineering program (70+ hours/week)
+        - title: Key Projects
+          contents:
+            - UNIX-like shell in C
+            - 3D raycasting engine in C
+            - Full-stack Airbnb clone with authentication
+
+    - title: Cisco Certified Network Associate (CCNA)
+      institution: Kenyatta University, Nairobi, Kenya
+      year: 2018
+      description:
+        - Network configuration and management
+        - Security protocols implementation
+        - LAN/WAN deployment
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Software Solution Architect
+      institution: Huawei Technologies, Nairobi, Kenya
+      year: 2023 - 2024
+      description:
+        - Designed scalable architectures for mobile money platforms
+        - Led cross-functional teams for system integrations
+        - Improved project efficiency through automated testing
+    
+    - title: Backend Software Engineer
+      institution: Zuyu, Remote (London, UK)
+      year: 2023 - 2024
+      description:
+        - Developed secure authentication APIs
+        - Implemented RBAC systems
+        - Enhanced system security and compliance
+    
+    - title: Software Service Engineer (Internship)
+      institution: Huawei Technologies, Nairobi, Kenya
+      year: 2023
+      description:
+        - Maintained overdraft systems with 99.999% uptime
+        - Implemented security measures and monitoring
+        - Optimized system performance
+
+- title: Publications
+  type: time_table
+  contents:
+    - title: [Future Publication Placeholder]
+      year: TBD
+      description:
+        - Research focus areas: AI/ML, Low-level systems, DSA
+        - Target journals: IEEE Transactions, ACM Computing Surveys
+        - Planned research on distributed systems and ML optimization
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: TBD
+      items: 
+        - [Academic Excellence Awards Placeholder]
+        - [Research Merit Awards Placeholder]
+        - [Computing Society Recognition Placeholder]
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Machine Learning & AI
+    - title: Artificial Intelligence & Machine Learning
       items:
         - Neural Networks and Deep Learning
-        - Computer Vision
-        - Natural Language Processing
-    - title: Low Level Programming
+        - Distributed ML Systems
+        - AI Security and Privacy
+    
+    - title: Systems Programming
       items:
-        - Systems Programming
-        - Operating Systems Development
-        - Memory Management
-    - title: Computer Science Fundamentals
-      items:
-        - Algorithm Design and Analysis
-        - Data Structures
+        - Low-level System Design
+        - Operating Systems
         - Computer Architecture
+    
+    - title: Algorithms & Data Structures
+      items:
+        - Algorithm Analysis and Design
+        - Advanced Data Structures
+        - Computational Complexity
 
 - title: Technical Skills
   type: nested_list
   contents:
     - title: Programming Languages
-      items: 
-        - Python, TypeScript, JavaScript, C, Bash
-    - title: Backend Frameworks
       items:
-        - Node.js, Express.js, NestJS, Flask, FastAPI
-    - title: Databases
+        - C, Python, JavaScript, TypeScript, Java, Bash
+        - Frameworks: Node.js, Express.js, NestJS, Flask, FastAPI
+    
+    - title: Tools & Technologies
       items:
+        - Docker, Kubernetes, Git
         - PostgreSQL, MySQL, MongoDB, Redis
-    - title: DevOps & Tools
-      items:
-        - Docker, Kubernetes, AWS, Jenkins, GitHub Actions
+        - CI/CD, TDD
 
-- title: Notable Projects
+- title: Research Projects
   type: time_table
   contents:
-    - title: Shell in C
-      year: 2023
-      description:
-        - Developed UNIX command interpreter in C
-        - Implemented process management and command execution
-        - Featured file I/O handling and environment variable management
-    
-    - title: Airbnb Clone
-      year: 2023
-      description:
-        - Built complete platform with user authentication and booking system
-        - Implemented RESTful APIs and database management
-        - Technologies: Python, Flask, SQLAlchemy, JavaScript
-
-    - title: Raycasting Engine
-      year: 2023
-      description:
-        - Created raycasting engine in C with real-time rendering
-        - Implemented collision detection and spatial algorithms
-        - Optimized performance for smooth gameplay
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Technical:</u> Machine Learning, Low Level Programming, Systems Design
-    - <u>Hobbies:</u> Open source contribution, Technical writing, Chess
+    - title: [Future Research Project Placeholder]
+      year: TBD
+      description: 
+        - Focus on AI/ML applications in systems
+        - Distributed computing optimization
+        - Novel algorithms for scalable systems

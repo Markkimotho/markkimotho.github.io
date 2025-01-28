@@ -1,215 +1,225 @@
 {
   "basics": {
-    "name": "MARK (K) TINEGA",
-    "label": "Software Engineer",
+    "name": "Mark (K) Tinega",
+    "label": "Software Engineer & Computer Scientist",
     "image": "",
     "email": "kimothomark93@gmail.com",
     "phone": "+254 (0)746 905 309",
-    "url": "https://markkimotho.github.io/",
-    "summary": "Software professional with 2+ years of experience in building scalable, highly available fintech and backend systems. Specialized in designing high-availability systems and RESTful APIs that process millions of financial transactions.",
+    "url": "",
+    "summary": "A software professional with strong foundations in backend development, financial technology systems, and mathematics, pursuing advanced studies in Computer Science with focus on AI/ML, Low-level systems, and Algorithms",
     "location": {
       "address": "",
       "postalCode": "",
       "city": "Nairobi",
       "countryCode": "KE",
-      "region": "Kenya"
-    }
+      "region": "Kenya",
+      "icon": "fa-solid fa-location-dot"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "Mark Tinega",
+        "url": "",
+        "icon": "fa-brands fa-github"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Upwork",
-      "position": "Software/ML Engineer - Freelance",
-      "url": "https://upwork.com",
-      "startDate": "2023-12",
-      "endDate": "Present",
-      "summary": "Software | ML/AI development and systems optimization",
-      "highlights": [
-        "Developed ML pipelines and AI services",
-        "Implemented low-level system optimizations",
-        "Built efficient data processing systems",
-        "Set up CI/CD pipelines on GitHub",
-        "Developed and integrated APIs, including custom SMS service"
-      ]
-    },
-    {
       "name": "Huawei Technologies",
-      "position": "Software Solution Architect – Fintech",
-      "startDate": "2023-12",
-      "endDate": "2024-12",
+      "position": "Software Solution Architect",
+      "url": "",
+      "startDate": "2023-12-01",
+      "endDate": "2024-12-01",
+      "summary": "Led architecture design and deployment of scalable mobile money and digital finance platforms",
       "highlights": [
-        "Designed scalable architectures for mobile money platforms",
-        "Improved project efficiency through Acceptance Test Plans",
-        "Reduced integration errors through architectural patterns"
-      ]
-    },
-    {
-      "name": "Huawei Technologies",
-      "position": "Software Service Engineer – Infrastructure",
-      "startDate": "2023-07",
-      "endDate": "2023-12",
-      "highlights": [
-        "Maintained critical system with 99.999% uptime",
-        "Reduced security incidents by 2%",
-        "Implemented automated monitoring systems"
-      ]
-    }
-  ],
-
-  "education": [
-    {
-      "institution": "ALX-Africa(Holberton School)",
-      "area": "Software Engineering",
-      "studyType": "Certificate",
-      "startDate": "2022-08",
-      "endDate": "2023-08",
-      "courses": [
-        "Low-Level Programming",
-        "High-Level Programming",
-        "DevOps",
-        "Machine Learning",
-        "Neural Networks"
-      ]
-    },
-    {
-      "institution": "Kenyatta University",
-      "area": "Mathematics and Computer Science",
-      "studyType": "BSc",
-      "startDate": "2018-09",
-      "endDate": "2023-07",
-      "courses": [
-        "Data Structures",
-        "Algorithms",
-        "Neural Networks",
-        "Machine Learning",
-        "Computer Networks"
-      ]
-    }
-  ],
-  "publications": [
-    {
-      "name": "Coming Soon",
-      "publisher": "Medium",
-      "releaseDate": "2024-01",
-      "url": "https://medium.com/@yourusername",
-      "summary": "Technical deep-dive into neural network optimization techniques"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning Crash Course",
-      "date": "2024-11",
-      "issuer": "Google",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-brain"
-    },
-    {
-      "name": "Software Engineering",
-      "date": "2023-08",
-      "issuer": "ALX Africa",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-microchip"
+        "Designed scalable architectures for financial platforms",
+        "Coordinated cross-functional teams for system integrations",
+        "Improved project efficiency through automated testing"
+      ],
+      "icon": "fa-solid fa-building"
     }
   ],
   "skills": [
     {
-      "name": "Programming Languages",
+      "name": "Software Development",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
       "keywords": [
-        "Python",
-        "TypeScript",
-        "JavaScript",
         "C",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Java",
         "Bash"
       ]
     },
     {
-      "name": "Backend & Infrastructure",
+      "name": "Frameworks & Tools",
+      "level": "Advanced",
+      "icon": "fa-solid fa-screwdriver-wrench",
       "keywords": [
         "Node.js",
         "Express.js",
         "NestJS",
         "Flask",
-        "FastAPI"
+        "FastAPI",
+        "Next.js"
+      ]
+    },
+    {
+      "name": "Database Systems",
+      "level": "Advanced",
+      "icon": "fa-solid fa-database",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis"
       ]
     },
     {
       "name": "DevOps",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-gears",
       "keywords": [
         "Docker",
         "Kubernetes",
-        "AWS",
-        "Jenkins",
-        "GitHub Actions"
+        "Git",
+        "CI/CD"
       ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Professional",
-      "icon": "fa-solid fa-language"
     }
   ],
   "interests": [
     {
       "name": "Artificial Intelligence",
-      "icon": "fa-solid fa-robot",
+      "icon": "fa-solid fa-brain",
       "keywords": [
         "Machine Learning",
         "Neural Networks",
-        "Computer Vision",
-        "Natural Language Processing"
+        "AI Security"
       ]
     },
     {
       "name": "Systems Programming",
-      "icon": "fa-solid fa-server",
+      "icon": "fa-solid fa-microchip",
       "keywords": [
+        "Low-level Programming",
         "Operating Systems",
-        "Memory Management",
-        "Low Level Optimization",
-        "Embedded Systems"
+        "Distributed Systems"
+      ]
+    },
+    {
+      "name": "Algorithms",
+      "icon": "fa-solid fa-diagram-project",
+      "keywords": [
+        "Data Structures",
+        "Algorithm Design",
+        "Computational Complexity"
       ]
     }
   ],
-  "references": [
+  "certificates": [
     {
-      "name": "Available upon request",
-      "icon": "fa-solid fa-user",
-      "reference": ""
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "date": "2018-07-01",
+      "issuer": "Kenyatta University",
+      "url": "",
+      "icon": "fa-solid fa-network-wired"
+    },
+    {
+      "name": "[Future Machine Learning Certification]",
+      "date": "",
+      "issuer": "",
+      "url": "",
+      "icon": "fa-solid fa-robot"
+    },
+    {
+      "name": "[Future Cloud Computing Certification]",
+      "date": "",
+      "issuer": "",
+      "url": "",
+      "icon": "fa-solid fa-cloud"
+    }
+  ],
+  "publications": [
+    {
+      "name": "[Future ML Research Paper]",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": "Planning research in AI/ML optimization",
+      "icon": "fa-solid fa-scroll"
+    },
+    {
+      "name": "[Future Systems Research Paper]",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": "Planning research in distributed systems",
+      "icon": "fa-solid fa-book"
     }
   ],
   "projects": [
     {
-      "name": "Shell in C",
-      "summary": "UNIX command interpreter in C with process management and command execution",
-      "highlights": [
-        "Developed UNIX command interpreter",
-        "Implemented process management",
-        "Featured file I/O handling"
-      ]
+      "name": "UNIX-like Shell",
+      "summary": "Developed a UNIX-like shell in C",
+      "highlights": ["Process management", "Signal handling", "File I/O"],
+      "url": "",
+      "icon": "fa-solid fa-terminal"
     },
     {
-      "name": "Airbnb Clone",
-      "summary": "Full-stack application with user authentication and booking system",
-      "highlights": [
-        "Built complete platform with authentication",
-        "Implemented RESTful APIs",
-        "Used Python, Flask, SQLAlchemy, JavaScript"
-      ]
+      "name": "3D Raycasting Engine",
+      "summary": "Built a 3D raycasting engine in C",
+      "highlights": ["Graphics programming", "Performance optimization"],
+      "url": "",
+      "icon": "fa-solid fa-cube"
     },
     {
-      "name": "Raycasting Engine",
-      "summary": "Graphics programming project with real-time rendering",
+      "name": "[Future AI Research Project]",
+      "summary": "Planning advanced research in AI/ML",
+      "highlights": ["Research methodology", "Technical innovation"],
+      "url": "",
+      "icon": "fa-solid fa-microscope"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "[Future Research Assistant Role]",
+      "position": "Graduate Research Assistant",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "Planning to contribute to academic research projects",
       "highlights": [
-        "Created raycasting engine in C",
-        "Implemented collision detection",
-        "Optimized performance for smooth gameplay"
-      ]
+        "Research mentorship",
+        "Project leadership",
+        "Academic community building"
+      ],
+      "icon": "fa-solid fa-graduation-cap"
+    }
+  ],
+  "awards": [
+    {
+      "title": "[Future Academic Excellence Award]",
+      "date": "",
+      "awarder": "",
+      "summary": "Planning to pursue recognition in research",
+      "icon": "fa-solid fa-award"
+    },
+    {
+      "title": "[Future Research Merit Award]",
+      "date": "",
+      "awarder": "",
+      "summary": "Planning to excel in technical innovation",
+      "icon": "fa-solid fa-medal"
+    }
+  ],
+  "references": [
+    {
+      "name": "[Future Academic Reference]",
+      "reference": "Planning to build strong academic relationships",
+      "icon": "fa-solid fa-user-tie"
     }
   ]
 }
-
-
-
-
-
