@@ -2,96 +2,144 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: MARK (K) TINEGA
+    - name: Location
+      value: Nairobi, Kenya
+    - name: Phone
+      value: +254 (0)746 905 309
+    - name: Email
+      value: kimothomark93@gmail.com
+    - name: Profiles
+      value: Github | Substack Articles | Personal website
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+- title: Professional Summary
+  type: text
+  contents: Software professional with 2+ years of experience in building scalable, highly available fintech and backend systems. Specialized in designing high-availability systems and RESTful APIs that process millions of financial transactions. Proven track record of maintaining 99.999% system uptime, reducing security incidents, and improving operational efficiency through robust architecture design and modern development practices including TDD and CI/CD.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Software/DevOps Engineer - Freelance
+      institution: Upwork
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Developed and integrated APIs, including a custom SMS service using Africa's Talking API and a real-time notification system
+        - Worked on setting up continuous integration and deployment pipelines on GitHub
+
+    - title: Software Solution Architect – Fintech
+      institution: Huawei Technologies
+      year: 2023 - 2024
       description:
-        - Description 1.
-        - Description 2.
+        - Designed and deployed scalable architectures for mobile money platforms serving millions of users
+        - Improved project efficiency through implementation of Acceptance Test Plans
+        - Reduced integration errors by implementing robust architectural patterns
+        - Enhanced development velocity through optimization of agile practices
+        - Drafted functional requirement specifications and configuration documents
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Software Service Engineer – Infrastructure
+      institution: Huawei Technologies
+      year: 2023 - 2023
       description:
+        - Maintained critical overdraft system with 99.999% uptime
+        - Reduced security incidents by 2% through enhanced security measures
+        - Implemented automated monitoring and alerting systems
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Backend Software Engineer
+      institution: Zuyu
+      year: 2023 - 2024
+      description:
+        - Developed secure authentication APIs using MERN stack with TypeScript
+        - Implemented role-based access control system
+        - Optimized API performance through caching strategies
 
-- title: Open Source Projects
+    - title: Data Analyst (Intern)
+      institution: SHOFCO
+      year: 2021
+      description:
+        - Automated data processing and reporting using Python
+        - Analyzed data trends to support decision-making
+        - Streamlined report generation through process automation
+
+- title: Education
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Software Engineering
+      institution: ALX-Africa(Holberton School)
+      year: 2022 - 2023
+      description:
+        - Intensive 12-month software engineering program (70 hours/week)
+        - Focus: Low-Level Programming, High-Level Programming, DevOps
+        - Relevant coursework: Machine Learning, Neural Networks, Computer Vision
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: BSc. Mathematics and Computer Science
+      institution: Kenyatta University
+      year: 2018 - 2023
+      description:
+        - Major in Applied Mathematics and Computer Science
+        - Relevant Coursework: Data Structures, Algorithms, Neural Networks, Machine Learning, 
+          Low-Level Programming, Computer Networks, Database Systems
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Machine Learning & AI
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Neural Networks and Deep Learning
+        - Computer Vision
+        - Natural Language Processing
+    - title: Low Level Programming
       items:
-        - Description 1.
-        - Description 2.
+        - Systems Programming
+        - Operating Systems Development
+        - Memory Management
+    - title: Computer Science Fundamentals
+      items:
+        - Algorithm Design and Analysis
+        - Data Structures
+        - Computer Architecture
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Programming Languages
+      items: 
+        - Python, TypeScript, JavaScript, C, Bash
+    - title: Backend Frameworks
+      items:
+        - Node.js, Express.js, NestJS, Flask, FastAPI
+    - title: Databases
+      items:
+        - PostgreSQL, MySQL, MongoDB, Redis
+    - title: DevOps & Tools
+      items:
+        - Docker, Kubernetes, AWS, Jenkins, GitHub Actions
+
+- title: Notable Projects
+  type: time_table
+  contents:
+    - title: Shell in C
+      year: 2023
+      description:
+        - Developed UNIX command interpreter in C
+        - Implemented process management and command execution
+        - Featured file I/O handling and environment variable management
+    
+    - title: Airbnb Clone
+      year: 2023
+      description:
+        - Built complete platform with user authentication and booking system
+        - Implemented RESTful APIs and database management
+        - Technologies: Python, Flask, SQLAlchemy, JavaScript
+
+    - title: Raycasting Engine
+      year: 2023
+      description:
+        - Created raycasting engine in C with real-time rendering
+        - Implemented collision detection and spatial algorithms
+        - Optimized performance for smooth gameplay
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Technical:</u> Machine Learning, Low Level Programming, Systems Design
+    - <u>Hobbies:</u> Open source contribution, Technical writing, Chess
