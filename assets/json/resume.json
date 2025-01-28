@@ -28,16 +28,82 @@
     {
       "name": "Huawei Technologies",
       "position": "Software Solution Architect",
+      "location": "Nairobi, Kenya",
       "url": "",
       "startDate": "2023-12-01",
       "endDate": "2024-12-01",
       "summary": "Led architecture design and deployment of scalable mobile money and digital finance platforms",
       "highlights": [
-        "Designed scalable architectures for financial platforms",
-        "Coordinated cross-functional teams for system integrations",
-        "Improved project efficiency through automated testing"
+        "Designed and deployed scalable architectures for mobile money and digital finance platforms",
+        "Drafted functional requirement specifications, configuration requirement documents and Acceptance Test Plans",
+        "Coordinated cross-functional teams for system integrations and deployment of new features to production"
+      ],
+      "achievements": [
+        "Improved project efficiency through automated testing implementation",
+        "Reduced integration errors via enhanced architectural designs",
+        "Boosted development speed through optimized agile practices"
       ],
       "icon": "fa-solid fa-building"
+    },
+    {
+      "name": "Zuyu",
+      "position": "Backend Software Engineer",
+      "location": "Remote, London, UK",
+      "url": "",
+      "startDate": "2023-09-01",
+      "endDate": "2024-09-01",
+      "summary": "Developed and maintained secure authentication systems",
+      "highlights": [
+        "Developed secure authentication APIs using Node.js, Express.js, and NestJS",
+        "Implemented RBAC (role-based access control) systems to enhance security",
+        "Collaborated with frontend teams to optimize API performance"
+      ],
+      "achievements": [
+        "Successfully deployed a secure user onboarding and authentication system",
+        "Enhanced system security with RBAC, improving compliance"
+      ],
+      "icon": "fa-solid fa-code"
+    },
+    {
+      "name": "Huawei Technologies",
+      "position": "Software Service Engineer",
+      "type": "Internship",
+      "location": "Nairobi, Kenya",
+      "url": "",
+      "startDate": "2023-07-01",
+      "endDate": "2023-12-01",
+      "summary": "Maintained critical financial systems with high availability requirements",
+      "highlights": [
+        "Maintained and optimized overdraft systems, ensuring 99.999% uptime for critical services",
+        "Implemented robust security measures and system monitoring",
+        "Analyzed performance metrics to identify and resolve inefficiencies"
+      ],
+      "achievements": [
+        "Reduced security incidents by 2% through proactive measures",
+        "Improved operational efficiency with data-driven optimizations"
+      ],
+      "icon": "fa-solid fa-laptop-code"
+    },
+    {
+      "name": "Shining Hope For Communities (SHOFCO)",
+      "position": "Data Analyst",
+      "type": "Contract",
+      "location": "Nairobi, Kenya",
+      "url": "",
+      "startDate": "2021-06-01",
+      "endDate": "2021-09-01",
+      "summary": "Led data analysis for COVID-19 vaccination optimization",
+      "highlights": [
+        "Automated data processing and reporting using Python, generating over 300 reports to optimize COVID-19 vaccination strategies",
+        "Analyzed data trends to support decision-making, contributing to a 2% increase in vaccination rates",
+        "Delivered actionable insights to stakeholders, improving resource allocation and outreach initiatives"
+      ],
+      "achievements": [
+        "Developed an automated data pipeline to reduce manual reporting time",
+        "Improved vaccination outreach by identifying misinformed and under-targeted demographics",
+        "Increased report generation speed through automation"
+      ],
+      "icon": "fa-solid fa-chart-line"
     }
   ],
   "skills": [
