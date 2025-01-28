@@ -38,11 +38,6 @@
         "Drafted functional requirement specifications, configuration requirement documents and Acceptance Test Plans",
         "Coordinated cross-functional teams for system integrations and deployment of new features to production"
       ],
-      "achievements": [
-        "Improved project efficiency through automated testing implementation",
-        "Reduced integration errors via enhanced architectural designs",
-        "Boosted development speed through optimized agile practices"
-      ],
       "icon": "fa-solid fa-building"
     },
     {
@@ -57,10 +52,6 @@
         "Developed secure authentication APIs using Node.js, Express.js, and NestJS",
         "Implemented RBAC (role-based access control) systems to enhance security",
         "Collaborated with frontend teams to optimize API performance"
-      ],
-      "achievements": [
-        "Successfully deployed a secure user onboarding and authentication system",
-        "Enhanced system security with RBAC, improving compliance"
       ],
       "icon": "fa-solid fa-code"
     },
@@ -78,10 +69,6 @@
         "Implemented robust security measures and system monitoring",
         "Analyzed performance metrics to identify and resolve inefficiencies"
       ],
-      "achievements": [
-        "Reduced security incidents by 2% through proactive measures",
-        "Improved operational efficiency with data-driven optimizations"
-      ],
       "icon": "fa-solid fa-laptop-code"
     },
     {
@@ -97,11 +84,6 @@
         "Automated data processing and reporting using Python, generating over 300 reports to optimize COVID-19 vaccination strategies",
         "Analyzed data trends to support decision-making, contributing to a 2% increase in vaccination rates",
         "Delivered actionable insights to stakeholders, improving resource allocation and outreach initiatives"
-      ],
-      "achievements": [
-        "Developed an automated data pipeline to reduce manual reporting time",
-        "Improved vaccination outreach by identifying misinformed and under-targeted demographics",
-        "Increased report generation speed through automation"
       ],
       "icon": "fa-solid fa-chart-line"
     }
