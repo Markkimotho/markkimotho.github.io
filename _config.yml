@@ -127,8 +127,8 @@ giscus:
 external_sources:
   - name: medium.com
     rss_url: https://medium.com/@ktinega/feed  # Replace with your Medium RSS feed
-  - name: substack.com
-    rss_url: https://ktinega.substack.com/feed  # Replace with your Substack RSS feed
+  # - name: substack.com
+  #   rss_url: https://ktinega.substack.com/feed  # Replace with your Substack RSS feed
 
 # -----------------------------------------------------------------------------
 # Newsletter
