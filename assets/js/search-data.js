@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Here, you will my repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade.",
+          description: "Here, you will find my personal repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
@@ -51,18 +51,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+            },{id: "news-i-just-published-my-website",
+          title: 'I just published my website',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{
+              window.location.href = "/news/announcement_4/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
