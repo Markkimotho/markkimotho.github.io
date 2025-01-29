@@ -18,21 +18,21 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of my cool projects.",
+          description: "A growing collection of my projects made for work and fun alike.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "Here, you will my repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This page holds my CV. You can read/review/critique it right from here. Or better yet, you can download it by clicking the top left icon ☝🏽. Then you can read/review/critique.",
+          description: "This page holds my CV. You can read/review/critique it right from here. Or better yet, you can download it by clicking the top right &quot;pdf&quot; icon ☝🏽. Then you can read/review/critique.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
