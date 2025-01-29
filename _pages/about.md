@@ -6,29 +6,43 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: prof_pic.jpg  # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
+  image_circular: false # Set to `true` if you want a circular profile picture
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Based in Nairobi, Kenya 🌍</p>
+    <p>Building tomorrow's systems today 💡</p>
+    <p>Open to research collaborations 🤝</p>
+    <p>Currently reading: "Algorithm Design Manual" 📚</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # Set to `true` if you have academic papers to showcase
+social: true # Keep this to display social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true # Keep this to show news items
+  scrollable: true # Adds a scroll bar if there are more than 3 news items
+  limit: 5 # Limits the number of news items displayed
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: true # Keep this to show your latest blog posts
+  scrollable: true # Adds a scroll bar if there are more than 3 posts
+  limit: 3 # Limits the number of posts displayed
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+### The Spark
+In 2007, a dusty computer in my aunt’s rural Kenyan home lit a fire in me. I was fascinated by its glowing screen and endless possibilities. My first "project"? A meal-planning menu in Microsoft Word to help my mom decide what to cook for the week. It was simple, but it was mine—and it sparked a lifelong love affair with technology.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Around the same time, I met Sam, a new neighbor who owned an HP computer running Windows Vista. Together, we spent countless hours building virtual cities in *SimCity* and battling through the pixelated corridors of *Wolfenstein 3D*. These games weren’t just fun—they were my first lessons in systems design. *SimCity* taught me how to balance complex infrastructures, while *Wolfenstein 3D* inspired me to code my own raycasting engine in C. Those early experiences shaped how I see the world: as a series of systems waiting to be understood, optimized, and rebuilt.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+### The Journey
+Fast forward to today, and I’m still chasing that same curiosity. I’ve built apps, written about technology, and explored the intersection of code and creativity. My blog, [Mark's Substack](https://ktinega.substack.com), is where I share my thoughts on programming, personal growth, and the future of tech. I’m also preparing to take the next big step in my journey: graduate studies in computer science, where I hope to dive deeper into artificial intelligence, machine learning, and systems design.
+
+### The Vision
+I believe technology is at its best when it solves real problems and improves lives. Whether it’s building apps, writing code, or exploring new ideas, I’m driven by the desire to create systems that are elegant, efficient, and impactful. I’m particularly interested in how AI can be used to tackle challenges in emerging markets, from healthcare to education to infrastructure.
+
+### Let’s Connect
+I’m always open to collaborations, conversations, and new ideas. If you’re working on something exciting or just want to chat about tech, feel free to reach out:
+- **Email**: [kimothomark93@gmail.com](mailto:kimothomark93@gmail.com)
+- **LinkedIn**: [Mark Tinega](https://www.linkedin.com/in/mark-tinega)
+- **Blog**: [Mark's Substack](https://ktinega.substack.com)
+
+Thanks for stopping by. Let’s build something amazing together!
