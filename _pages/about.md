@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: |
-  Computer Scientist. Builder. Open Sourcerer.
+  Computer Scientist | Builder | Open Sourcerer.
   <br>
   Herein lies all that I dare share with the world. Technology, art, books, and more...
 
