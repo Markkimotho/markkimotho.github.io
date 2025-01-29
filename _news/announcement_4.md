@@ -21,10 +21,10 @@ I’ll be updating this space regularly with new projects, blog posts, and updat
 #### What to Expect
 
 <ul>
-    <li><b>Tech Stuff<b>: From apps to algorithms, I’ll share what I’m building and how I’m solving problems.</li>
-    <li><b>Blog Posts<b>: Thoughts on technology, creativity, and the future—because writing helps me think.</li>
-    <li><b>Books & Art<b>: Recommendations, reviews, and reflections on the things that inspire me.</li>
-    <li><b>Life Updates<b>: The occasional personal story or milestone worth sharing.</li>
+    <li> <b>Tech Stuff</b>: From apps to algorithms, I’ll share what I’m building and how I’m solving problems.</li>
+    <li> <b>Blog Posts</b>: Thoughts on technology, creativity, and the future—because writing helps me think.</li>
+    <li> <b>Books & Art</b>: Recommendations, reviews, and reflections on the things that inspire me.</li>
+    <li> <b>Life Updates</b>: The occasional personal story or milestone worth sharing.</li>
 </ul>
 
 ---
