@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Here, you will my repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade. 
+description: Here, you will find my personal repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade. 
 nav: true
 nav_order: 4
 ---
