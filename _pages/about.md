@@ -2,17 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Herein lies all that I dare share with the world. I write about a wide variety of topics from technology, art, books, and more.
 
 profile:
   align: right
   image: prof_pic.jpg  # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
   image_circular: false # Set to `true` if you want a circular profile picture
   more_info: >
-    <p>Based in Nairobi, Kenya 🌍</p>
-    <p>Building tomorrow's systems today 💡</p>
-    <p>Open to research collaborations 🤝</p>
-    <p>Currently reading: "Algorithm Design Manual" 📚</p>
+    <p>Computer Scientist. Builder. Open Sourcerer</p>
+    <p>Nairobi, KE 🌍</p>
+    <a href='https://github.com/Markkimotho'>Github</a>
+    <p>Open to collaborations 🤝 | Research | Open Source </p>
+    <p>Current Read: "Algorithm Design Manual" 📚</p>
 
 selected_papers: false # Set to `true` if you have academic papers to showcase
 social: true # Keep this to display social icons at the bottom of the page
