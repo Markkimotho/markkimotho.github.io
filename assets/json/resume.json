@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Mark (K) Tinega",
-    "label": "Software Engineer & Computer Scientist",
+    "label": "Computer Scientist | Software Engineer | Student of the School of Life",
     "image": "",
     "email": "kimothomark93@gmail.com",
     "phone": "+254 (0)746 905 309",
     "url": "",
-    "summary": "A software professional with strong foundations in backend development, financial technology systems, and mathematics, pursuing advanced studies in Computer Science with focus on AI/ML, Low-level systems, and Algorithms",
+    "summary": "to whom much is given, much is required",
     "location": {
       "address": "",
       "postalCode": "",
@@ -96,9 +96,7 @@
       "keywords": [
         "C",
         "Python",
-        "JavaScript",
-        "TypeScript",
-        "Java",
+        "JavaScript/TypeScript",
         "Bash"
       ]
     },
@@ -111,7 +109,6 @@
         "Express.js",
         "NestJS",
         "Flask",
-        "FastAPI",
         "Next.js"
       ]
     },
@@ -170,8 +167,7 @@
   "certificates": [
     {
       "name": "Cisco Certified Network Associate (CCNA)",
-      "date": "2018-07-01",
-      "issuer": "Kenyatta University",
+      "issuer": "Kenyatta University - NETACAD",
       "url": "",
       "icon": "fa-solid fa-network-wired"
     },
@@ -222,13 +218,6 @@
       "highlights": ["Graphics programming", "Performance optimization"],
       "url": "",
       "icon": "fa-solid fa-cube"
-    },
-    {
-      "name": "[Future AI Research Project]",
-      "summary": "Planning advanced research in AI/ML",
-      "highlights": ["Research methodology", "Technical innovation"],
-      "url": "",
-      "icon": "fa-solid fa-microscope"
     }
   ],
   "volunteer": [
@@ -265,8 +254,8 @@
   ],
   "references": [
     {
-      "name": "[Future Academic Reference]",
-      "reference": "Planning to build strong academic relationships",
+      "name": "[References]",
+      "reference": "Strong academic & professional relationships",
       "icon": "fa-solid fa-user-tie"
     }
   ]
