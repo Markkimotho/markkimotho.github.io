@@ -4,11 +4,12 @@ title: about
 permalink: /
 subtitle: |
   Computer Scientist. Builder. Open Sourcerer.
+  <br>
   Herein lies all that I dare share with the world. Technology, art, books, and more...
 
 profile:
   align: right
-  image: prof_pic.jpg  # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
+  image: mark_prof_pic.webp  # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
   image_circular: false # Set to `true` if you want a circular profile picture
   more_info: >
     <p>Nairobi, KE 🌍</p>
