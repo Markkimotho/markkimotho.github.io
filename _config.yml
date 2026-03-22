@@ -9,7 +9,7 @@ last_name: Tinega
 contact_note: >
   Best way to reach me is Email or LinkedIn.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  An odyssey for Mark Tinega 
+  An odyssey for Mark Tinega
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -19,7 +19,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 👨🏾‍💻 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: markkimotho.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -87,20 +87,19 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Mark's Musings  # A catchy name for your blog
-blog_description: Thoughts on technology, creativity, and the future.  # A short description of your blog's focus
-permalink: /blog/:year/:title/  # Keep this structure for clean URLs
-lsi: false  # Set to `true` if you want to generate related posts (requires additional setup)
+blog_name: Mark's Musings # A catchy name for your blog
+blog_description: Thoughts on technology, creativity, and the future. # A short description of your blog's focus
+permalink: /blog/:year/:title/ # Keep this structure for clean URLs
+lsi: false # Set to `true` if you want to generate related posts (requires additional setup)
 
 # Pagination
 pagination:
-  enabled: true  # Enable pagination for your blog posts
+  enabled: true # Enable pagination for your blog posts
 
 # Related Blog Posts
 related_blog_posts:
-  enabled: true  # Show related posts at the end of each blog entry
-  max_related: 5  # Limit the number of related posts shown
-
+  enabled: true # Show related posts at the end of each blog entry
+  max_related: 5 # Limit the number of related posts shown
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
@@ -126,7 +125,7 @@ giscus:
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
   - name: medium.com
-    rss_url: https://medium.com/@ktinega/feed  # Replace with your Medium RSS feed
+    rss_url: https://medium.com/@ktinega/feed # Replace with your Medium RSS feed
   # - name: substack.com
   #   rss_url: https://ktinega.substack.com/feed  # Replace with your Substack RSS feed
 

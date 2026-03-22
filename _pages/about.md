@@ -10,7 +10,7 @@ subtitle: |
 
 profile:
   align: right
-  image: mark_prof_pic.webp  # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
+  image: mark_prof_pic.webp # Replace with your profile picture (save it as `prof_pic.jpg` in the `img/` folder)
   image_circular: false # Set to `true` if you want a circular profile picture
   more_info: >
     <p>Nairobi, KE 🌍</p>

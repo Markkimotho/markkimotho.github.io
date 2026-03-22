@@ -10,6 +10,7 @@ horizontal: false
 ---
 
 working on them...
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}

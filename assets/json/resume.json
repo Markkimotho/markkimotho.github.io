@@ -93,75 +93,42 @@
       "name": "Software Development",
       "level": "Advanced",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "C",
-        "Python",
-        "JavaScript/TypeScript",
-        "Bash"
-      ]
+      "keywords": ["C", "Python", "JavaScript/TypeScript", "Bash"]
     },
     {
       "name": "Frameworks & Tools",
       "level": "Advanced",
       "icon": "fa-solid fa-screwdriver-wrench",
-      "keywords": [
-        "Node.js",
-        "Express.js",
-        "NestJS",
-        "Flask",
-        "Next.js"
-      ]
+      "keywords": ["Node.js", "Express.js", "NestJS", "Flask", "Next.js"]
     },
     {
       "name": "Database Systems",
       "level": "Advanced",
       "icon": "fa-solid fa-database",
-      "keywords": [
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Redis"
-      ]
+      "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
     },
     {
       "name": "DevOps",
       "level": "Intermediate",
       "icon": "fa-solid fa-gears",
-      "keywords": [
-        "Docker",
-        "Kubernetes",
-        "Git",
-        "CI/CD"
-      ]
+      "keywords": ["Docker", "Kubernetes", "Git", "CI/CD"]
     }
   ],
   "interests": [
     {
       "name": "Artificial Intelligence",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "Machine Learning",
-        "Neural Networks",
-        "AI Security"
-      ]
+      "keywords": ["Machine Learning", "Neural Networks", "AI Security"]
     },
     {
       "name": "Systems Programming",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "Low-level Programming",
-        "Operating Systems",
-        "Distributed Systems"
-      ]
+      "keywords": ["Low-level Programming", "Operating Systems", "Distributed Systems"]
     },
     {
       "name": "Algorithms",
       "icon": "fa-solid fa-diagram-project",
-      "keywords": [
-        "Data Structures",
-        "Algorithm Design",
-        "Computational Complexity"
-      ]
+      "keywords": ["Data Structures", "Algorithm Design", "Computational Complexity"]
     }
   ],
   "certificates": [
@@ -228,11 +195,7 @@
       "startDate": "",
       "endDate": "",
       "summary": "Planning to contribute to academic research projects",
-      "highlights": [
-        "Research mentorship",
-        "Project leadership",
-        "Academic community building"
-      ],
+      "highlights": ["Research mentorship", "Project leadership", "Academic community building"],
       "icon": "fa-solid fa-graduation-cap"
     }
   ],

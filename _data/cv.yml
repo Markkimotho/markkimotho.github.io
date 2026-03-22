@@ -26,7 +26,7 @@
             - Probability and Statistics
             - Linear Algebra
             - Object-Oriented Programming
-    
+
     - title: Software Engineering
       institution: ALX-Africa (Holberton School), Nairobi, Kenya
       year: 2022 - 2023
@@ -56,7 +56,7 @@
         - Designed scalable architectures for mobile money platforms
         - Led cross-functional teams for system integrations
         - Improved project efficiency through automated testing
-    
+
     - title: Backend Software Engineer
       institution: Zuyu, Remote (London, UK)
       year: 2023 - 2024
@@ -64,7 +64,7 @@
         - Developed secure authentication APIs
         - Implemented RBAC systems
         - Enhanced system security and compliance
-    
+
     - title: Software Service Engineer (Internship)
       institution: Huawei Technologies, Nairobi, Kenya
       year: 2023
@@ -87,7 +87,7 @@
   type: time_table
   contents:
     - year: TBD
-      items: 
+      items:
         - [Academic Excellence Awards Placeholder]
         - [Research Merit Awards Placeholder]
         - [Computing Society Recognition Placeholder]
@@ -100,13 +100,13 @@
         - Neural Networks and Deep Learning
         - Distributed ML Systems
         - AI Security and Privacy
-    
+
     - title: Systems Programming
       items:
         - Low-level System Design
         - Operating Systems
         - Computer Architecture
-    
+
     - title: Algorithms & Data Structures
       items:
         - Algorithm Analysis and Design
@@ -120,7 +120,7 @@
       items:
         - C, Python, JavaScript, TypeScript, Java, Bash
         - Frameworks: Node.js, Express.js, NestJS, Flask, FastAPI
-    
+
     - title: Tools & Technologies
       items:
         - Docker, Kubernetes, Git
@@ -132,7 +132,7 @@
   contents:
     - title: [Future Research Project Placeholder]
       year: TBD
-      description: 
+      description:
         - Focus on AI/ML applications in systems
         - Distributed computing optimization
         - Novel algorithms for scalable systems
