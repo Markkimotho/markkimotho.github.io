@@ -1,3 +1,12 @@
+---
+layout: page
+title: about me
+permalink: /about-me/
+description: The story behind the screen.
+nav: true
+nav_order: 1
+---
+
 ### The Spark
 In 2007, a dusty computer in my aunt’s rural Kenyan home lit a fire in me. I was fascinated by its capabilities and endless possibilities. My first "project"? A meal-planning menu in Microsoft Word to help my mom decide what to cook for the week(Saved her a ton of time and hassle). It was simple, but it was mine—and it sparked a lifelong love affair with technology.
 
