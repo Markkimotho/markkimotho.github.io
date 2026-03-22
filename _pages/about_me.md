@@ -3,7 +3,7 @@ layout: page
 title: about me
 permalink: /about-me/
 description: The story behind the screen.
-nav: true
+nav: false
 nav_order: 1
 ---
 
