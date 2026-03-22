@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: markkimotho.github.io/sitemap.xml
+User-agent: * Disallow: Sitemap: https://markkimotho.github.io/sitemap.xml
