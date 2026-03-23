@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Function to display the menu and get the user's choice
 display_menu() {
