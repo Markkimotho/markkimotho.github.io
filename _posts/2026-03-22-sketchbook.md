@@ -8,74 +8,21 @@ categories: projects
 giscus_comments: true
 related_posts: true
 ---
-
 I have loved art since I was young. Pencils, crayons, whatever I could get my hands on. I most especially loved drawing on old paper — notebooks, margins of textbooks, any blank surface available. As I got older that love shifted toward digital art. Layers, undo, infinite color. I spent a lot of time exploring what was possible.
 
 I was not very satisfied with the tools I came across though. So I decided to make my own. One that has that unbeatable look of old paper, rustic, and albeit being on a screen you can almost feel the roughness of the paper.
 
 It has taken a good while to get here. I have been working on it steadily, refining how the tools feel, getting the real-time collaboration solid, and making sure it holds up across different devices.
 
-## What is Sketchbook?
-
 Sketchbook is a self-hosted, real-time collaborative drawing app. You run it yourself, you own the data, and you can share a link with anyone to draw together on the same canvas.
 
-## Features
+Here is what it supports right now: pencil, ink pen, brush, calligraphy, eraser, line, shapes, and a text tool. It has stylus and Apple Pencil support with real pressure sensitivity, and palm rejection so your hand resting on the iPad does not leave marks. There are multiple canvas surfaces — aged paper, kraft, watercolour, newsprint, old parchment, blackboard — plus ruled lines, grid, and dot grid overlays. It has layers, version history, and a chat panel for collaborating while drawing. It works on iPad, Android tablets, laptops, MacBooks, and phones.
 
-### Drawing tools
-
-- Pencil, ink pen, brush, calligraphy, eraser
-- Line and shape tools
-- Text tool
-- Stylus and Apple Pencil support with real pressure sensitivity
-- Palm rejection so your hand resting on the iPad does not leave marks
-
-### Canvas surfaces
-
-One of the things I cared about most was getting the surfaces right. Sketchbook ships with:
-
-- Aged paper
-- Kraft paper
-- Watercolour paper
-- Newsprint
-- Old parchment
-- Blackboard
-
-Each one has its own texture and character. You pick the one that fits the mood of what you are making.
-
-### Overlays
-
-- Ruled lines
-- Grid
-- Dot grid
-
-### Collaboration
-
-- Real-time drawing with anyone you share a link with
-- Layers
-- Version history
-- Built-in chat panel for communicating while drawing
-
-### Device support
-
-Works on iPad, Android tablets, laptops, MacBooks, and phones. If it has a browser, it runs.
-
-## Under the hood
-
-The stack is straightforward:
-
-- **Next.js** for the frontend and server
-- **Socket.io** for real-time sync between collaborators
-- **SQLite** for lightweight, file-based storage
-
-No external database to configure, no cloud dependencies. Set it up on any machine in a few minutes.
+The whole thing runs on Next.js with a Socket.io server for real-time sync and SQLite for storage. No external database to configure, no cloud dependencies. Set it up on any machine in a few minutes.
 
 ## Getting started
 
-Everything you need is on GitHub:
-
-[https://github.com/Markkimotho/digital-art-collaboration](https://github.com/Markkimotho/digital-art-collaboration)
-
-Clone the repo, install dependencies, and start drawing:
+Everything you need is on [GitHub](https://github.com/Markkimotho/digital-art-collaboration). Clone the repo, install dependencies, and start drawing:
 
 ```bash
 git clone https://github.com/Markkimotho/digital-art-collaboration.git
@@ -84,8 +31,18 @@ npm install
 npm run dev
 ```
 
-That is it. Open the app in your browser and you are drawing.
+Open the app in your browser and you are good to go.
 
-## Contributing
+## How to use it
 
-If you have ideas or want to contribute, open a pull request. The project is completely free and open source. If you need help getting a hosted version running, reach out through GitHub.
+When you open the app you land on the lobby. Hit New Canvas and you get a fresh room. The URL in your browser is your room link — copy it and send it to whoever you want to draw with. They open the link and they are in the same canvas, live.
+
+The toolbar sits at the top on desktop and on the left side on mobile. Your tools are grouped into three sections: drawing tools, shapes, and utility tools. Pick a tool, pick a color from the color swatch or use the color picker for anything custom, adjust the stroke size, and start drawing. If you are on an iPad or a tablet with a stylus, pressure sensitivity works out of the box — no setup needed. Press lightly for thin strokes, press harder for thick ones.
+
+On the right side there is a panel with four tabs. Layers lets you add, rename, lock, and hide layers. Each layer is independent so you can sketch on one and ink on another without touching your base drawing. History is where you save named versions of your canvas. If you want to checkpoint your work before making big changes, save a version. If something goes wrong you can revert to any saved point and everyone in the room sees the canvas restore instantly.
+
+Canvas is where you change the surface and grid. You can switch between aged paper, kraft, watercolour paper, newsprint, old parchment, and blackboard. Underneath that you can toggle ruled lines, a square grid, or a dot grid — useful if you are doing anything that needs alignment. Chat is a simple message panel. Useful when you are collaborating and need to say something without leaving the canvas.
+
+The crosshair button at the bottom right of the canvas resets your view and fits everything you have drawn back into the screen. If you pan too far away and lose your work, that button brings you back. To pan around the canvas use the hand tool or two fingers on touch. To zoom, pinch on touch or scroll on desktop.
+
+If you have ideas or want to contribute, open a pull request. It is completely free and open. If you need help getting a hosted version running, reach out through [GitHub](https://github.com/Markkimotho/digital-art-collaboration).
