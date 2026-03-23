@@ -4,7 +4,7 @@
 <span class="nb">cd </span>digital-art-collaboration
 npm <span class="nb">install
 </span>npm run dev
-</code></pre></div></div> <p>Open the app in your browser and you are good to go.</p> <h2 id="running-it-with-docker">Running it with Docker</h2> <p>If you do not want to deal with Node.js installs, Docker is the cleaner option. The image is built on Node 22 Alpine and everything is bundled inside — dependencies, the Next.js build, Prisma client, and the server. Canvas data persists in a Docker volume so it survives restarts.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># build the image</span>
+</code></pre></div></div> <p>Open the <a href="http://localhost:3000" rel="external nofollow noopener" target="_blank">app locally</a> in your browser and you are good to go.</p> <h2 id="running-it-with-docker">Running it with Docker</h2> <p>If you do not want to deal with Node.js installs, Docker is the cleaner option. The image is built on Node 22 Alpine and everything is bundled inside — dependencies, the Next.js build, Prisma client, and the server. Canvas data persists in a Docker volume so it survives restarts.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># build the image</span>
 docker build <span class="nt">-t</span> sketchbook:latest <span class="nb">.</span>
 
 <span class="c"># run it</span>
