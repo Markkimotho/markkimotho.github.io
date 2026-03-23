@@ -8,6 +8,7 @@ categories: projects
 giscus_comments: true
 related_posts: true
 ---
+
 I have loved art since I was young. Pencils, crayons, whatever I could get my hands on. I most especially loved drawing on old paper — notebooks, margins of textbooks, any blank surface available. As I got older that love shifted toward digital art. Layers, undo, infinite color. I spent a lot of time exploring what was possible.
 
 I was not very satisfied with the tools I came across though. So I decided to make my own. One that has that unbeatable look of old paper, rustic, and albeit being on a screen you can almost feel the roughness of the paper.
