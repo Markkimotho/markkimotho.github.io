@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-Open the app in your browser and you are good to go.
+Open the [app locally](http://localhost:3000) in your browser and you are good to go.
 
 ## Running it with Docker
 
