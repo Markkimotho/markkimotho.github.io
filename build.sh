@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Define log file
 LOGFILE="build_deploy.log"
