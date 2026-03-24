@@ -62,6 +62,17 @@ ninja.data = [{
           window.location.href = "/blog/2026/sketchbook/";
         
       },
+    },{id: "post-building-a-production-grade-json-parser-from-scratch",
+      
+        title: "Building a Production-Grade JSON Parser from Scratch",
+      
+      description: "A robust, scalable JSON parser written in Python with comprehensive error handling, full JSON spec support, and a web interface for real-time validation.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/building-production-grade-json-parser/";
+        
+      },
     },{id: "news-i-just-published-my-website-again",
           title: 'I Just Published My Website, Again!',
           description: "",
