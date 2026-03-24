@@ -34,5 +34,4 @@ latest_posts:
   scrollable: true # Adds a scroll bar if there are more than 3 posts
   limit: 3 # Limits the number of posts displayed
 ---
-
-I build things with code and explore the intersection of technology and creativity. I write about programming, personal growth, and the future of tech on [Substack](https://ktinega.substack.com). Always open to collaborations — feel free to reach out.
+I build things with code and explore the intersection of technology and creativity. I write about the web, programming, personal growth, and the future of tech on [Substack](https://ktinega.substack.com). Always open to collaborations — feel free to reach out.
