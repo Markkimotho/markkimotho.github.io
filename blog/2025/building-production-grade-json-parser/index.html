@@ -44,12 +44,12 @@ number    ::= NUMBER_TOKEN
             <span class="n">key</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">string</span><span class="p">()</span>  <span class="c1"># Key must be a string
 </span>            <span class="nf">consume</span><span class="p">(</span><span class="sh">'</span><span class="s">:</span><span class="sh">'</span><span class="p">)</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">value</span><span class="p">()</span>   <span class="c1"># Value can be anything
-</span>          
+</span>
             <span class="c1"># Check for duplicate keys
 </span>            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="nc">JSONParseError</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Duplicate key </span><span class="sh">'</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="sh">'"</span><span class="p">)</span>
             <span class="n">result</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
-          
+
             <span class="k">if</span> <span class="ow">not</span> <span class="nf">matches</span><span class="p">(</span><span class="sh">'</span><span class="s">,</span><span class="sh">'</span><span class="p">):</span>
                 <span class="k">break</span>
             <span class="nf">consume</span><span class="p">(</span><span class="sh">'</span><span class="s">,</span><span class="sh">'</span><span class="p">)</span>
