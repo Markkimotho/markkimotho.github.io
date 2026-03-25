@@ -83,6 +83,11 @@ ninja.data = [{
           description: "A command-line utility providing file statistics similar to Unix wc",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ccwc/";
+            },},{id: "projects-edusight-africa-ai-student-risk-assessment-platform",
+          title: 'EduSight Africa - AI Student Risk Assessment Platform',
+          description: "Machine learning platform predicting student learning risk across African schools with cultural context and multilingual support",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/edusight-africa/";
             },},{id: "projects-financial-transaction-monitoring-amp-analytics-tool",
           title: 'Financial Transaction Monitoring &amp;amp; Analytics Tool',
           description: "Comprehensive financial tracking platform with Django, PostgreSQL, and Redis",
