@@ -93,6 +93,11 @@ ninja.data = [{
           description: "High-performance interactive data visualization with real-time updates and AI insights",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lumina-analytics/";
+            },},{id: "projects-make-an-order-order-management-service",
+          title: 'Make-An-Order - Order Management Service',
+          description: "A RESTful service for managing customers and orders with Google OAuth and SMS notifications",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/make-an-order/";
             },},{id: "projects-monty-stack-queue-interpreter",
           title: 'Monty - Stack/Queue Interpreter',
           description: "A simple interpreter for stack and queue operations in C",
