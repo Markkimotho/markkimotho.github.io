@@ -8,6 +8,7 @@ categories: projects
 giscus_comments: true
 related_posts: true
 ---
+
 I wanted to understand how parsing actually works. Not the high-level concepts, but the mechanics — how text becomes structured data. How a tokenizer identifies meaningful chunks. How a parser builds objects from those chunks. How errors get detected and reported.
 
 Most developers use the built-in `json` module without thinking about it. I wanted to know what was happening under the hood.
@@ -130,12 +131,12 @@ def object():
             key = self.string()  # Key must be a string
             consume(':')
             val = self.value()   # Value can be anything
-          
+
             # Check for duplicate keys
             if key in result:
                 raise JSONParseError(f"Duplicate key '{key}'")
             result[key] = val
-          
+
             if not matches(','):
                 break
             consume(',')
@@ -260,7 +261,7 @@ The parser handles all JSON according to spec:
 - **Validation**: Detects leading zeros, duplicate keys, invalid escapes, trailing commas
 - **Limits**: Recursion depth limiting and file size validation to prevent pathological cases
 
-The interesting part was not the feature list but *how* it works.
+The interesting part was not the feature list but _how_ it works.
 
 ## What I Learned
 
@@ -273,7 +274,7 @@ The interesting part was not the feature list but *how* it works.
 
 One edge case I didn't expect: what counts as whitespace? JSON allows `\t`, `\n`, `\r`, and space. But not all Unicode whitespace. The spec is specific. If you're lenient, you silently accept invalid JSON.
 
-**Recursive descent parsing is beautifully self-documenting.** The code *is* the grammar. When someone reads `def object():` they see how objects are structured without referring to documentation. The recursive calls (`key = self.string()`, `val = self.value()`) showed the exact nesting. But it requires discipline: every grammar rule must be a function, and every function must follow the same pattern: consume expected tokens, handle the payload, validate structure.
+**Recursive descent parsing is beautifully self-documenting.** The code _is_ the grammar. When someone reads `def object():` they see how objects are structured without referring to documentation. The recursive calls (`key = self.string()`, `val = self.value()`) showed the exact nesting. But it requires discipline: every grammar rule must be a function, and every function must follow the same pattern: consume expected tokens, handle the payload, validate structure.
 
 **Position tracking is not optional.** I first built the parser without it. Errors said "invalid JSON" somewhere. Useless. Adding line/column tracking meant modifying every `consume()` call, every token-reading operation, and maintaining `line`/`column` during whitespace skipping. But then errors became "line 42, column 5: duplicate key". That's the difference between "something is wrong" and "here's the problem."
 
