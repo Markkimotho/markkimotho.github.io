@@ -82,32 +82,32 @@ ninja.data = [{
           title: 'ccwc - Custom File Statistics Tool',
           description: "A command-line utility providing file statistics similar to Unix wc",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
-            },},{id: "projects-sdl-c-raycasting-engine",
-          title: 'SDL C Raycasting Engine',
-          description: "A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/11_project/";
+              window.location.href = "/projects/ccwc/";
             },},{id: "projects-financial-transaction-monitoring-amp-analytics-tool",
           title: 'Financial Transaction Monitoring &amp;amp; Analytics Tool',
           description: "Comprehensive financial tracking platform with Django, PostgreSQL, and Redis",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/12_project/";
+              window.location.href = "/projects/financial-monitoring-tool/";
             },},{id: "projects-lumina-analytics-dashboard",
           title: 'Lumina Analytics Dashboard',
           description: "High-performance interactive data visualization with real-time updates and AI insights",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/13_project/";
+              window.location.href = "/projects/lumina-analytics/";
             },},{id: "projects-monty-stack-queue-interpreter",
           title: 'Monty - Stack/Queue Interpreter',
           description: "A simple interpreter for stack and queue operations in C",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/14_project/";
+              window.location.href = "/projects/monty/";
             },},{id: "projects-printf-printf-reimplementation",
           title: 'Printf - Printf Reimplementation',
           description: "A custom C implementation of the printf standard library function",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/15_project/";
+              window.location.href = "/projects/printf/";
+            },},{id: "projects-sdl-c-raycasting-engine",
+          title: 'SDL C Raycasting Engine',
+          description: "A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sdl-c-raycasting/";
             },},{
         id: 'social-email',
         title: 'email',
