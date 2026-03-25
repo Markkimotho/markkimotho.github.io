@@ -217,28 +217,5 @@
       "url": "",
       "icon": "fa-solid fa-network-wired"
     }
-  ],
-  "projects": [
-    {
-      "name": "UNIX-like Shell",
-      "summary": "Developed a UNIX command interpreter in C",
-      "highlights": ["Process management", "Signal handling", "File I/O"],
-      "url": "",
-      "icon": "fa-solid fa-terminal"
-    },
-    {
-      "name": "3D Raycasting Engine",
-      "summary": "Created a raycasting engine in C with real-time rendering",
-      "highlights": ["Graphics programming", "Collision detection", "Performance optimization"],
-      "url": "",
-      "icon": "fa-solid fa-cube"
-    },
-    {
-      "name": "Make an Order",
-      "summary": "A web interface for managing orders and customers with RESTful API endpoints",
-      "highlights": ["RESTful API", "SMS integration for real-time notifications"],
-      "url": "",
-      "icon": "fa-solid fa-cart-shopping"
-    }
   ]
 }
