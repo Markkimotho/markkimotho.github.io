@@ -108,6 +108,11 @@ ninja.data = [{
           description: "A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sdl-c-raycasting/";
+            },},{id: "projects-sketchbook-self-hosted-drawing-app",
+          title: 'Sketchbook - Self-Hosted Drawing App',
+          description: "A real-time collaborative drawing application with stylus support and pressure sensitivity",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sketchbook/";
             },},{
         id: 'social-email',
         title: 'email',
