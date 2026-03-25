@@ -118,6 +118,11 @@ ninja.data = [{
           description: "A real-time collaborative drawing application with stylus support and pressure sensitivity",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sketchbook/";
+            },},{id: "projects-voxail-ai-powered-audio-transcription-platform",
+          title: 'Voxail - AI-Powered Audio Transcription Platform',
+          description: "Full-stack transcription platform with Google Gemini 2.0 Flash, 15+ specialized AI tasks, and live recording",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/voxail/";
             },},{
         id: 'social-email',
         title: 'email',
