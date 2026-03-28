@@ -8,7 +8,7 @@ nav_order: 3
 display_categories: [work, open-source, fun]
 horizontal: false
 ---
-Always building new projects, more on my [github](github.com/Markkimotho)
+Always building new projects, more on my [github](https://www.github.com/Markkimotho)
 
 <!-- pages/projects.md -->
 
