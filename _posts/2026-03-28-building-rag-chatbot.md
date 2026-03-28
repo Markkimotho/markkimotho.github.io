@@ -117,7 +117,7 @@ Each response also gets a rough quality score based on things like word count, w
 Everything runs locally. You need Python, Ollama installed, and the models pulled.
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Markkimotho/rag-ai-chat-bot-with-langchain.git
 cd rag-ai-chat-bot-with-langchain
 pip install -r requirements.txt
 
