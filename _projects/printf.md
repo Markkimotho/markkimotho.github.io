@@ -11,6 +11,7 @@ category: open-source
 ## Overview
 
 **Printf** is a C implementation project that reimplements the `printf` standard library function from scratch. This project demonstrates deep understanding of:
+
 - C standard library functions
 - String formatting and parsing
 - Variable argument handling (`va_list`)
@@ -19,6 +20,7 @@ category: open-source
 ## About This Project
 
 This is an educational project showcasing:
+
 - Custom implementation of a fundamental C function
 - Handling of format specifiers
 - Memory-safe string operations
@@ -33,6 +35,7 @@ This is an educational project showcasing:
 ## Features (Coming)
 
 Complete documentation coming soon, including:
+
 - Supported format specifiers
 - Installation and compilation guide
 - Usage examples
@@ -42,6 +45,7 @@ Complete documentation coming soon, including:
 ## Documentation Roadmap
 
 This project will be gradually enhanced with:
+
 - Format specifier reference
 - Implementation details
 - Testing methodology
@@ -54,4 +58,4 @@ This project will be gradually enhanced with:
 
 ---
 
-*More details coming soon. Clone the repository to explore the source code and implementation details.*
+_More details coming soon. Clone the repository to explore the source code and implementation details._

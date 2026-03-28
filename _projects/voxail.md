@@ -21,23 +21,27 @@ Unlike simple speech-to-text APIs, Voxail processes audio with deep contextual u
 Professional-grade transcription with purpose-built prompt engineering for each domain:
 
 #### Core Transcription
+
 - **Verbatim Transcription** - Word-for-word transcripts with optional speaker labels & timestamps
 - **Subtitles (SRT)** - Professionally timed media subtitles with character limits
 - **Captions (WebVTT)** - Standards-compliant accessibility captions
 
 #### Speaker & Audio Analysis
+
 - **Diarization** - Multi-speaker identification with speaking time statistics
 - **Speaker Labeling** - Auto-detects roles (Host/Guest, Doctor/Patient, Lawyer/Witness)
 - **Live Transcription** - Real-time 5-second chunked processing with silence detection
 - **Sentiment Analysis** - Tone detection + emotional timeline per speaker
 
 #### Content Intelligence
+
 - **Summary & Key Points** - Automatic extraction of action items, decisions, takeaways
 - **Chapters/Bookmarking** - Auto-segments audio into logical chapters
 - **Lyrics Extraction** - Music transcription with instrumental markers
 - **Interview/Podcast Format** - Purpose-built formatting with notable quotes
 
 #### Professional Domain Tasks
+
 - **Medical Dictation** - Clinical-grade precision, SOAP format, drug interaction awareness
 - **Legal Deposition** - Strict verbatim with line numbers, objections, exhibits, legal markers
 - **Meeting Notes** - Structured output (attendees, decisions, action items, follow-ups)
@@ -74,28 +78,28 @@ Sophisticated real-time transcription pipeline using browser's MediaRecorder API
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | React 18 with Vite |
-| **UI Framework** | Tailwind CSS |
-| **Icons** | Lucide Icons |
-| **Backend** | Node.js with Express |
-| **AI Engine** | Google Gemini 2.0 Flash (multimodal) |
-| **Audio Recording** | MediaRecorder API |
-| **Deployment** | Docker |
-| **Output Formats** | SRT, WebVTT, JSON, Markdown |
+| Layer               | Technology                           |
+| ------------------- | ------------------------------------ |
+| **Frontend**        | React 18 with Vite                   |
+| **UI Framework**    | Tailwind CSS                         |
+| **Icons**           | Lucide Icons                         |
+| **Backend**         | Node.js with Express                 |
+| **AI Engine**       | Google Gemini 2.0 Flash (multimodal) |
+| **Audio Recording** | MediaRecorder API                    |
+| **Deployment**      | Docker                               |
+| **Output Formats**  | SRT, WebVTT, JSON, Markdown          |
 
 ## AI & Prompt Engineering
 
 ### Gemini 2.0 Flash Engine
 
-| Aspect | Details |
-|--------|---------|
-| **Model** | Google Gemini 2.0 Flash (multimodal) |
-| **Max Output** | 16,384 tokens per request |
-| **Processing** | Audio file upload + live streaming |
+| Aspect            | Details                                |
+| ----------------- | -------------------------------------- |
+| **Model**         | Google Gemini 2.0 Flash (multimodal)   |
+| **Max Output**    | 16,384 tokens per request              |
+| **Processing**    | Audio file upload + live streaming     |
 | **Rate Limiting** | 3-tier exponential backoff (15/30/45s) |
-| **Prompt System** | 600+ lines of domain-specific rules |
+| **Prompt System** | 600+ lines of domain-specific rules    |
 
 ### Prompt Architecture
 
@@ -173,6 +177,7 @@ docker run -p 3000:3000 \
 ### Domain-Specific Tasks
 
 Select your use case:
+
 - **Medical Dictation** - For clinical transcription
 - **Legal Deposition** - For courtroom recordings
 - **Podcast/Interview** - For content formatting
@@ -235,6 +240,7 @@ Multilingual support with frame-by-frame language labeling — preserves exact s
 ### Contextual Formatting
 
 Each task applies domain-specific rules:
+
 - Medical: Clinical abbreviations, drug names, vital sign formatting
 - Legal: Line numbering, objection markers, exhibit references
 - Podcast: Notable quotes extraction, chapter breaks, intro/outro detection
@@ -242,6 +248,7 @@ Each task applies domain-specific rules:
 ### Quality Indicators
 
 Built-in quality metrics:
+
 - Audio clarity assessment
 - Noise floor detection
 - Speaker overlap statistics

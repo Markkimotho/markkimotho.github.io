@@ -29,6 +29,7 @@ The project began from a personal vision to create digital art tools that captur
 ### Canvas Surfaces
 
 Multiple paper textures to choose from:
+
 - Aged paper
 - Kraft paper
 - Watercolour paper
@@ -60,14 +61,14 @@ Multiple paper textures to choose from:
 
 ## Technology Stack
 
-| Component | Technology |
-|-----------|-----------|
-| **Frontend** | Next.js with React |
-| **Real-time Sync** | Socket.io |
-| **Database** | SQLite (file-based, no external DB required) |
-| **Backend** | Node.js |
-| **Deployment** | Docker, Docker Compose, Kubernetes |
-| **TLS/HTTPS** | Caddy (self-hosted) or cert-manager (Kubernetes) |
+| Component          | Technology                                       |
+| ------------------ | ------------------------------------------------ |
+| **Frontend**       | Next.js with React                               |
+| **Real-time Sync** | Socket.io                                        |
+| **Database**       | SQLite (file-based, no external DB required)     |
+| **Backend**        | Node.js                                          |
+| **Deployment**     | Docker, Docker Compose, Kubernetes               |
+| **TLS/HTTPS**      | Caddy (self-hosted) or cert-manager (Kubernetes) |
 
 ## Getting Started
 
@@ -131,6 +132,7 @@ Access your drawing app at `https://sketchbook.yourdomain.com`
 ### Kubernetes Production Deployment
 
 The repo includes complete Kubernetes manifests covering:
+
 - Deployment with replicas
 - Persistent volume for SQLite database
 - ClusterIP service for internal routing
@@ -159,12 +161,12 @@ kubectl apply -f k8s/
 
 ### Workspace Panels (Right Side)
 
-| Panel | Features |
-|-------|----------|
-| **Layers** | Add, rename, lock, hide layers independently |
+| Panel       | Features                                         |
+| ----------- | ------------------------------------------------ |
+| **Layers**  | Add, rename, lock, hide layers independently     |
 | **History** | Save named versions and revert to any checkpoint |
-| **Canvas** | Change surface texture and grid overlays |
-| **Chat** | Message collaborators without leaving the canvas |
+| **Canvas**  | Change surface texture and grid overlays         |
+| **Chat**    | Message collaborators without leaving the canvas |
 
 ### Navigation
 

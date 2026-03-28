@@ -15,6 +15,7 @@ category: open-source
 ## About This Project
 
 This project is a learning exercise in:
+
 - Parsing and interpreting bytecode
 - Data structure implementation (stacks and queues)
 - Memory management in C
@@ -29,6 +30,7 @@ This project is a learning exercise in:
 ## Getting Started
 
 Instructions and detailed documentation coming soon. This project will be gradually enhanced with:
+
 - Full bytecode specification
 - Installation and compilation guide
 - Usage examples
@@ -45,6 +47,7 @@ Instructions and detailed documentation coming soon. This project will be gradua
 ## Development Status
 
 This project is actively being documented and enhanced. Check back for updates on:
+
 - Complete feature documentation
 - Installation guide
 - Usage examples
@@ -56,4 +59,4 @@ This project is actively being documented and enhanced. Check back for updates o
 
 ---
 
-*More details coming soon. Feel free to clone the repository to explore the implementation.*
+_More details coming soon. Feel free to clone the repository to explore the implementation._

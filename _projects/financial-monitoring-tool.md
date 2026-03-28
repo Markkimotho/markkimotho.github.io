@@ -62,14 +62,14 @@ A comprehensive, secure, and intuitive **financial tracking platform** for indiv
 
 ## Technology Stack
 
-| Component | Technology |
-|-----------|-----------|
-| **Backend** | Django 4.2+ with Django REST Framework |
-| **Database** | PostgreSQL (relational model for financial integrity) |
-| **Cache** | Redis for session storage and analytics caching |
-| **Authentication** | JWT (djangorestframework-simplejwt) |
-| **Documentation** | drf-spectacular (OpenAPI/Swagger) |
-| **Infrastructure** | Docker & Kubernetes ready |
+| Component          | Technology                                            |
+| ------------------ | ----------------------------------------------------- |
+| **Backend**        | Django 4.2+ with Django REST Framework                |
+| **Database**       | PostgreSQL (relational model for financial integrity) |
+| **Cache**          | Redis for session storage and analytics caching       |
+| **Authentication** | JWT (djangorestframework-simplejwt)                   |
+| **Documentation**  | drf-spectacular (OpenAPI/Swagger)                     |
+| **Infrastructure** | Docker & Kubernetes ready                             |
 
 ## Quick Start
 
@@ -109,6 +109,7 @@ python manage.py runserver
 ```
 
 **Access Points:**
+
 - API: http://localhost:8000/api/
 - Swagger Docs: http://localhost:8000/api/docs/
 - Admin: http://localhost:8000/admin/
@@ -116,11 +117,13 @@ python manage.py runserver
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/auth/register/` - User registration
 - `POST /api/auth/login/` - JWT token login
 - `POST /api/auth/refresh/` - Refresh access token
 
 ### Transactions
+
 - `GET /api/transactions/` - List transactions
 - `POST /api/transactions/` - Create transaction
 - `DELETE /api/transactions/{id}/` - Soft delete
@@ -128,17 +131,20 @@ python manage.py runserver
 - `POST /api/transactions/bulk_import/` - Bulk CSV import
 
 ### Budgets
+
 - `GET /api/budgets/` - List budgets
 - `POST /api/budgets/` - Create budget with alerts
 - `GET /api/budgets/alerts/` - View all budget alerts
 
 ### Analytics
+
 - `GET /api/transactions/summary/` - Dashboard summary
 - Comprehensive financial insights via analytics module
 
 ## Database Schema
 
 Core models include:
+
 - **CustomUser** - User profiles
 - **Category** - Transaction categories
 - **Transaction** - Individual transactions (with soft delete)

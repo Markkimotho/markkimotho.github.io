@@ -20,14 +20,15 @@ The platform uses sophisticated ML models (XGBoost + RandomForest) with 19 engin
 
 Unlike basic binary classifiers, EduSight Africa uses a **4-level ordinal risk model**:
 
-| Risk Level | Description |
-|-----------|-------------|
-| **Low** | Student on track, low intervention need |
-| **Medium** | Emerging concerns, monitor closely |
-| **High** | Significant risk, intervention recommended |
-| **Critical** | Immediate support required |
+| Risk Level   | Description                                |
+| ------------ | ------------------------------------------ |
+| **Low**      | Student on track, low intervention need    |
+| **Medium**   | Emerging concerns, monitor closely         |
+| **High**     | Significant risk, intervention recommended |
+| **Critical** | Immediate support required                 |
 
 **Model Details:**
+
 - **Primary Model** - XGBoost (300 estimators, max_depth=6)
 - **Baseline Model** - RandomForest (200 estimators, max_depth=12)
 - **Calibration** - Platt scaling for reliable probabilities
@@ -38,11 +39,13 @@ Unlike basic binary classifiers, EduSight Africa uses a **4-level ordinal risk m
 **19 carefully engineered features** capturing patterns invisible in raw data:
 
 #### Raw Assessment Scores (6)
+
 - Math, Reading, Writing scores
 - Behavioral assessment
 - Attendance rate
 
 #### Engineered Features (13)
+
 - **score_gap** - Largest spread between subject scores (identifies hidden weaknesses)
 - **avg_academic** - Composite academic index across all subjects
 - **academic_behavior_mismatch** - Flags good scores with poor behavior (or vice versa)
@@ -66,59 +69,65 @@ Unlike basic binary classifiers, EduSight Africa uses a **4-level ordinal risk m
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | Next.js 14 (App Router), TypeScript, Tailwind CSS, Recharts |
-| **Backend** | FastAPI, SQLAlchemy (async), Alembic, asyncpg |
-| **Database** | PostgreSQL 16 |
-| **Cache** | Redis 7 |
-| **ML Models** | XGBoost, RandomForest, scikit-learn, Pandas |
-| **Authentication** | NextAuth.js (JWT, credentials provider) |
-| **Infrastructure** | Docker Compose, GitHub Actions CI/CD |
+| Layer              | Technology                                                  |
+| ------------------ | ----------------------------------------------------------- |
+| **Frontend**       | Next.js 14 (App Router), TypeScript, Tailwind CSS, Recharts |
+| **Backend**        | FastAPI, SQLAlchemy (async), Alembic, asyncpg               |
+| **Database**       | PostgreSQL 16                                               |
+| **Cache**          | Redis 7                                                     |
+| **ML Models**      | XGBoost, RandomForest, scikit-learn, Pandas                 |
+| **Authentication** | NextAuth.js (JWT, credentials provider)                     |
+| **Infrastructure** | Docker Compose, GitHub Actions CI/CD                        |
 
 ## Core Features
 
 ### Risk Assessment
+
 - ML model scores students across attendance, academic, behavioral, and socioeconomic indicators
 - 4-tier risk classification (Low/Medium/High/Critical)
 - Confidence scores and explainable predictions
 
 ### Student Management
+
 - Full CRUD operations with school-level scoping
 - Paginated list views with filters
 - Assessment history tracking
 - Bulk operations support
 
 ### Dashboard & Analytics
+
 - Real-time statistics and KPIs
 - Risk distribution charts and visualizations
 - Trend analysis over time
 - School-level aggregations
 
 ### Parent Portal
+
 - Structured observation forms
 - Assessment history visualization
 - Child-specific performance tracking
 - Feedback and communication channels
 
 ### Multilingual Support
+
 - **10 Languages**: English, Swahili, French, Arabic, Amharic, Hausa, Yoruba, Zulu, Portuguese, Kinyarwanda
 - **Implementation**: next-intl for seamless i18n
 - Per-user language preference persistence
 
 ### Cultural Context Detection
+
 - **Regional Weighting Profiles** - East, West, North, South Africa
 - **Country-Specific Patterns** - Statistical models trained on regional data
 - **Cultural Indicators** - Home engagement, peer context, regional norms
 
 ### Role-Based Access Control
 
-| Role | Permissions |
-|------|------------|
-| **Teacher** | Assess students, view dashboard, manage students in their school |
-| **Parent** | Submit observations, view their child's history |
-| **Admin** | Full school-level access |
-| **Superadmin** | Platform-wide access |
+| Role           | Permissions                                                      |
+| -------------- | ---------------------------------------------------------------- |
+| **Teacher**    | Assess students, view dashboard, manage students in their school |
+| **Parent**     | Submit observations, view their child's history                  |
+| **Admin**      | Full school-level access                                         |
+| **Superadmin** | Platform-wide access                                             |
 
 ## Project Structure
 
@@ -186,6 +195,7 @@ docker compose exec backend alembic upgrade head
 ```
 
 **Access:**
+
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8000
 - Swagger Docs: http://localhost:8000/docs
@@ -193,6 +203,7 @@ docker compose exec backend alembic upgrade head
 ### Installation from Source
 
 See **INSTALLATION.md** for detailed setup instructions including:
+
 - Python virtual environment setup
 - PostgreSQL and Redis installation
 - Frontend Node.js dependencies
@@ -213,6 +224,7 @@ make test-backend
 ```
 
 **Test Coverage:** 25+ tests covering:
+
 - Authentication & authorization
 - Student CRUD operations
 - Risk assessment pipeline
@@ -227,6 +239,7 @@ python ml/train_model.py
 ```
 
 Outputs:
+
 - `ml/models/xgb_model.pkl` - Trained XGBoost model
 - `ml/models/scaler.pkl` - Feature scaler
 - Training metrics and validation scores
@@ -247,26 +260,31 @@ make test-backend  # Run backend tests
 **20+ REST endpoints** covering:
 
 ### Authentication
+
 - `POST /api/v1/auth/register` - User registration
 - `POST /api/v1/auth/login` - JWT login
 - `POST /api/v1/auth/refresh` - Token refresh
 
 ### Students
+
 - `GET/POST /api/v1/students` - List and create students
 - `GET/PUT/DELETE /api/v1/students/{id}` - Student operations
 - `POST /api/v1/students/{id}/assess` - Run risk assessment
 
 ### Assessments
+
 - `GET/POST /api/v1/assessments` - Assessment history
 - `GET /api/v1/assessments/{id}` - Assessment details
 - `GET /api/v1/assessments/student/{student_id}` - Student's assessments
 
 ### Dashboard
+
 - `GET /api/v1/dashboard/stats` - Overall platform stats
 - `GET /api/v1/dashboard/risk-distribution` - Risk level breakdown
 - `GET /api/v1/dashboard/trends` - Historical trends
 
 ### Schools
+
 - `GET/POST /api/v1/schools` - School management
 - `GET /api/v1/schools/{id}/students` - School's students
 - `GET /api/v1/schools/{id}/stats` - School-level analytics
@@ -293,18 +311,21 @@ make test-backend  # Run backend tests
 ## Educational Impact
 
 ### For Teachers
+
 - Early identification of at-risk students
 - Data-driven intervention planning
 - Evidence-based teaching adjustments
 - Student progress tracking
 
 ### For Parents
+
 - Visibility into their child's academic progress
 - Early warning system for support needs
 - Structured feedback mechanisms
 - Engagement tracking
 
 ### For Administrators
+
 - School-level analytics and benchmarking
 - Resource allocation based on risk data
 - Trend analysis across schools
@@ -321,6 +342,7 @@ docker compose -f docker-compose.prod.yml up -d
 ### CI/CD Pipeline
 
 GitHub Actions workflows included:
+
 - **ci.yml** - Automated testing and linting on push
 - **deploy.yml** - Build and push Docker images to registry
 
@@ -339,6 +361,7 @@ Helm charts available for scalable cloud deployments on AWS, GCP, or Azure.
 ## Contributing
 
 The platform welcomes contributions:
+
 - Bug reports and feature requests
 - Regional adaptations and translations
 - Additional ML model improvements

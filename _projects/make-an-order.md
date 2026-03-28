@@ -50,46 +50,46 @@ category: fun
 
 ## Technology Stack
 
-| Component | Technology |
-|-----------|-----------|
-| **Backend Framework** | Flask |
-| **ORM** | SQLAlchemy |
-| **Database** | MySQL (JawsDB on Heroku) |
-| **Authentication** | Google OAuth 2.0 |
-| **SMS Gateway** | Africa's Talking API |
-| **Testing** | Pytest |
-| **CI/CD** | GitHub Actions |
-| **Deployment** | Heroku |
-| **Frontend** | HTML, CSS |
+| Component             | Technology               |
+| --------------------- | ------------------------ |
+| **Backend Framework** | Flask                    |
+| **ORM**               | SQLAlchemy               |
+| **Database**          | MySQL (JawsDB on Heroku) |
+| **Authentication**    | Google OAuth 2.0         |
+| **SMS Gateway**       | Africa's Talking API     |
+| **Testing**           | Pytest                   |
+| **CI/CD**             | GitHub Actions           |
+| **Deployment**        | Heroku                   |
+| **Frontend**          | HTML, CSS                |
 
 ## API Endpoints
 
 ### Authentication
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/login` | Redirects to Google login |
-| GET | `/logout` | Logs out authenticated user |
+| Method | Endpoint  | Description                 |
+| ------ | --------- | --------------------------- |
+| GET    | `/login`  | Redirects to Google login   |
+| GET    | `/logout` | Logs out authenticated user |
 
 ### Customers
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/customers/register` | Create new customer |
-| GET | `/customers/view_customers` | Retrieve all customers |
-| GET | `/customers/view_customers/<id>` | Get specific customer |
-| PUT | `/customers/update_customers/<id>` | Update customer |
-| DELETE | `/customers/delete_customers/<id>` | Delete customer |
+| Method | Endpoint                           | Description            |
+| ------ | ---------------------------------- | ---------------------- |
+| POST   | `/customers/register`              | Create new customer    |
+| GET    | `/customers/view_customers`        | Retrieve all customers |
+| GET    | `/customers/view_customers/<id>`   | Get specific customer  |
+| PUT    | `/customers/update_customers/<id>` | Update customer        |
+| DELETE | `/customers/delete_customers/<id>` | Delete customer        |
 
 ### Orders
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/orders/place_order` | Create new order |
-| GET | `/orders/view_orders` | Retrieve all orders |
-| GET | `/orders/view_orders/<id>` | Get customer's orders |
-| PUT | `/orders/update_orders/<id>` | Update order |
-| DELETE | `/orders/delete_orders/<id>` | Delete order |
+| Method | Endpoint                     | Description           |
+| ------ | ---------------------------- | --------------------- |
+| POST   | `/orders/place_order`        | Create new order      |
+| GET    | `/orders/view_orders`        | Retrieve all orders   |
+| GET    | `/orders/view_orders/<id>`   | Get customer's orders |
+| PUT    | `/orders/update_orders/<id>` | Update order          |
+| DELETE | `/orders/delete_orders/<id>` | Delete order          |
 
 ## Getting Started
 
@@ -195,6 +195,7 @@ git push heroku main
 ### CI/CD with GitHub Actions
 
 Automated testing and deployment on every push to main branch. The workflow:
+
 1. Checks out code
 2. Sets up Python environment
 3. Installs dependencies
@@ -202,6 +203,7 @@ Automated testing and deployment on every push to main branch. The workflow:
 5. Deploys to Heroku on success
 
 **Setup:**
+
 - Add GitHub secrets for all environment variables
 - Workflow file: `.github/workflows/deploy.yml`
 

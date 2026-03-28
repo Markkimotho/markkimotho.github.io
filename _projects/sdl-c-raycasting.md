@@ -30,11 +30,13 @@ category: open-source
 ### Installation
 
 **Ubuntu/Debian:**
+
 ```bash
 sudo apt install libsdl2-dev libsdl2-image-dev
 ```
 
 **macOS (Homebrew):**
+
 ```bash
 brew install sdl2 sdl2_image
 ```
@@ -53,17 +55,18 @@ make
 ```
 
 For macOS with Homebrew SDL2 not in standard paths:
+
 ```bash
 make CFLAGS="-I/opt/homebrew/include/SDL2" LDFLAGS="-L/opt/homebrew/lib"
 ```
 
 ## Controls
 
-| Key | Action |
-|-----|--------|
+| Key       | Action                  |
+| --------- | ----------------------- |
 | `W` / `S` | Move forward / backward |
-| `A` / `D` | Rotate left / right |
-| `ESC` | Exit game |
+| `A` / `D` | Rotate left / right     |
+| `ESC`     | Exit game               |
 
 ## Technical Details
 

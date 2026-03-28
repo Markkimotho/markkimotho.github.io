@@ -23,6 +23,7 @@ category: open-source
 ### Visualization
 
 - **Multiple Chart Types**:
+
   - Line charts (time-series)
   - Bar charts (categorical)
   - Area charts (cumulative)
@@ -49,12 +50,12 @@ category: open-source
 
 Fully responsive dashboard optimized for all screen sizes:
 
-| Device | Breakpoint | Optimization |
-|--------|-----------|----------------|
-| **Mobile** | 320px+ | Full functionality on smartphones |
-| **Tablet** | 640px+ | Optimized touch-friendly layout |
-| **Desktop** | 1024px+ | Professional multi-panel view |
-| **Large Screens** | 1280px+ | Enhanced experience with extended features |
+| Device            | Breakpoint | Optimization                               |
+| ----------------- | ---------- | ------------------------------------------ |
+| **Mobile**        | 320px+     | Full functionality on smartphones          |
+| **Tablet**        | 640px+     | Optimized touch-friendly layout            |
+| **Desktop**       | 1024px+    | Professional multi-panel view              |
+| **Large Screens** | 1280px+    | Enhanced experience with extended features |
 
 ## Getting Started
 
@@ -124,19 +125,19 @@ npm run preview
 
 ```javascript
 // Example: Filter by date range
-filter({ column: 'date', operator: '>=', value: '2024-01-01' })
+filter({ column: "date", operator: ">=", value: "2024-01-01" });
 ```
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend Framework** | React + TypeScript |
-| **Charting** | Plotly.js / Chart.js |
-| **Styling** | Tailwind CSS |
-| **State Management** | React Context / Zustand |
-| **Data Processing** | Danfo.js (for data manipulation) |
-| **Analytics** | OpenAI API (optional) |
+| Layer                  | Technology                       |
+| ---------------------- | -------------------------------- |
+| **Frontend Framework** | React + TypeScript               |
+| **Charting**           | Plotly.js / Chart.js             |
+| **Styling**            | Tailwind CSS                     |
+| **State Management**   | React Context / Zustand          |
+| **Data Processing**    | Danfo.js (for data manipulation) |
+| **Analytics**          | OpenAI API (optional)            |
 
 ## Use Cases
 

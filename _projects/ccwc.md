@@ -3,7 +3,7 @@ published: true
 layout: page
 title: ccwc - Custom File Statistics Tool
 description: A command-line utility providing file statistics similar to Unix wc
-img: 
+img:
 importance: 10
 category: open-source
 ---
@@ -15,7 +15,7 @@ category: open-source
 ## Features
 
 - **Byte Count**: Use the `-c` option to count the number of bytes in a file
-- **Line Count**: Use the `-l` option to count the number of lines in a file  
+- **Line Count**: Use the `-l` option to count the number of lines in a file
 - **Word Count**: Use the `-w` option to count the number of words in a file
 - **Character Count**: Use the `-m` option to count the number of characters (including multibyte characters) in a file
 - **Default Behavior**: Run without options to get all statistics
@@ -28,12 +28,12 @@ ccwc [OPTION] [FILE]
 
 ### Options
 
-| Option | Description |
-|--------|-------------|
-| `-c` | Count the number of bytes |
-| `-l` | Count the number of lines |
-| `-w` | Count the number of words |
-| `-m` | Count the number of characters (including multibyte) |
+| Option | Description                                          |
+| ------ | ---------------------------------------------------- |
+| `-c`   | Count the number of bytes                            |
+| `-l`   | Count the number of lines                            |
+| `-w`   | Count the number of words                            |
+| `-m`   | Count the number of characters (including multibyte) |
 
 ### Examples
 
