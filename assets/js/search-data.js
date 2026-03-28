@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-sketchbook-my-self-hosted-drawing-app",
+            },{id: "post-building-a-local-rag-chatbot-to-actually-understand-how-ai-reads-documents",
+      
+        title: "Building a Local RAG Chatbot to Actually Understand How AI Reads Documents",
+      
+      description: "A fully local, privacy-first document chatbot built with LangChain, Ollama, and ChromaDB to learn how LLMs, retrieval-augmented generation, vector databases, and conversation memory actually work under the hood.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/building-rag-chatbot/";
+        
+      },
+    },{id: "post-sketchbook-my-self-hosted-drawing-app",
       
         title: "Sketchbook: My Self-Hosted Drawing App",
       
