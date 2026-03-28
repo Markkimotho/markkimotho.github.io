@@ -3,11 +3,10 @@ published: true
 layout: page
 title: SDL C Raycasting Engine
 description: A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2
-img:
+img: assets/img/Peek 2.gif
 importance: 11
 category: open-source
 ---
-
 ## Overview
 
 **SDL C Raycasting** is a lightweight C-based raycasting engine inspired by the classic Wolfenstein 3D, built with SDL2 and SDL2_image. This project demonstrates fundamental 3D graphics programming using classic raycasting techniques.
@@ -62,11 +61,11 @@ make CFLAGS="-I/opt/homebrew/include/SDL2" LDFLAGS="-L/opt/homebrew/lib"
 
 ## Controls
 
-| Key       | Action                  |
-| --------- | ----------------------- |
+| Key           | Action                  |
+| ------------- | ----------------------- |
 | `W` / `S` | Move forward / backward |
 | `A` / `D` | Rotate left / right     |
-| `ESC`     | Exit game               |
+| `ESC`       | Exit game               |
 
 ## Technical Details
 
