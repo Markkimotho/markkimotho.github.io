@@ -117,8 +117,8 @@ The core differentiator — `promptBuilder.js` contains 600+ lines of carefully 
 ### Installation
 
 ```bash
-git clone https://github.com/Markkimotho/voxail.git
-cd voxail
+git clone https://github.com/Markkimotho/transcribe-ai
+cd transcribe-ai
 
 # Install dependencies
 npm install
@@ -258,7 +258,7 @@ Built-in quality metrics:
 
 ## Repository
 
-[View on GitHub](https://github.com/Markkimotho/voxail)
+[View on GitHub](https://github.com/Markkimotho/transcribe-ai)
 
 ## Status
 

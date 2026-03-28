@@ -257,18 +257,14 @@ curl -X POST http://localhost:5001/orders/place_order \
 
 ## Features Highlights
 
-- ✅ Secure Google OAuth authentication
-- ✅ RESTful API design for easy integration
-- ✅ Real-time SMS notifications
-- ✅ Comprehensive error handling
-- ✅ Automated testing with Pytest
-- ✅ CI/CD pipeline with GitHub Actions
-- ✅ Production-ready Heroku deployment
-- ✅ Database migrations with Flask-Migrate
-
-## Live Demo
-
-[View on Heroku](https://make-an-order-ce858f58b429.herokuapp.com/)
+- Secure Google OAuth authentication
+- RESTful API design for easy integration
+- Real-time SMS notifications
+- Comprehensive error handling
+- Automated testing with Pytest
+- CI/CD pipeline with GitHub Actions
+- Production-ready Heroku deployment
+- Database migrations with Flask-Migrate
 
 ## Testing API
 

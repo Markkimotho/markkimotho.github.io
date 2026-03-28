@@ -192,6 +192,46 @@ ul.task-list input[type="checkbox"] {
 
 // Profile
 
+.about-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+
+  .about-hero-content {
+    flex: 1;
+    min-width: 0;
+
+    .post-header {
+      margin-bottom: 1rem;
+    }
+
+    .about-hero-body {
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .profile {
+    flex-shrink: 0;
+    width: 280px;
+    order: -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero {
+    flex-direction: column;
+
+    .profile {
+      width: 100%;
+      order: 0;
+    }
+  }
+}
+
 .profile {
   width: 100%;
 
@@ -216,7 +256,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media (min-width: 576px) {
-  .profile {
+  .profile:not(.about-hero .profile) {
     width: 30%;
 
     .address {
