@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Voxail - AI-Powered Audio Transcription Platform
 description: Full-stack transcription platform with Google Gemini 2.0 Flash, 15+ specialized AI tasks, and live recording
-img:
+img: assets/img/project_voxail.jpg
 importance: 18
 category: open-source
 ---

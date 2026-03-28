@@ -3,7 +3,7 @@ published: true
 layout: page
 title: ccwc - Custom File Statistics Tool
 description: A command-line utility providing file statistics similar to Unix wc
-img:
+img: assets/img/project_ccwc.jpg
 importance: 10
 category: open-source
 ---

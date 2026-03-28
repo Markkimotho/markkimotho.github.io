@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Make-An-Order - Order Management Service
 description: A RESTful service for managing customers and orders with Google OAuth and SMS notifications
-img:
+img: assets/img/project_makeorder.jpg
 importance: 17
 category: fun
 ---

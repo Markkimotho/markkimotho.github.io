@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Monty - Stack/Queue Interpreter
 description: A simple interpreter for stack and queue operations in C
-img:
+img: assets/img/project_monty.jpg
 importance: 14
 category: open-source
 ---

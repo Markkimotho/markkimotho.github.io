@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Printf - Printf Reimplementation
 description: A custom C implementation of the printf standard library function
-img:
+img: assets/img/project_printf.jpg
 importance: 15
 category: open-source
 ---

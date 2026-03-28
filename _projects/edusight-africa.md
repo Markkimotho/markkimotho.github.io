@@ -3,7 +3,7 @@ published: true
 layout: page
 title: EduSight Africa - AI Student Risk Assessment Platform
 description: Machine learning platform predicting student learning risk across African schools with cultural context and multilingual support
-img:
+img: assets/img/project_edusight.jpg
 importance: 19
 category: open-source
 ---

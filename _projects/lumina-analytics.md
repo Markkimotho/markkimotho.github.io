@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Lumina Analytics Dashboard
 description: High-performance interactive data visualization with real-time updates and AI insights
-img:
+img: assets/img/project_lumina.jpg
 importance: 13
 category: open-source
 ---

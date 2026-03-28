@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Financial Transaction Monitoring & Analytics Tool
 description: Comprehensive financial tracking platform with Django, PostgreSQL, and Redis
-img:
+img: assets/img/project_financial.jpg
 importance: 12
 category: open-source
 ---

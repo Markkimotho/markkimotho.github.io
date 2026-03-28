@@ -3,7 +3,7 @@ published: true
 layout: page
 title: Sketchbook - Self-Hosted Drawing App
 description: A real-time collaborative drawing application with stylus support and pressure sensitivity
-img:
+img: assets/img/project_sketchbook.jpg
 importance: 16
 category: open-source
 ---
