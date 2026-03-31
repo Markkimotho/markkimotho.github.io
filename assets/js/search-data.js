@@ -51,7 +51,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-building-a-local-rag-chatbot-to-actually-understand-how-ai-reads-documents",
+            },{id: "post-separating-users-from-customers-building-a-multi-role-pos-system",
+      
+        title: "Separating Users from Customers: Building a Multi-Role POS System",
+      
+      description: "How a point of sale system separates staff accounts from customer records to keep operations clean and let each role do what it needs",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/separating-users-from-customers/";
+        
+      },
+    },{id: "post-building-a-pos-system-with-flask-order-management-and-real-time-inventory",
+      
+        title: "Building a POS System with Flask: Order Management and Real-Time Inventory",
+      
+      description: "How I built an ordering system that tracks inventory, manages customers, and sends SMS notifications",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/building-pos-system-flask/";
+        
+      },
+    },{id: "post-building-a-local-rag-chatbot-to-actually-understand-how-ai-reads-documents",
       
         title: "Building a Local RAG Chatbot to Actually Understand How AI Reads Documents",
       
@@ -109,9 +131,9 @@ ninja.data = [{
           description: "High-performance interactive data visualization with real-time updates and AI insights",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lumina-analytics/";
-            },},{id: "projects-make-an-order-order-management-service",
-          title: 'Make-An-Order - Order Management Service',
-          description: "A RESTful service for managing customers and orders with Google OAuth and SMS notifications",
+            },},{id: "projects-make-an-order",
+          title: 'Make-An-Order',
+          description: "Point of sale system for managing orders, inventory, and customers",
           section: "Projects",handler: () => {
               window.location.href = "/projects/make-an-order/";
             },},{id: "projects-monty-stack-queue-interpreter",
