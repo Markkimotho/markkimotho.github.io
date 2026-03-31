@@ -1,281 +1,293 @@
 ---
 published: true
 layout: page
-title: Make-An-Order - Order Management Service
-description: A RESTful service for managing customers and orders with Google OAuth and SMS notifications
+title: Make-An-Order
+description: Point of sale system for managing orders, inventory, and customers
 img: assets/img/project_makeorder.jpg
 importance: 17
-category: fun
+category: projects
 ---
 
 ## Overview
 
-**Make-An-Order** is a simple yet functional RESTful service for managing customers and orders implemented in Python. It provides a web interface and comprehensive API endpoints for order management, integrated with Google OAuth 2.0 authentication and Africa's Talking API for SMS notifications.
+Make-An-Order is a point of sale system built with Flask and MySQL. Staff can manage orders and inventory. Customers can browse and place orders. Orders trigger SMS notifications.
 
-## Key Features
+The system handles three types of users: superuser (godmode), admin (run the business), and operators (use the register). Separate from that, there's a customer system for buyers. This separation keeps staff accounts out of customer analytics and order data clean.
 
-### User Authentication
+## Core Features
 
-- **Google OAuth 2.0** - Secure login with Google accounts
-- Session management with Flask
-- Protected routes and endpoints
+**Orders**
 
-### Customer Management
+- Admins place orders on behalf of customers
+- Customers place orders through a web interface with code/email lookup
+- Orders tracked with status: pending, confirmed, completed, cancelled, refunded
+- SMS notification sent to customer phone when order placed
+- Each order gets a receipt
 
-- **Register customers** - Add new customer records
-- **View all customers** - Retrieve complete customer list
-- **View specific customer** - Get detailed customer information
-- **Update customer details** - Modify existing customer records
-- **Delete customers** - Remove customer records
+**Inventory**
 
-### Order Management
+- Add products with name, SKU, category, price, quantity
+- Stock decreases automatically when orders placed
+- Can restock items manually
+- Cancelled or refunded orders restore stock
+- Every stock change is logged (what, why, who, when)
 
-- **Place orders** - Create new orders with customer reference
-- **View all orders** - Retrieve complete order history
-- **View customer orders** - Get orders specific to a customer
-- **Update order details** - Modify existing orders
-- **Delete orders** - Remove order records
+**Customers**
 
-### SMS Notifications
+- Admin creates customer records with name, phone, unique code
+- Customers lookup by code or email to place orders
+- Complete order history per customer
+- Phone number used for SMS notifications
 
-- **Automatic SMS alerts** - Customers receive SMS when orders are placed
-- **Africa's Talking API integration** - Real-time notification delivery
-- Customizable sender ID
+**Staff Management**
 
-### Database Integration
+- Google OAuth login for staff
+- Three roles: superuser, admin, operator
+- Superuser: create/delete users, manage roles
+- Admin: manage customers, inventory, orders, see analytics
+- Operator: place orders, view history
 
-- **MySQL database** - Persistent data storage
-- **JawsDB on Heroku** - Cloud database for production
-- **SQLAlchemy ORM** - Object-relational mapping
+**Reports & Analytics**
 
-## Technology Stack
+- Revenue over time
+- Top selling products
+- Payment method breakdown
+- Order status distribution
+- Filter by date range
+- Download reports as CSV
 
-| Component             | Technology               |
-| --------------------- | ------------------------ |
-| **Backend Framework** | Flask                    |
-| **ORM**               | SQLAlchemy               |
-| **Database**          | MySQL (JawsDB on Heroku) |
-| **Authentication**    | Google OAuth 2.0         |
-| **SMS Gateway**       | Africa's Talking API     |
-| **Testing**           | Pytest                   |
-| **CI/CD**             | GitHub Actions           |
-| **Deployment**        | Heroku                   |
-| **Frontend**          | HTML, CSS                |
+## Technology
+
+| Component | Tech                            |
+| --------- | ------------------------------- |
+| Backend   | Flask 3.0                       |
+| Database  | MySQL 5.7+                      |
+| ORM       | SQLAlchemy 2.0                  |
+| Auth      | Google OAuth 2.0                |
+| SMS       | Africa's Talking API            |
+| Frontend  | Bootstrap 5.3, Jinja2, Chart.js |
+| Hosting   | Render, Heroku                  |
+
+## Setup
+
+**Prerequisites**
+
+- Python 3.8+
+- MySQL running locally or on a server
+- Google OAuth credentials
+- Africa's Talking account (optional)
+
+**Install**
+
+```bash
+git clone https://github.com/Markkimotho/make-an-order.git
+cd make-an-order
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Configure .env**
+
+```
+APP_URL=http://localhost:5001
+APP_SECRET_KEY=your-secret-key
+
+GOOGLE_CLIENT_ID=your-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-secret
+
+MYSQL_HOST=127.0.0.1
+MYSQL_USER=root
+MYSQL_PASSWORD=your-password
+MYSQL_DB=customers_orders
+
+AT_USERNAME=sandbox
+AT_API_KEY=your-key
+AT_SENDER_ID=your-sender-id
+```
+
+**Important:** Add `http://localhost:5001/auth/authorize` to Google Console OAuth Authorized redirect URIs.
+
+**Run**
+
+```bash
+python3 app.py
+```
+
+Visit `http://localhost:5001`
 
 ## API Endpoints
 
-### Authentication
+### Auth (`/auth`)
 
-| Method | Endpoint  | Description                 |
-| ------ | --------- | --------------------------- |
-| GET    | `/login`  | Redirects to Google login   |
-| GET    | `/logout` | Logs out authenticated user |
+- `GET /auth/login` — Start Google OAuth
+- `GET /auth/authorize` — OAuth callback
+- `POST /auth/login/local` — Email/password
+- `POST /auth/customer-login` — Customer lookup
+- `GET /auth/logout` — End session
 
-### Customers
+### Inventory (`/inventory`)
 
-| Method | Endpoint                           | Description            |
-| ------ | ---------------------------------- | ---------------------- |
-| POST   | `/customers/register`              | Create new customer    |
-| GET    | `/customers/view_customers`        | Retrieve all customers |
-| GET    | `/customers/view_customers/<id>`   | Get specific customer  |
-| PUT    | `/customers/update_customers/<id>` | Update customer        |
-| DELETE | `/customers/delete_customers/<id>` | Delete customer        |
+- `GET /api/inventory` — Get all products
+- `POST /api/inventory` — Create product (admin+)
+- `PUT /api/inventory/<id>` — Edit product (admin+)
+- `DELETE /api/inventory/<id>` — Delete product (superuser+)
+- `GET /api/inventory/search?q=term` — Search
+- `POST /api/inventory/restock` — Add stock (admin+)
+- `GET /api/inventory/audit-trail` — Stock history
 
-### Orders
+### Orders (`/orders`)
 
-| Method | Endpoint                     | Description           |
-| ------ | ---------------------------- | --------------------- |
-| POST   | `/orders/place_order`        | Create new order      |
-| GET    | `/orders/view_orders`        | Retrieve all orders   |
-| GET    | `/orders/view_orders/<id>`   | Get customer's orders |
-| PUT    | `/orders/update_orders/<id>` | Update order          |
-| DELETE | `/orders/delete_orders/<id>` | Delete order          |
+- `POST /api/orders/place_order` — Create order
+- `GET /api/orders/view_orders` — Get all (admin+)
+- `GET /api/orders/<id>` — Get order
+- `PUT /api/orders/<id>` — Update status (admin+)
+- `DELETE /api/orders/<id>` — Delete (admin+)
+- `GET /api/orders/<id>/receipt` — Generate receipt
+- `GET /api/orders/export/csv` — Download CSV
 
-## Getting Started
+### Customers (`/customers`)
 
-### Prerequisites
+- `POST /api/customers/register` — Create (admin+)
+- `GET /api/customers` — Get all (admin+)
+- `GET /api/customers/<id>` — Get customer
+- `PUT /api/customers/<id>` — Edit (admin+)
+- `DELETE /api/customers/<id>` — Delete (superuser+)
 
-- Python 3.8 or higher
-- MySQL database
-- Google OAuth 2.0 credentials
-- Africa's Talking account
+### Users (`/users`)
 
-### Installation
+- `GET /api/users` — Get all (superuser+)
+- `PUT /api/users/<id>/role` — Change role (superuser+)
+- `PUT /api/users/<id>/customer` — Link to customer (superuser+)
+- `DELETE /api/users/<id>` — Delete (superuser+)
 
-```bash
-# Clone the repository
-git clone https://github.com/Markkimotho/make-an-order.git
-cd make-an-order
+### Reports (`/reports`)
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+- `GET /api/reports/revenue` — Revenue by date
+- `GET /api/reports/top-products` — Top sellers
+- `GET /api/reports/payment-breakdown` — By payment type
+- `GET /api/reports/order-status` — Status distribution
 
-# Install dependencies
-pip install -r requirements.txt
+## Database Schema
 
-# Create .env file with configuration
-cp .env.example .env
-# Edit .env with your credentials
-```
+**users** — Staff accounts
 
-### Environment Variables
+- id, email, name, picture_url, role, customer_id, created_at
 
-```env
-# Google OAuth
-GOOGLE_CLIENT_ID=your_client_id
-GOOGLE_CLIENT_SECRET=your_client_secret
+**customers** — Buyer records
 
-# Flask
-APP_SECRET_KEY=your_secret_key
+- id, code, name, phone_number, email, created_at
 
-# MySQL Database
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=password
-MYSQL_DB=customers_orders
+**inventory** — Products
 
-# Africa's Talking
-AT_USERNAME=your_username
-AT_API_KEY=your_api_key
-AT_SENDER_ID=your_sender_id
-```
+- id, name, sku, category, description, price, quantity, reorder_level
 
-### Run Locally
+**orders** — Transactions
 
-```bash
-# Initialize database
-flask db upgrade
+- id, customer_id, total_amount, status, payment_method, payment_reference, created_at
 
-# Start the application
-python app.py
-```
+**order_items** — Line items
 
-Access the app at `http://localhost:5001`
+- id, order_id, inventory_id, quantity, unit_price, subtotal
 
-## Testing
+**stock_movements** — Audit trail
 
-The project includes comprehensive test coverage using Pytest:
+- id, inventory_id, movement_type, quantity_changed, reason, created_by, created_at
 
-```bash
-# Run all tests
-pytest tests/
+## Deployments
 
-# Run specific test file
-pytest tests/test_customers.py
-```
+### Render
 
-### Test Coverage
+1. Push to GitHub
+2. Create Web Service from repo
+3. Set environment variables (same as .env)
+4. Add database URL to environment
+5. Deploy
 
-- **test_auth.py** - Authentication endpoints
-- **test_customers.py** - Customer CRUD operations
-- **test_orders.py** - Order CRUD operations
-- **test_models.py** - Database models
+Add to Google Console OAuth: `https://your-render-url.com/auth/authorize`
 
-## Deployment
+### Heroku
 
-### Deploy to Heroku
+1. `heroku addons:create jawsdb:kitefin`
+2. `git push heroku main`
+3. `heroku config:set APP_URL=https://your-app.herokuapp.com ...`
 
-```bash
-# Create Heroku app
-heroku create your-app-name
-
-# Add JawsDB MySQL add-on
-heroku addons:create jawsdb:kitefin
-
-# Set environment variables
-heroku config:set GOOGLE_CLIENT_ID=your_id
-heroku config:set GOOGLE_CLIENT_SECRET=your_secret
-# ... set other variables
-
-# Deploy
-git push heroku main
-```
-
-### CI/CD with GitHub Actions
-
-Automated testing and deployment on every push to main branch. The workflow:
-
-1. Checks out code
-2. Sets up Python environment
-3. Installs dependencies
-4. Runs test suite
-5. Deploys to Heroku on success
-
-**Setup:**
-
-- Add GitHub secrets for all environment variables
-- Workflow file: `.github/workflows/deploy.yml`
+Add to Google Console OAuth: `https://your-app.herokuapp.com/auth/authorize`
 
 ## Project Structure
 
 ```
 make-an-order/
 ├── api/
-│   ├── customers.py       # Customer endpoints
-│   └── orders.py          # Order endpoints
+│   ├── customers.py
+│   ├── inventory.py
+│   ├── orders.py
+│   ├── reports.py
+│   └── users.py
 ├── auth/
-│   ├── auth_routes.py     # Login/logout routes
-│   └── auth_middleware.py # Auth checks
+│   └── auth_routes.py
 ├── services/
-│   ├── database_service.py  # DB operations
-│   └── sms_service.py       # SMS via Africa's Talking
-├── tests/
-│   ├── test_auth.py
-│   ├── test_customers.py
-│   ├── test_orders.py
-│   └── test_models.py
-├── models.py              # Customer, Order models
-├── config.py              # Configuration
-├── app.py                 # Main entry point
-└── requirements.txt       # Dependencies
+│   ├── seed_service.py
+│   └── sms_service.py
+├── templates/
+│   ├── landing.html
+│   ├── role_select.html
+│   ├── index.html
+│   ├── base.html
+│   ├── inventory.html
+│   ├── customers.html
+│   ├── orders.html
+│   ├── reports.html
+│   └── receipts.html
+├── static/
+│   └── style.css
+├── models.py
+├── config.py
+├── app.py
+└── requirements.txt
 ```
 
-## Example Usage
+## Architecture Notes
 
-### Create a Customer
+**Users vs Customers**
+
+Staff login with Google OAuth and get a User account with a role. Customers are separate records with a phone number and unique code. This keeps staff out of customer lists and prevents confusion about who actually bought something.
+
+**Role-Based UI**
+
+The inventory page (checkout interface) looks different for admins, operators, and customers. Admins see a customer selector dropdown. Operators see just a place order button. Everything is validated at the API level too.
+
+**Stock Audit Trail**
+
+Every inventory change gets logged with timestamp, operator ID, quantity change, and reason. This means you can trace any discrepancy back to who changed it and why.
+
+**OAuth Configuration**
+
+The app takes APP_URL as an environment variable. It builds the redirect URI from that and registers it with Google. This prevents redirect_uri_mismatch errors when deploying to different environments.
+
+**SMS Handling**
+
+Africa's Talking integration is wrapped in try/catch. If SMS fails, the order still goes through. SMS is optional.
+
+## Testing
 
 ```bash
-curl -X POST http://localhost:5001/customers/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Mike",
-    "phone_number": "+254748995315",
-    "code": "CUST001"
-  }'
+pytest tests/
+pytest tests/test_orders.py -v
+pytest --cov=api tests/
 ```
 
-### Place an Order
+## Limitations
 
-```bash
-curl -X POST http://localhost:5001/orders/place_order \
-  -H "Content-Type: application/json" \
-  -d '{
-    "customer_id": 1,
-    "item": "Laptop",
-    "amount": 1200.50
-  }'
-```
+- SMS only via Africa's Talking
+- No built-in payment processing (external reference supported)
+- No inventory forecasting yet
+- No multi-location support yet
 
-## Features Highlights
+## Contributing
 
-- Secure Google OAuth authentication
-- RESTful API design for easy integration
-- Real-time SMS notifications
-- Comprehensive error handling
-- Automated testing with Pytest
-- CI/CD pipeline with GitHub Actions
-- Production-ready Heroku deployment
-- Database migrations with Flask-Migrate
-
-## Testing API
-
-[View Postman Collection](https://www.postman.com/) - Import the collection to test all endpoints
-
-## Repository
-
-[View on GitHub](https://github.com/Markkimotho/make-an-order)
+Issues and PRs welcome on [GitHub](https://github.com/Markkimotho/make-an-order).
 
 ---
 
-This project demonstrates full-stack development with authentication, database integration, external API usage, automated testing, and CI/CD practices.
+**Updated:** March 31, 2026
