@@ -8,6 +8,7 @@ img: assets/img/project_makeorder.jpg
 importance: 17
 category: work
 ---
+
 ## Overview
 
 Make-An-Order is a point of sale system built with Flask and MySQL. Staff can manage orders and inventory. Customers can browse and place orders. Orders trigger SMS notifications.
