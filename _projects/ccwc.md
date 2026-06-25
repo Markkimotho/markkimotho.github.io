@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: ccwc - Custom File Statistics Tool
+redirect: https://markkimotho.github.io/ccwc/
 description: A command-line utility providing file statistics similar to Unix wc
 img: assets/img/project_ccwc.jpg
 importance: 10

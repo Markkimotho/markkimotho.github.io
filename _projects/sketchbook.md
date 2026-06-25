@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: Sketchbook - Self-Hosted Drawing App
+redirect: https://markkimotho.github.io/digital-art-collaboration/
 description: A real-time collaborative drawing application with stylus support and pressure sensitivity
 img: assets/img/project_sketchbook.jpg
 importance: 16

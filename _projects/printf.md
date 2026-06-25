@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: Printf - Printf Reimplementation
+redirect: https://markkimotho.github.io/printf/
 description: A custom C implementation of the printf standard library function
 img: assets/img/project_printf.jpg
 importance: 15

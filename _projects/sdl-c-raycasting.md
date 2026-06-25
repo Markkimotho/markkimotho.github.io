@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: SDL C Raycasting Engine
+redirect: https://markkimotho.github.io/sdl-c-raycasting/
 description: A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2
 img: assets/img/Peek 2.gif
 importance: 11

@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: Lumina Analytics Dashboard
+redirect: https://markkimotho.github.io/lumina-analytics-project/
 description: High-performance interactive data visualization with real-time updates and AI insights
 img: assets/img/project_lumina.jpg
 importance: 13

@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: Make-An-Order
+redirect: https://markkimotho.github.io/make-an-order/
 description: Point of sale system for managing orders, inventory, and customers
 img: assets/img/project_makeorder.jpg
 importance: 17

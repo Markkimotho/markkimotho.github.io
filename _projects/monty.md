@@ -2,6 +2,7 @@
 published: true
 layout: page
 title: Monty - Stack/Queue Interpreter
+redirect: https://markkimotho.github.io/monty/
 description: A simple interpreter for stack and queue operations in C
 img: assets/img/project_monty.jpg
 importance: 14
