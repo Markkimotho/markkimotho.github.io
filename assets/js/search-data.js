@@ -111,6 +111,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_4/";
+            },},{id: "projects-automation-scripts-amp-utils",
+          title: 'Automation Scripts &amp;amp; Utils',
+          description: "Reusable bash &amp; Python automation for the everyday tasks developers repeat",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/automation-scripts-utils/";
             },},{id: "projects-ccwc-custom-file-statistics-tool",
           title: 'ccwc - Custom File Statistics Tool',
           description: "A command-line utility providing file statistics similar to Unix wc",
