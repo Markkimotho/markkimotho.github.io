@@ -17,9 +17,14 @@ layout: default
           <p class="desc">{{ page.subtitle }}</p>
         </header>
         <div class="about-hero-body">{{ content }}</div>
+        {% unless page.profile.image %}
+          {% if page.profile.more_info %}
+            <div class="more-info more-info-inline">{{ page.profile.more_info }}</div>
+          {% endif %}
+        {% endunless %}
       </div>
-      <div class="profile">
-        {% if page.profile.image %}
+      {% if page.profile.image %}
+        <div class="profile">
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
@@ -32,11 +37,11 @@ layout: default
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   {% else %}
     <header class="post-header">
