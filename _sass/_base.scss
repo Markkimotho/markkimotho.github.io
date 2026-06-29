@@ -576,6 +576,30 @@ footer .footer-contact {
   }
 }
 
+// Mobile: a fixed footer with the contact row + copyright is too tall and would
+// cover page content, so let it flow at the end of the page instead, and stack
+// the note above the icons.
+@media (max-width: 575.98px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  footer.fixed-bottom {
+    position: static !important;
+  }
+
+  footer .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    .footer-contact-note {
+      margin-right: 0;
+    }
+  }
+}
+
 // CV
 
 .cv {
