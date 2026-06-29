@@ -11,14 +11,6 @@ subtitle: |
 profile:
   align: right
   image_circular: false # Set to `true` if you want a circular profile picture
-  more_info: >
-    <p>Nairobi, KE 🌍</p>
-    <br>
-    <a href='https://github.com/Markkimotho'>Github</a>
-    <br>
-    <a href='mailto:kimothomark93@gmail.com'>Email Me</a>
-    <br>
-    <p>Open to collaborations 🤝</p>
 
 selected_papers: false # Set to `true` if you have academic papers to showcase
 social: true # Keep this to display social icons at the bottom of the page
