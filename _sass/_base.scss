@@ -549,6 +549,33 @@ footer.sticky-bottom {
   }
 }
 
+// Contact note + small social icons inside the footer
+footer .footer-contact {
+  margin-bottom: 4px;
+
+  .footer-contact-note {
+    margin-right: 0.5rem;
+  }
+
+  .footer-social {
+    a {
+      margin: 0 0.3rem;
+    }
+
+    i {
+      font-size: 1.1rem;
+      vertical-align: middle;
+    }
+
+    img,
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      vertical-align: middle;
+    }
+  }
+}
+
 // CV
 
 .cv {

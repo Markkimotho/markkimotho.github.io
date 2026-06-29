@@ -1,6 +1,12 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
+      {% if site.contact_note %}
+        <div class="footer-contact">
+          <span class="footer-contact-note">{{ site.contact_note }}</span>
+          <span class="footer-social">{% include social.liquid %}</span>
+        </div>
+      {% endif %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}
@@ -20,6 +26,12 @@
     {% endif %}
 
     <div class="container">
+      {% if site.contact_note %}
+        <div class="footer-contact">
+          <span class="footer-contact-note">{{ site.contact_note }}</span>
+          <span class="footer-social">{% include social.liquid %}</span>
+        </div>
+      {% endif %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}

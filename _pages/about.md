@@ -13,7 +13,7 @@ profile:
   image_circular: false # Set to `true` if you want a circular profile picture
 
 selected_papers: false # Set to `true` if you have academic papers to showcase
-social: true # Keep this to display social icons at the bottom of the page
+social: false # Social icons now live in the site footer
 
 announcements:
   enabled: true # Keep this to show news items
