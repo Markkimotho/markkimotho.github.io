@@ -6,7 +6,7 @@ description: A growing collection of my projects made for work and fun alike.
 nav: true
 nav_order: 3
 display_categories: [work, open-source, fun]
-horizontal: false
+horizontal: true
 ---
 
 Always building new projects, more on my [github](https://www.github.com/Markkimotho)
@@ -25,7 +25,7 @@ Always building new projects, more on my [github](https://www.github.com/Markkim
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="row row-cols-1">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
@@ -51,7 +51,7 @@ Always building new projects, more on my [github](https://www.github.com/Markkim
 {% if page.horizontal %}
 
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="row row-cols-1">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
