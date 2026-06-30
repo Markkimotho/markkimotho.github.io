@@ -768,9 +768,11 @@ footer .footer-contact {
     }
   }
 
-  // List view: small square-ish thumbnail beside the text
-  .project-list-thumb {
-    height: 70px;
+  // List view: small square thumbnail beside the text.
+  // Needs `.card img` in the selector to beat `.projects .card img { width: 100% }`.
+  .card img.project-list-thumb {
+    width: 56px;
+    height: 56px;
     object-fit: cover;
     border-radius: 6px;
   }
