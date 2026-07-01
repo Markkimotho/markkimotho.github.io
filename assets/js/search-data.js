@@ -118,7 +118,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_4/";
-            },},{id: "projects-automation-scripts-amp-utils",
+            },},{id: "news-started-a-new-role-as-a-machine-learning-engineer-at-safaricom-building-and-serving-models-that-reach-over-20m-customers-across-kenya-rocket",
+          title: 'Started a new role as a Machine Learning Engineer at Safaricom, building and...',
+          description: "",
+          section: "News",},{id: "projects-automation-scripts-amp-utils",
           title: 'Automation Scripts &amp;amp; Utils',
           description: "Reusable bash &amp; Python automation for the everyday tasks developers repeat",
           section: "Projects",handler: () => {
