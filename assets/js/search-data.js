@@ -118,7 +118,7 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_4/";
-            },},{id: "news-started-a-new-role-as-a-machine-learning-engineer-at-safaricom-building-and-serving-models-that-reach-over-20m-customers-across-kenya-rocket",
+            },},{id: "news-started-a-new-role-as-a-machine-learning-engineer-at-safaricom-building-and-serving-models-that-reach-over-20m-customers-across-kenya",
           title: 'Started a new role as a Machine Learning Engineer at Safaricom, building and...',
           description: "",
           section: "News",},{id: "projects-automation-scripts-amp-utils",
