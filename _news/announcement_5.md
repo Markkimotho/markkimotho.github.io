@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a new role as a Machine Learning Engineer at [Safaricom](https://www.safaricom.co.ke/), building and serving models that reach over 20M customers across Kenya. :rocket:
+Started a new role as a Machine Learning Engineer at [Safaricom](https://www.safaricom.co.ke/), building and serving models that reach over 20M customers across Kenya. 🚀
