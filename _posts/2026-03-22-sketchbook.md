@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sketchbook: My Self-Hosted Drawing App"
+title: "SketchTogether: My Self-Hosted Drawing App"
 date: 2026-03-22 10:00:00
 description: A self-hosted, real-time collaborative drawing app built for artists who miss the feel of old paper.
 tags: projects art collaboration open-source
@@ -15,7 +15,7 @@ I was not very satisfied with the tools I came across though. So I decided to ma
 
 It has taken a good while to get here. I have been working on it steadily, refining how the tools feel, getting the real-time collaboration solid, and making sure it holds up across different devices.
 
-Sketchbook is a self-hosted, real-time collaborative drawing app. You run it yourself, you own the data, and you can share a link with anyone to draw together on the same canvas.
+SketchTogether is a self-hosted, real-time collaborative drawing app. You run it yourself, you own the data, and you can share a link with anyone to draw together on the same canvas.
 
 Here is what it supports right now: pencil, ink pen, brush, calligraphy, eraser, line, shapes, and a text tool. It has stylus and Apple Pencil support with real pressure sensitivity, and palm rejection so your hand resting on the iPad does not leave marks. There are multiple canvas surfaces — aged paper, kraft, watercolour, newsprint, old parchment, blackboard — plus ruled lines, grid, and dot grid overlays. It has layers, version history, and a chat panel for collaborating while drawing. It works on iPad, Android tablets, laptops, MacBooks, and phones.
 
@@ -23,11 +23,11 @@ The whole thing runs on Next.js with a Socket.io server for real-time sync and S
 
 ## Getting started
 
-Everything you need is on [GitHub](https://github.com/Markkimotho/digital-art-collaboration). Clone the repo, install dependencies, and start drawing:
+Everything you need is on [GitHub](https://github.com/Markkimotho/SketchTogether). Clone the repo, install dependencies, and start drawing:
 
 ```bash
-git clone https://github.com/Markkimotho/digital-art-collaboration.git
-cd digital-art-collaboration
+git clone https://github.com/Markkimotho/SketchTogether.git
+cd SketchTogether
 npm install
 npm run dev
 ```
@@ -40,7 +40,7 @@ If you do not want to deal with Node.js installs, Docker is the cleaner option. 
 
 ```bash
 # build the image
-docker build -t sketchbook:latest .
+docker build -t sketchtogether:latest .
 
 # run it
 docker compose up
@@ -63,12 +63,12 @@ ngrok hands you a public HTTPS link immediately, something like `https://abc123.
 For a permanent link you need a server. Spin up a cheap VPS — Hetzner, DigitalOcean, Linode, any of them work — install Docker, clone the repo, and run `docker compose up -d`. Point a domain at the server IP and put [Caddy](https://caddyserver.com) in front of it for automatic HTTPS:
 
 ```
-sketchbook.yourdomain.com {
+sketchtogether.yourdomain.com {
     reverse_proxy localhost:3000
 }
 ```
 
-Your public link becomes `https://sketchbook.yourdomain.com`. Anyone can open it, create a room, and share the room URL with collaborators.
+Your public link becomes `https://sketchtogether.yourdomain.com`. Anyone can open it, create a room, and share the room URL with collaborators.
 
 For a more production setup there are Kubernetes manifests in the repo. They cover the deployment, a persistent volume for the database, a ClusterIP service, nginx ingress with WebSocket headers, and cert-manager for automatic TLS certificates from Let's Encrypt. You update the domain in the ingress file, push your image to a registry, apply the manifests with `kubectl apply -f k8s/`, and the cluster handles the rest.
 
@@ -84,4 +84,4 @@ Canvas is where you change the surface and grid. You can switch between aged pap
 
 The crosshair button at the bottom right of the canvas resets your view and fits everything you have drawn back into the screen. If you pan too far away and lose your work, that button brings you back. To pan around the canvas use the hand tool or two fingers on touch. To zoom, pinch on touch or scroll on desktop.
 
-If you have ideas or want to contribute, open a pull request. It is completely free and open. If you need help getting a hosted version running, reach out through [GitHub](https://github.com/Markkimotho/digital-art-collaboration).
+If you have ideas or want to contribute, open a pull request. It is completely free and open. If you need help getting a hosted version running, reach out through [GitHub](https://github.com/Markkimotho/SketchTogether).

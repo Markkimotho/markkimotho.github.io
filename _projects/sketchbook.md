@@ -1,8 +1,8 @@
 ---
 published: true
 layout: page
-title: Sketchbook - Self-Hosted Drawing App
-redirect: https://markkimotho.github.io/digital-art-collaboration/
+title: SketchTogether - Self-Hosted Drawing App
+redirect: https://github.com/Markkimotho/SketchTogether
 description: A real-time collaborative drawing application with stylus support and pressure sensitivity
 img: assets/img/project_sketchbook.jpg
 importance: 16
@@ -11,7 +11,7 @@ category: open-source
 
 ## Overview
 
-**Sketchbook** is a self-hosted, real-time collaborative drawing app inspired by the tactile feel of traditional paper. You run it yourself, you own the data, and you can share a link with anyone to draw together on the same canvas.
+**SketchTogether** is a self-hosted, real-time collaborative drawing app inspired by the tactile feel of traditional paper. You run it yourself, you own the data, and you can share a link with anyone to draw together on the same canvas.
 
 The project began from a personal vision to create digital art tools that capture the look and feel of old paper — rustic, textured, with that unbeatable roughness you can almost feel through the screen.
 
@@ -78,8 +78,8 @@ Multiple paper textures to choose from:
 Clone and run locally:
 
 ```bash
-git clone https://github.com/Markkimotho/digital-art-collaboration.git
-cd digital-art-collaboration
+git clone https://github.com/Markkimotho/SketchTogether.git
+cd SketchTogether
 npm install
 npm run dev
 ```
@@ -92,7 +92,7 @@ For a cleaner setup with everything bundled:
 
 ```bash
 # Build the image
-docker build -t sketchbook:latest .
+docker build -t sketchtogether:latest .
 
 # Run with Docker Compose
 docker compose up
@@ -123,12 +123,12 @@ For permanent public access:
 5. Set up Caddy for automatic HTTPS:
 
 ```caddy
-sketchbook.yourdomain.com {
+sketchtogether.yourdomain.com {
     reverse_proxy localhost:3000
 }
 ```
 
-Access your drawing app at `https://sketchbook.yourdomain.com`
+Access your drawing app at `https://sketchtogether.yourdomain.com`
 
 ### Kubernetes Production Deployment
 
@@ -194,7 +194,7 @@ For setup issues, feature requests, or to share feedback, reach out through GitH
 
 ## Repository
 
-[View on GitHub](https://github.com/Markkimotho/digital-art-collaboration)
+[View on GitHub](https://github.com/Markkimotho/SketchTogether)
 
 ---
 
