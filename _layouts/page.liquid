@@ -8,7 +8,15 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
+<div class="post {% if page.collection == 'projects' %}portfolio-project-detail{% elsif page.portfolio_section %}portfolio-{{ page.portfolio_section }}{% endif %}">
+  {% if page.collection == 'projects' %}
+    <nav class="project-detail-nav" aria-label="Project navigation">
+      <a href="{{ '/projects/' | relative_url }}">← All projects</a>
+      {% if page.redirect -%}
+        <a href="{{ page.redirect }}">Project site or source ↗</a>
+      {%- endif %}
+    </nav>
+  {% endif %}
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>

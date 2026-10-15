@@ -1,0 +1,342 @@
+// Project archive: a list of work, not a uniform card grid.
+.portfolio-projects {
+  > article > p:first-child {
+    color: var(--global-text-color-light);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    max-width: 44rem;
+  }
+
+  .projects .container {
+    padding: 0;
+  }
+
+  .projects .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projects .col {
+    padding: 0;
+  }
+}
+
+.portfolio-repositories {
+  > article > p:first-child {
+    color: var(--global-text-color-light);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    max-width: 44rem;
+  }
+}
+
+.github-overview,
+.github-repository-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .repo {
+    flex: 1 1 20rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.github-overview .repo {
+  max-width: 36rem;
+}
+
+.github-repository-grid .repo {
+  max-width: calc(50% - 0.25rem);
+}
+
+.project-group-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--global-divider-color);
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 0.75rem;
+  padding-bottom: 0.55rem;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 650;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  span {
+    color: var(--global-text-color-light);
+    font-size: 0.78rem;
+  }
+}
+
+.projects a.project-entry {
+  align-items: center;
+  border-bottom: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+  display: flex;
+  gap: 1.35rem;
+  min-height: 7rem;
+  padding: 0.65rem 0;
+  transition: padding 160ms ease;
+
+  &:hover,
+  &:focus-visible {
+    padding-left: 0.4rem;
+    text-decoration: none;
+
+    h3,
+    .project-entry-arrow {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.project-entry-image {
+  flex: 0 0 7.5rem;
+
+  img.project-list-thumb {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.3rem;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.project-entry-content {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    font-size: 1.08rem;
+    font-weight: 650;
+    line-height: 1.3;
+    margin: 0.15rem 0 0.3rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 0.87rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+}
+
+.project-entry-kind {
+  color: var(--global-theme-color);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.project-entry-arrow {
+  align-self: center;
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+
+// Project pages keep the content easy to scan without altering their claims.
+.project-detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.84rem;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 0 0 2.2rem;
+
+  a {
+    color: var(--global-theme-color);
+  }
+}
+
+.portfolio-project-detail {
+  .post-header {
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  article {
+    line-height: 1.7;
+
+    > h2 {
+      border-top: 1px solid var(--global-divider-color);
+      font-size: 1.45rem;
+      margin-top: 3rem;
+      padding-top: 1.4rem;
+    }
+
+    > h3 {
+      font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+
+    p,
+    li {
+      max-width: 48rem;
+    }
+  }
+}
+
+// Writing and biography use the same quiet hierarchy as the project archive.
+.portfolio-writing {
+  .header-bar {
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 2rem;
+    padding: 0 0 1.5rem;
+    text-align: left;
+
+    h2 {
+      color: var(--global-text-color);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 42rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .post-list li {
+    border-bottom: 1px solid var(--global-divider-color);
+    padding: 1.1rem 0 1.4rem;
+  }
+
+  .post-list h3 {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+}
+
+.portfolio-about {
+  article {
+    line-height: 1.75;
+
+    h3 {
+      border-top: 1px solid var(--global-divider-color);
+      font-size: 1.2rem;
+      margin-top: 2.6rem;
+      padding-top: 1.1rem;
+    }
+
+    p {
+      max-width: 46rem;
+    }
+  }
+}
+
+.portfolio-people {
+  .post-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .people-intro {
+    align-items: start;
+    display: grid;
+    gap: clamp(2rem, 6vw, 5rem);
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 36%);
+  }
+
+  .people-intro-copy {
+    max-width: 39rem;
+
+    h2 {
+      font-size: clamp(1.65rem, 3.4vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0 0 1.6rem;
+    }
+
+    > p:not(.people-label) {
+      line-height: 1.75;
+      margin-bottom: 1.15rem;
+    }
+  }
+
+  .people-label {
+    color: var(--global-text-color-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  .people-portrait {
+    margin: 0;
+
+    img {
+      aspect-ratio: 4 / 5;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+  }
+
+  .people-links {
+    border-top: 1px solid var(--global-divider-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    a {
+      font-size: 0.87rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+
+  .people-story {
+    border-top: 1px solid var(--global-divider-color);
+    margin-top: clamp(3rem, 7vw, 5rem);
+    max-width: 42rem;
+    padding-top: 1.2rem;
+
+    > p:not(.people-label) {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+
+    > a {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-people .people-intro {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-people .people-portrait {
+    max-width: 24rem;
+  }
+
+  .github-repository-grid .repo {
+    max-width: 100%;
+  }
+
+  .projects a.project-entry {
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .project-entry-image {
+    flex-basis: 5.5rem;
+  }
+
+  .project-entry-arrow {
+    font-size: 1rem;
+  }
+}

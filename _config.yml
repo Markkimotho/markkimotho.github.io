@@ -65,8 +65,8 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
@@ -88,8 +88,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Mark's Musings # A catchy name for your blog
-blog_description: Thoughts on technology, creativity, and the future. # A short description of your blog's focus
+blog_name:
+blog_description: My thoughts on technology, creativity, and the future.
 permalink: /blog/:year/:title/ # Keep this structure for clean URLs
 lsi: false # Set to `true` if you want to generate related posts (requires additional setup)
 
@@ -127,8 +127,8 @@ giscus:
 external_sources:
   - name: medium.com
     rss_url: https://medium.com/@ktinega/feed # Replace with your Medium RSS feed
-  # - name: substack.com
-  #   rss_url: https://ktinega.substack.com/feed  # Replace with your Substack RSS feed
+  - name: substack.com
+    rss_url: https://ktinega.substack.com/feed
 
 # -----------------------------------------------------------------------------
 # Newsletter

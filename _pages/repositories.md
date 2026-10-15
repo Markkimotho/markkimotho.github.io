@@ -1,47 +1,34 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
-description: Here, you will find my personal repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade.
+title: Repositories
+description: Code, experiments, and work in progress.
 nav: true
 nav_order: 4
+portfolio_section: repositories
 ---
 
-{% if site.data.repositories.github_users %}
+The [Projects]({{ '/projects/' | relative_url }}) page holds individual project notes. These cards show details directly from GitHub for the repositories I've chosen to show here. Browse [all repositories](https://github.com/Markkimotho?tab=repositories) for the rest.
 
-## GitHub users
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<section class="repository-group" aria-labelledby="github-overview">
+  <div class="project-group-heading">
+    <h2 id="github-overview">GitHub activity</h2>
+  </div>
+  <div class="github-overview">
   {% for user in site.data.repositories.github_users %}
     {% include repository/repo_user.liquid username=user %}
   {% endfor %}
-</div>
-
----
-
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
-
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
   </div>
+</section>
 
----
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<section class="repository-group" aria-labelledby="selected-repositories">
+  <div class="project-group-heading">
+    <h2 id="selected-repositories">Selected repositories</h2>
+    <span>{{ site.data.repositories.github_repos.size }} repositories</span>
+  </div>
+  <div class="github-repository-grid">
   {% for repo in site.data.repositories.github_repos %}
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}
-</div>
-{% endif %}
+  </div>
+</section>

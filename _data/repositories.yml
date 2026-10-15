@@ -3,14 +3,14 @@ github_users:
 
 repo_description_lines_max: 2
 
+# Public repositories selected for the GitHub-backed cards.
 github_repos:
-  - Markkimotho/make-an-order
-  - Markkimotho/json-parser
-  - Markkimotho/ccwc
+  - Markkimotho/automation-scripts-utils
+  - Markkimotho/edusight-africa
+  - Markkimotho/SketchTogether
+  - Markkimotho/PreparationPalAI
+  - Markkimotho/etch_a_sketch
+  - Markkimotho/lumina-analytics-project
+  - Markkimotho/Financial-Transaction-Monitoring-Analytics-Tool
+  - Markkimotho/backend-systems-lab
   - Markkimotho/sdl-c-raycasting
-  - mermaid-js/mermaid
-  - srbhr/Resume-Matcher
-  - Git21221/JS-beginner-projects
-  - alex/what-happens-when
-  - luong-komorebi/Awesome-Linux-Software
-  - jwasham/coding-interview-university

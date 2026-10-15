@@ -252,6 +252,157 @@ ul.task-list input[type="checkbox"] {
   margin-top: 1.25rem;
 }
 
+// Portfolio homepage
+
+.portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 3.5rem;
+}
+
+.portfolio-button {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.65rem 1rem;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+.portfolio-button-primary {
+  background: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+
+  &:hover {
+    color: var(--global-bg-color);
+  }
+}
+
+.featured-work {
+  margin: 3rem 0 3.5rem;
+}
+
+.featured-work-heading {
+  margin-bottom: 1.25rem;
+  max-width: 42rem;
+
+  .eyebrow {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.01em;
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    letter-spacing: -0.025em;
+    margin: 0.15rem 0 0.5rem;
+  }
+
+  p:not(.eyebrow) {
+    color: var(--global-text-color-light);
+    margin-bottom: 0;
+  }
+}
+
+.eyebrow {
+  color: var(--global-theme-color);
+  font-size: 0.7rem !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.35rem !important;
+  text-transform: none;
+}
+
+.featured-work-item {
+  align-items: center;
+  border-bottom: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2.25rem 1fr auto;
+  padding: 1.25rem 0;
+  transition: padding 160ms ease, color 160ms ease;
+
+  &:first-of-type {
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  &:hover {
+    color: var(--global-theme-color);
+    padding-left: 0.4rem;
+    text-decoration: none;
+  }
+}
+
+.featured-work-index {
+  color: var(--global-text-color-light);
+  font-family: var(--global-mono-font);
+  font-size: 0.75rem;
+}
+
+.featured-work-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+
+  strong {
+    font-size: 1.05rem;
+    font-weight: 650;
+  }
+
+  span,
+  small {
+    color: var(--global-text-color-light);
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  small {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.featured-work-arrow {
+  font-size: 1.25rem;
+}
+
+.portfolio-note {
+  border-left: 2px solid var(--global-theme-color);
+  margin: 0 0 2.5rem;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-actions {
+    margin-bottom: 2.5rem;
+  }
+
+  .featured-work-item {
+    gap: 0.7rem;
+    grid-template-columns: 1.8rem 1fr auto;
+  }
+
+  .featured-work-copy small {
+    line-height: 1.4;
+  }
+}
+
 .profile.float-right {
   margin-left: 1rem;
 }
@@ -770,12 +921,7 @@ footer .footer-contact {
 
   // List view: small square thumbnail beside the text.
   // Needs `.card img` in the selector to beat `.projects .card img { width: 100% }`.
-  .card img.project-list-thumb {
-    width: 56px;
-    height: 56px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
+
 
   .card .card-body {
     padding: 0.6rem 1rem;

@@ -1,10 +1,11 @@
 ---
 layout: page
-title: about me
+title: About Me
 permalink: /about-me/
 description: The story behind the screen.
 nav: false
 nav_order: 1
+portfolio_section: about
 ---
 
 ### The Spark

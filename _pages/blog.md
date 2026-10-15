@@ -1,9 +1,10 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 nav: true
 nav_order: 1
+portfolio_section: writing
 pagination:
   enabled: true
   collection: posts
@@ -16,15 +17,14 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="post">
+<div class="post portfolio-writing">
 
-{% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
 
-{% if blog_name_size > 0 or blog_description_size > 0 %}
+{% if blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
+    <h1 class="sr-only">{{ page.title }}</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}

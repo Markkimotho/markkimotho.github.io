@@ -2,7 +2,7 @@
 <html lang="{{ site.lang }}">
   <!-- Head -->
   <head>
-    {% if page.redirect %}
+    {% if page.redirect and page.collection != 'projects' %}
       {% if page.redirect == true %}
         {% assign redirect = site.baseurl | append: '/' %}
       {% elsif page.redirect contains '://' %}
