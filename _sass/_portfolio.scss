@@ -1,6 +1,11 @@
 // The homepage sets the type and rhythm for the rest of the site.
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -402,7 +407,6 @@ h6 {
       object-fit: cover;
       width: 100%;
     }
-
   }
 
   .people-links {

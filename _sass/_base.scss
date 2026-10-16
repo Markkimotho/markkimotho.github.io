@@ -268,7 +268,10 @@ ul.task-list input[type="checkbox"] {
   display: inline-block;
   font-size: 0.85rem;
   padding: 0.65rem 1rem;
-  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 
   &:hover {
     border-color: var(--global-theme-color);
@@ -330,7 +333,9 @@ ul.task-list input[type="checkbox"] {
   gap: 1rem;
   grid-template-columns: 2.25rem 1fr auto;
   padding: 1.25rem 0;
-  transition: padding 160ms ease, color 160ms ease;
+  transition:
+    padding 160ms ease,
+    color 160ms ease;
 
   &:first-of-type {
     border-top: 1px solid var(--global-divider-color);
@@ -921,7 +926,6 @@ footer .footer-contact {
 
   // List view: small square thumbnail beside the text.
   // Needs `.card img` in the selector to beat `.projects .card img { width: 100% }`.
-
 
   .card .card-body {
     padding: 0.6rem 1rem;

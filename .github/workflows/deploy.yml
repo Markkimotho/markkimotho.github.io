@@ -17,6 +17,7 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - ".github/workflows/deploy.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -46,6 +47,7 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - ".github/workflows/deploy.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -68,7 +70,31 @@ permissions:
   contents: write
 
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install formatting tools 💾
+        run: npm ci
+      - name: Prettier Check 🔎
+        run: npx prettier . --check
+      - name: Script syntax check 🔎
+        run: |
+          for script in build_local.sh create_post.sh create_news.sh; do
+            bash -n "$script"
+          done
+          ruby -c _plugins/external-posts.rb
+
   deploy:
+    needs: checks
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
@@ -97,6 +123,11 @@ jobs:
           pip3 install --upgrade nbconvert pyyaml reportlab
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Check built-site links 🔗
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          fail: true
+          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

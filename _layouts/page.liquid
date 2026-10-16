@@ -18,7 +18,9 @@ layout: default
     </nav>
   {% endif %}
   <header class="post-header">
-    <h1 class="post-title">{% if page.description_as_heading %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1>
+    <h1 class="post-title">
+      {% if page.description_as_heading %}{{ page.description }}{% else %}{{ page.title }}{% endif %}
+    </h1>
     {% unless page.description_as_heading or page.description == blank %}
       <p class="post-description">{{ page.description }}</p>
     {% endunless %}
