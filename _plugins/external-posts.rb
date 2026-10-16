@@ -8,6 +8,7 @@ module ExternalPosts
   class ExternalPostsGenerator < Jekyll::Generator
     safe true
     priority :high
+    CachedEntry = Struct.new(:url, :title, :content, :summary, :published)
 
     def generate(site)
       if site.config['external_sources'] != nil
@@ -43,7 +44,16 @@ module ExternalPosts
       end
 
       unless feed
-        Jekyll.logger.warn 'External posts:', "Skipping #{src['name']} for this build; the next build will retry."
+        cached_posts = site&.data&.dig('external_feed_fallbacks', src['name'])
+        if cached_posts&.any?
+          Jekyll.logger.warn 'External posts:', "Using #{cached_posts.length} cached #{src['name']} posts for this build."
+          entries = cached_posts.map do |post|
+            CachedEntry.new(post['url'], post['title'], post['summary'], post['summary'], Time.parse(post['published'].to_s))
+          end
+          process_entries(site, src, entries)
+        else
+          Jekyll.logger.warn 'External posts:', "Skipping #{src['name']} for this build; the next build will retry."
+        end
         return
       end
 

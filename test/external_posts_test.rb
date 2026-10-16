@@ -57,4 +57,26 @@ class ExternalPostsTest < Minitest::Test
 
     assert_equal 3, attempts
   end
+
+  def test_cached_posts_are_used_when_feed_is_blocked
+    response = Response.new(403, '<html>Forbidden</html>', { 'content-type' => 'text/html' })
+    cached_post = {
+      'url' => 'https://example.com/one', 'title' => 'One',
+      'published' => '2026-03-30T11:01:57Z', 'summary' => 'A short description'
+    }
+    site = Struct.new(:data).new({ 'external_feed_fallbacks' => { 'substack.com' => [cached_post] } })
+    entries = nil
+
+    with_method(HTTParty, :get, ->(*_args) { response }) do
+      with_method(@generator, :sleep, ->(_seconds) {}) do
+        with_method(@generator, :process_entries, ->(_site, _src, cached_entries) { entries = cached_entries }) do
+          @generator.fetch_from_rss(site, SOURCE)
+        end
+      end
+    end
+
+    assert_equal 1, entries.length
+    assert_equal 'One', entries.first.title
+    assert_equal Time.utc(2026, 3, 30, 11, 1, 57), entries.first.published
+  end
 end
