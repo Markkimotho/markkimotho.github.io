@@ -23,9 +23,30 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
+      feed = nil
+
+      3.times do |attempt|
+        response = nil
+        begin
+          response = HTTParty.get(src['rss_url'], timeout: 15)
+          raise "HTTP #{response.code}" unless response.code == 200
+
+          feed = Feedjira.parse(response.body.to_s)
+          break
+        rescue StandardError => e
+          content_type = response&.headers&.[]('content-type') || 'unknown'
+          Jekyll.logger.warn 'External posts:',
+            "#{src['name']} feed attempt #{attempt + 1}/3 failed " \
+            "(HTTP #{response&.code || 'unknown'}, #{content_type}): #{e.class}: #{e.message}"
+          sleep(attempt + 1) if attempt < 2
+        end
+      end
+
+      unless feed
+        Jekyll.logger.warn 'External posts:', "Skipping #{src['name']} for this build; the next build will retry."
+        return
+      end
+
       process_entries(site, src, feed.entries)
     end
 

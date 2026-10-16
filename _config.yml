@@ -194,6 +194,7 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - test/
   - vendor
   - _pages/publications.md
   - _pages/teaching.md
