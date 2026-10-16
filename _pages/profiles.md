@@ -3,6 +3,7 @@ layout: page
 permalink: /people/
 title: People
 description: The person behind the work
+description_as_heading: true
 nav: true
 nav_order: 7
 portfolio_section: people

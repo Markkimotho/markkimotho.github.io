@@ -31,6 +31,8 @@ module ExternalPosts
 
     def process_entries(site, src, entries)
       entries.each do |e|
+        next if Array(src['exclude_urls']).include?(e.url)
+
         puts "...fetching #{e.url}"
         create_document(site, src['name'], e.url, {
           title: e.title,
@@ -68,6 +70,8 @@ module ExternalPosts
 
     def fetch_from_urls(site, src)
       src['posts'].each do |post|
+        next if Array(src['exclude_urls']).include?(post['url'])
+
         puts "...fetching #{post['url']}"
         content = fetch_content_from_url(post['url'])
         content[:published] = parse_published_date(post['published_date'])

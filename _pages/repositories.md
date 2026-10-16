@@ -3,6 +3,7 @@ layout: page
 permalink: /repositories/
 title: Repositories
 description: Code, experiments, and work in progress.
+description_as_heading: true
 nav: true
 nav_order: 4
 portfolio_section: repositories

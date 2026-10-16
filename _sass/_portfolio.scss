@@ -1,3 +1,128 @@
+// The homepage sets the type and rhythm for the rest of the site.
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  letter-spacing: -0.02em;
+}
+
+.post > .post-header {
+  border-bottom: 1px solid var(--global-divider-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+
+  .post-title {
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.55rem;
+  }
+
+  .post-description,
+  .post-meta {
+    color: var(--global-text-color-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    max-width: 42rem;
+  }
+}
+
+.post > article > h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  margin: 2.8rem 0 0.85rem;
+}
+
+.post > article > h3 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.post > article > h2.home-feed-heading {
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 3rem 0 0.35rem;
+  padding-bottom: 0.6rem;
+
+  a {
+    color: var(--global-text-color);
+    display: inline-flex;
+    gap: 0.35rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+  }
+
+  span {
+    font-size: 0.95rem;
+  }
+}
+
+.post-content,
+.portfolio-about article {
+  line-height: 1.75;
+}
+
+.post-content p,
+.portfolio-about article p {
+  max-width: 46rem;
+}
+
+.news .table {
+  color: var(--global-text-color);
+  margin-bottom: 0;
+
+  tr + tr {
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  th,
+  td {
+    line-height: 1.55;
+    padding: 0.8rem 0.75rem 0.8rem 0;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 8rem !important;
+  }
+}
+
+.cv .card {
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0 !important;
+  padding: 1.25rem 0 !important;
+
+  .card-title {
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
 // Project archive: a list of work, not a uniform card grid.
 .portfolio-projects {
   > article > p:first-child {
@@ -314,6 +439,11 @@
 }
 
 @media (max-width: 575.98px) {
+  .news .table th {
+    white-space: normal;
+    width: 6rem !important;
+  }
+
   .portfolio-people .people-intro {
     gap: 2rem;
     grid-template-columns: 1fr;
