@@ -1,131 +1,92 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Function to display the menu and get the user's choice
-display_menu() {
-  echo "Select the type of news to create:"
-  echo "1. Inline News"
-  echo "2. News with Long Details"
-  echo "3. Exit"
-  read -p "Enter your choice (1/2/3): " choice
-  echo
+# Every news item has a title and a local detail page linked from /news/.
+set -euo pipefail
+
+repo_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+cd "$repo_dir"
+
+yaml_escape() {
+  printf '%s' "$1" | sed 's/\\/\\\\/g; s/"/\\"/g'
 }
 
-# Function to create inline news
-create_inline_news() {
-  echo "Creating Inline News..."
-
-  # Ask for the title of the news
-  read -p "Enter the title for the news (e.g., 'A simple inline announcement'): " title
-
-  # Automatically get the current date in the required format
-  date=$(date +'%b %d, %Y')
-
-  # Find the next available announcement number
-  next_number=$(ls _news/announcement_*.md | wc -l)
-  next_number=$((next_number + 1))
-
-  # Generate the file name
-  file_name="announcement_${next_number}.md"
-
-  # Create the Markdown file with the user-provided content
-  cat <<EOL > "_news/$file_name"
----
-layout: post
-date: $(date -d "$date" +%Y-%m-%d\ %H:%M:%S-0400)
-inline: true
-related_posts: false
----
-
-$title
-
-EOL
-
-  # Open the newly created file in VS Code for editing
-  code "_news/$file_name"
-
-  echo "Inline news '$file_name' created successfully."
-  exit 0  # Exit the script after creating the news
+open_in_editor() {
+  if [[ -t 0 ]] && command -v code >/dev/null 2>&1; then
+    code "$1"
+  fi
 }
 
-# Function to create news with long details
-create_news_with_long_details() {
-  echo "Creating News with Long Details..."
-
-  # Ask for the title of the news
-  read -p "Enter the title for the news (e.g., 'A long announcement with details'): " title
-
-  # Automatically get the current date in the required format
-  date=$(date +'%b %d, %Y')
-
-  # Find the next available announcement number
-  next_number=$(ls _news/announcement_*.md | wc -l)
-  next_number=$((next_number + 1))
-
-  # Generate the file name
-  file_name="announcement_${next_number}.md"
-
-  # Create the Markdown file with the user-provided content
-  cat <<EOL > "_news/$file_name"
----
-layout: post
-title: "$title"
-date: $(date -d "$date" +%Y-%m-%d\ %H:%M:%S-0400)
-inline: false
-related_posts: false
----
-
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
-
----
-
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
-
-#### Hipster list
-
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
-
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
-
----
-
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
-
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
-
-EOL
-
-  # Open the newly created file in VS Code for editing
-  code "_news/$file_name"
-
-  echo "News with long details '$file_name' created successfully."
-  exit 0  # Exit the script after creating the news
+next_announcement_file() {
+  local file number max=0
+  for file in _news/announcement_*.md; do
+    [[ -e "$file" ]] || continue
+    if [[ "$file" =~ ^_news/announcement_([0-9]+)\.md$ ]]; then
+      number=${BASH_REMATCH[1]}
+      if (( number > max )); then max=$number; fi
+    fi
+  done
+  printf '_news/announcement_%s.md' "$((max + 1))"
 }
 
-# Main loop
+create_news() {
+  local kind=$1
+  local title summary details source_url title_yaml news_file
+
+  read -r -p "Announcement title: " title
+  read -r -p "Summary for its detail page: " summary
+  if [[ -z "${title//[[:space:]]/}" || -z "${summary//[[:space:]]/}" ]]; then
+    printf '%s\n' "Title and summary are required." >&2
+    return 1
+  fi
+
+  if [[ "$kind" == detailed ]]; then
+    read -r -p "Additional details (one paragraph): " details
+    if [[ -z "${details//[[:space:]]/}" ]]; then
+      printf '%s\n' "Additional details are required for a detailed announcement." >&2
+      return 1
+    fi
+  fi
+
+  read -r -p "Original or related URL (optional): " source_url
+  if [[ -n "$source_url" && ! "$source_url" =~ ^https?://[^[:space:]]+$ ]]; then
+    printf '%s\n' "Use an http:// or https:// URL, or leave it blank." >&2
+    return 1
+  fi
+
+  title_yaml=$(yaml_escape "$title")
+  news_file=$(next_announcement_file)
+  if [[ -e "$news_file" ]]; then
+    printf 'Announcement already exists: %s\n' "$news_file" >&2
+    return 1
+  fi
+
+  mkdir -p _news
+  {
+    printf '%s\n' '---' 'layout: post'
+    printf 'title: "%s"\n' "$title_yaml"
+    printf 'date: %s\n' "$(date '+%Y-%m-%d %H:%M:%S %z')"
+    printf '%s\n' 'inline: false' 'related_posts: false' '---'
+    printf '\n'
+    printf '%s\n' "$summary"
+    if [[ "$kind" == detailed ]]; then
+      printf '\n%s\n' "$details"
+    fi
+    if [[ -n "$source_url" ]]; then
+      printf '\n[Read the original](%s).\n' "$source_url"
+    fi
+  } > "$news_file"
+
+  printf 'Created %s. It will be linked from the homepage and /news/.\n' "$news_file"
+  open_in_editor "$news_file"
+}
+
 while true; do
-  display_menu
-
-  case $choice in
-    1)
-      create_inline_news
-      ;;
-    2)
-      create_news_with_long_details
-      ;;
-    3)
-      echo "Exiting..."
-      exit 0  # Exit if the user selects 'Exit'
-      ;;
-    *)
-      echo "Invalid choice, please try again."
-      ;;
+  printf '%s\n' 'Select the type of announcement to create:' '1. Short announcement' '2. Detailed announcement' '3. Exit'
+  read -r -p "Choice (1/2/3): " choice
+  case "$choice" in
+    1) create_news short; break ;;
+    2) create_news detailed; break ;;
+    3) exit 0 ;;
+    *) printf '%s\n' 'Choose 1, 2, or 3.' ;;
   esac
 done

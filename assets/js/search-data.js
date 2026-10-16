@@ -4,61 +4,47 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "A growing collection of my projects made for work and fun alike.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
-          description: "Here, you will find my personal repository, and a couple of others that I fancy. I promise to commit more to github so that I improve my grade.",
+          title: "Repositories",
+          description: "Code, experiments, and work in progress.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
-          description: "This page holds my CV. If you want to collaborate or hire me, feel free to review it and also download the pdf version on the top right.",
+          title: "CV",
+          description: "If you want to collaborate or hire me, this is your page",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
         },{id: "nav-people",
-          title: "people",
-          description: "the person behind the work",
+          title: "People",
+          description: "The person behind the work",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-separating-users-from-customers-building-a-multi-role-pos-system",
+        },{id: "post-separating-users-from-customers-building-a-multi-role-pos-system",
       
         title: "Separating Users from Customers: Building a Multi-Role POS System",
       
@@ -91,9 +77,9 @@ ninja.data = [{
           window.location.href = "/blog/2026/building-rag-chatbot/";
         
       },
-    },{id: "post-sketchbook-my-self-hosted-drawing-app",
+    },{id: "post-sketchtogether-my-self-hosted-drawing-app",
       
-        title: "Sketchbook: My Self-Hosted Drawing App",
+        title: "SketchTogether: My Self-Hosted Drawing App",
       
       description: "A self-hosted, real-time collaborative drawing app built for artists who miss the feel of old paper.",
       section: "Posts",
@@ -113,19 +99,36 @@ ninja.data = [{
           window.location.href = "/blog/2025/building-production-grade-json-parser/";
         
       },
-    },{id: "news-i-just-published-my-website-again",
+    },{id: "news-announcing-a-series-about-the-web",
+          title: 'Announcing a series about the web',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/web-series-announcement/";
+            },},{id: "news-i-just-published-my-website-again",
           title: 'I Just Published My Website, Again!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_4/";
-            },},{id: "news-started-a-new-role-as-a-machine-learning-engineer-at-safaricom-building-and-serving-models-that-reach-over-20m-customers-across-kenya",
-          title: 'Started a new role as a Machine Learning Engineer at Safaricom, building and...',
+            },},{id: "news-machine-learning-engineer-at-safaricom",
+          title: 'Machine Learning Engineer at Safaricom',
           description: "",
-          section: "News",},{id: "projects-automation-scripts-amp-utils",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_5/";
+            },},{id: "projects-video-publishing-automation",
+          title: 'Video Publishing Automation',
+          description: "A private tool for scheduling and uploading videos across social platforms",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/adspower-video-automation/";
+            },},{id: "projects-automation-scripts-amp-utils",
           title: 'Automation Scripts &amp;amp; Utils',
           description: "Reusable bash &amp; Python automation for the everyday tasks developers repeat",
           section: "Projects",handler: () => {
               window.location.href = "/projects/automation-scripts-utils/";
+            },},{id: "projects-batch-image-generator",
+          title: 'Batch Image Generator',
+          description: "A desktop app that turns spreadsheet prompts into batches of generated images",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/batch-image-generator/";
             },},{id: "projects-ccwc-custom-file-statistics-tool",
           title: 'ccwc - Custom File Statistics Tool',
           description: "A command-line utility providing file statistics similar to Unix wc",
@@ -136,11 +139,21 @@ ninja.data = [{
           description: "Machine learning platform predicting student learning risk across African schools with cultural context and multilingual support",
           section: "Projects",handler: () => {
               window.location.href = "/projects/edusight-africa/";
+            },},{id: "projects-etch-a-sketch",
+          title: 'Etch a Sketch',
+          description: "A small browser drawing toy with a resizable grid, color picker, eraser, and clear button",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/etch-a-sketch/";
             },},{id: "projects-financial-transaction-monitoring-amp-analytics-tool",
           title: 'Financial Transaction Monitoring &amp;amp; Analytics Tool',
           description: "Comprehensive financial tracking platform with Django, PostgreSQL, and Redis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/financial-monitoring-tool/";
+            },},{id: "projects-lead-scoring-amp-routing-pipeline",
+          title: 'Lead Scoring &amp;amp; Routing Pipeline',
+          description: "An internal workflow for evaluating prospect websites and routing qualified leads",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lead-scoring-pipeline/";
             },},{id: "projects-lumina-analytics-dashboard",
           title: 'Lumina Analytics Dashboard',
           description: "High-performance interactive data visualization with real-time updates and AI insights",
@@ -156,6 +169,11 @@ ninja.data = [{
           description: "A simple interpreter for stack and queue operations in C",
           section: "Projects",handler: () => {
               window.location.href = "/projects/monty/";
+            },},{id: "projects-preparationpalai-local-rag-study-assistant",
+          title: 'PreparationPalAI - Local RAG Study Assistant',
+          description: "A privacy-first study assistant with document RAG, quizzes, flashcards, and local LLMs",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/preparationpalai/";
             },},{id: "projects-printf-printf-reimplementation",
           title: 'Printf - Printf Reimplementation',
           description: "A custom C implementation of the printf standard library function",
@@ -166,16 +184,21 @@ ninja.data = [{
           description: "A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sdl-c-raycasting/";
-            },},{id: "projects-sketchbook-self-hosted-drawing-app",
-          title: 'Sketchbook - Self-Hosted Drawing App',
+            },},{id: "projects-semaje",
+          title: 'Semaje',
+          description: "Self-hosted speech-to-text and text-to-speech across 1,600+ languages",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/semaje/";
+            },},{id: "projects-sketchtogether-self-hosted-drawing-app",
+          title: 'SketchTogether - Self-Hosted Drawing App',
           description: "A real-time collaborative drawing application with stylus support and pressure sensitivity",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sketchbook/";
-            },},{id: "projects-voxail-ai-powered-audio-transcription-platform",
-          title: 'Voxail - AI-Powered Audio Transcription Platform',
-          description: "Full-stack transcription platform with Google Gemini 2.0 Flash, 15+ specialized AI tasks, and live recording",
+            },},{id: "projects-tropehaven",
+          title: 'Tropehaven',
+          description: "A fiction wiki with article editing, discussion, and a draft-to-publication path",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/voxail/";
+              window.location.href = "/projects/tropehaven/";
             },},{
         id: 'social-email',
         title: 'email',
