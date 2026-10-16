@@ -2,155 +2,212 @@
   type: map
   contents:
     - name: Full Name
-      value: Mark (K) Tinega
-    - name: Contact
-      value: kimothomark93@gmail.com
+      value: Mark Tinega
     - name: Location
       value: Nairobi, Kenya
-    - name: Languages
-      value: English (Professional)
+    - name: Contact
+      value: kimothomark93@gmail.com
+    - name: LinkedIn
+      links:
+        - name: mark-tinega
+          link: https://www.linkedin.com/in/mark-tinega
+    - name: GitHub
+      links:
+        - name: Markkimotho
+          link: https://github.com/Markkimotho
 
 - title: Professional Summary
   type: map
   contents:
     - name: Summary
-      value: An engineer with extensive experience designing, writing and scaling high-performance software and real-time ML pipelines to handle large amounts of data. Experienced in building production-ready systems and ML models, leveraging advanced techniques and frameworks. Proven ability in enhancing system reliability, optimizing data processes, and collaborating with cross-functional teams to drive business value.
+      value: >-
+        Software and AI/ML Engineer with 5+ years building production systems across the stack:
+        ML pipelines, LLM-powered applications, backend APIs, and the infrastructure that keeps
+        them running reliably at scale. Comfortable moving between model work, backend engineering,
+        and infrastructure depending on what the problem needs.
 
 - title: Technical Skills
-  type: nested_list
+  type: map
   contents:
-    - title: Programming Languages
-      items:
-        - Python, JavaScript, C, Bash
-    - title: Machine Learning Tools
-      items:
-        - TensorFlow, PyTorch, scikit-learn, Pandas, Iguazio
-    - title: AI Tools & Technologies
-      items:
-        - GitHub Copilot, LLMs, RAG, Model Context Protocol (MCP), Prompt Engineering
-    - title: Backend Frameworks
-      items:
-        - Django, Flask, FastAPI
-    - title: Databases
-      items:
-        - PostgreSQL, MySQL, MongoDB, Redis
-    - title: DevOps and Tools
-      items:
-        - Docker, Kubernetes, AWS, Jenkins, GitHub Actions
-    - title: Testing and Quality
-      items:
-        - Unit Testing, TDD, Integration Testing, CI/CD/CT
-    - title: Architecture and Design
-      items:
-        - REST APIs, Microservices, Event-Driven Design
-    - title: Security
-      items:
-        - OAuth2, JWT, RBAC, API Security
-    - title: Version Control
-      items:
-        - Git, GitHub
+    - name: Languages
+      value: Python, TypeScript, JavaScript, SQL, C#/.NET, Bash
+    - name: ML & AI
+      value: >-
+        LangGraph, LiteLLM, Anthropic Claude API, OpenAI API, Ollama, vLLM, Hugging Face,
+        PyTorch, scikit-learn, XGBoost, LightGBM, IsolationForest, RAG pipelines, pgvector,
+        prompt engineering, model-as-a-judge evaluation, MCP tool integrations
+    - name: MLOps & Platforms
+      value: >-
+        MLRun, Iguazio, Kubeflow Pipelines (KFP), MLflow, Kedro, model versioning,
+        feature stores, batch and real-time inference, A/B experiment tracking
+    - name: Data Engineering
+      value: >-
+        PySpark, Apache Kafka, ETL pipelines, PostgreSQL, pgvector, Redis, MongoDB,
+        OpenSearch, feature engineering, embedding pipelines
+    - name: Backend
+      value: >-
+        FastAPI, Django/DRF, Node.js/NestJS, REST API design, async programming,
+        OAuth2/JWT, Alembic migrations, Microsoft SQL Server
+    - name: Infrastructure
+      value: >-
+        Kubernetes (EKS), Docker, AWS (EC2, S3, Lambda, SageMaker, Bedrock, API Gateway,
+        ECR, RDS), Helm, Terraform, Nuclio, Jenkins, GitHub Actions
+    - name: Observability
+      value: >-
+        Prometheus, Grafana, structured logging, alerting pipelines, token consumption
+        tracking, latency distributions
+    - name: Frontend
+      value: React, TypeScript, HTML/CSS, REST integrations
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
     - title: Machine Learning Engineer
-      institution: Safaricom PLC, Nairobi, Kenya (Hybrid)
-      year: Mar 2025 - Present
+      institution: Safaricom PLC, Nairobi, Kenya
+      year: Mar 2025 – Present
+      maindescription: >-
+        Kenya's largest telco, 50M+ customers. AI platform operations, production ML pipelines,
+        LLM systems, and ML serving infrastructure on Iguazio/MLRun/EKS.
       description:
-        - Developed real-time ML pipelines on AWS (SageMaker, S3, EC2) and on-premise using Python, PySpark, and Kafka to process over 5,000 transactions per second, supporting 50 million customers
-        - Collaborated with cross-functional teams to design and implement feature engineering pipelines for large-scale ML model experimentation and deployment, handling over 10 TB of data weekly
-        - Integrated LLM and RAG-based approaches into internal tooling to improve feature discovery and retrieval across the team's growing feature store of 10,000+ features
-        - Engineered scalable data workflows with automated orchestration and CI/CD integration using Python and Jenkins, reducing data processing time by 30%
-        - Deployed and served ML models using MLRun and Iguazio, leveraging Nuclio serverless functions and Kubernetes pods to deliver low-latency, scalable model inference in production
-        - Adopted GitHub Copilot as a core part of the development workflow, accelerating pipeline development and improving code consistency across the team
+        - >-
+          Own the AI platform (Iguazio/MLRun) running all production ML workloads: model
+          versioning, scheduled pipeline execution via Kubeflow Pipelines, and EKS cluster
+          operations for inference in AWS eu-west-1; inference infrastructure serves 5,000 TPS
+          across model families.
+        - >-
+          Built and operate a multi-provider LLM gateway (LiteLLM, AWS API Gateway) as the single
+          control plane for all LLM access across the organisation: unified routing across
+          Anthropic, OpenAI, and AWS Bedrock, per-team spend tracking, rate limiting, and a single
+          InfoSec audit point.
+        - >-
+          Built and maintain production ML classification and risk-rating pipelines (Kedro,
+          IsolationForest, MLRun) with automated scheduling, monitoring metrics jobs, and score
+          exports to PostgreSQL synced to AWS RDS.
+        - >-
+          Built a multi-agent LLM system (LangGraph supervisor-worker pattern, Anthropic Claude
+          API) deployed via Nuclio on Kubernetes that assists 1,000+ call centre agents in real
+          time; led model evaluation using a model-as-a-judge framework and shipped a 22% quality
+          improvement over two quarters.
+        - >-
+          Deploy and serve open-weight models (Qwen, vLLM) on internal GPU infrastructure for
+          data-sovereign workloads; own workload classification, capacity planning, and inference
+          performance tuning.
+        - >-
+          Built and maintain a production RAG pipeline (pgvector, PostgreSQL): embedding
+          ingestion, chunking, retrieval re-ranking, and a feedback loop that feeds flagged
+          responses back into prompt tuning cycles.
+        - >-
+          Build full-stack Python applications (FastAPI, Django) that expose ML models and AI
+          systems to end users: REST APIs, async inference endpoints, React/TypeScript frontends,
+          and real-time interfaces for model-powered features.
+        - >-
+          Instrumented ML and LLM systems with Prometheus and Grafana covering token consumption,
+          latency distributions, error rates, and anomaly alerts; resolved a Kafka consumer pool
+          exhaustion incident via load profiling and backpressure tuning.
 
-    - title: Software/Machine Learning Engineer - Freelance
-      institution: Freelancer, Remote
-      year: Dec 2019 - Present
-      description:
-        - Designed and integrated APIs, including a custom SMS service using Africa's Talking API and a real-time notification system, bolstering user engagement by 15% and handling over 50,000 notifications daily
-        - Implemented continuous integration and deployment pipelines with GitHub Actions, automating tests and streamlining client project deployments, reducing deployment time by 40%
-        - Developed and deployed machine learning models using MLOps best practices with Python, TensorFlow, and MLflow, cutting model deployment time for client applications by 80%
-
-    - title: Software Engineer - Fintech
+    - title: Software Engineer
       institution: Huawei Technologies, Nairobi, Kenya
-      year: Dec 2023 - Dec 2024
+      year: Dec 2023 – Dec 2024
+      maindescription: >-
+        Global technology company. Backend services and solution architecture for fintech products
+        used by millions of Kenyans.
       description:
-        - Designed and deployed scalable architectures for mobile money and digital finance platforms (VOOMA, M-PESA, Cashia, ZIDII) serving over 30 million active users and processing billions of transactions annually
-        - Improved project efficiency through implementation of Acceptance Test Plans to validate solutions designed, cutting validation time by 25%
-        - Reduced integration errors by 20% by implementing robust architectural patterns and documentation
-        - Drafted functional requirement specifications (FRS), configuration requirement documents, and Acceptance Test Plans for over 10 major system functionalities
+        - >-
+          Designed and delivered Python/FastAPI backend services for cloud-native fintech
+          integrations: OAuth2 authentication flows, async data pipelines, and REST API contracts
+          across multiple payment and lending products.
+        - >-
+          Optimised a Microsoft SQL Server reconciliation query from 45 seconds to under 2 seconds
+          via non-clustered index design and T-SQL restructuring, unblocking a daily finance
+          reporting workflow.
+        - >-
+          Delivered solution architecture for enterprise clients, translating technical trade-offs
+          into investment recommendations for executive stakeholders; contributed to Kubernetes
+          CI/CD automation and containerised deployments.
+        - >-
+          Provisioned and operated VM and Huawei Cloud infrastructure for fintech workloads as
+          Software Service Engineer (Jul 2023 – Dec 2023), covering infrastructure-as-code and
+          service reliability for payment backends.
 
-    - title: Software Service Engineer - Infrastructure
-      institution: Huawei Technologies, Nairobi, Kenya
-      year: Jul 2023 - Dec 2023
+    - title: Senior ML & Backend Engineer
+      institution: Fiverr Pro (Freelance), Remote
+      year: Nov 2019 – Present
+      maindescription: Independent consulting practice. Clients across the US, UK, and East Africa.
       description:
-        - Maintained critical overdraft system with 99.999% uptime through proactive monitoring and optimization, supporting over 1 million daily users
-        - Implemented automated monitoring and alerting systems for early incident detection, reducing mean time to detection (MTTD) by 30%
-        - Enhanced system security through regular updates and threat analysis, closing over 10 critical vulnerabilities
+        - >-
+          Built a production RAG pipeline for a US client: ingested, chunked, and embedded large
+          document corpora into a vector store, then exposed a retrieval-augmented Q&A interface
+          via FastAPI with async inference and structured output parsing.
+        - >-
+          Built a lead scoring and routing pipeline combining PostgreSQL, Python ETL, and a
+          classification model, reducing manual triage time by 60% for a US marketing client.
+        - >-
+          Built a real-time sports data ingestion, prediction, and automation platform: end-to-end
+          ML pipeline from data ingestion through model inference to execution layer.
+        - >-
+          Delivered ML model integrations (OpenAI, Hugging Face) with async inference, retry logic
+          with exponential backoff, and structured output parsing for client automation workflows.
+        - >-
+          Built a document parsing and NLP classification pipeline to extract structured data from
+          legal communication records and deliver a clean reporting interface.
 
-    - title: Backend Software Engineer (Part-time)
+    - title: Backend Engineer
       institution: Zuyu, London, UK (Remote)
-      year: Sep 2023 - Sep 2024
+      year: 2022 – 2023
+      maindescription: Early-stage startup building payment and logistics products for East Africa.
       description:
-        - Developed secure authentication APIs using MERN (MongoDB, Express.js, React and Node.js) stack with TypeScript to handle over 1 million requests per day
-        - Implemented role-based access control system enhancing platform security and improving compliance, reducing unauthorized access attempts by 25%
-        - Optimized API performance through caching strategies and database query optimization, reducing average API response time by 30%
-        - Collaborated with the frontend team to ensure seamless integration with the backend authentication system, reducing integration-related bugs by 15%
+        - >-
+          Built Django/DRF REST APIs and PostgreSQL schemas from scratch for a multi-tenant payment
+          platform; owned backend releases end-to-end including schema migrations, deployment,
+          and post-deploy monitoring.
+        - >-
+          Implemented OAuth2 and JWT authentication infrastructure using NestJS: token rotation,
+          refresh flows, rate limiting, and audit logging for a multi-tenant platform.
+        - >-
+          Designed core payment and logistics API contracts in collaboration with the founding
+          team, translating product requirements into backend architecture decisions.
+        - >-
+          Set up automated testing and deployment pipelines, reducing release overhead and
+          enabling faster iteration with fewer regressions.
 
-    - title: Data Analyst (Intern)
-      institution: Shining Hope For Communities (SHOFCO), Nairobi, Kenya
-      year: Jun 2021 - Aug 2021
+    - title: Data Analyst Intern
+      institution: SHOFCO, Nairobi, Kenya
+      year: 2021 – 2022
+      maindescription: Social enterprise serving urban communities across Kenya.
       description:
-        - Automated data processing and reporting using Python, generating over 300 reports to optimize COVID-19 vaccination strategies, saving approximately 20 hours of manual work per week
-        - Analyzed data trends to support decision-making, contributing to a 2% increase in vaccination rates, leading to over 1,500 additional vaccinations
-        - Streamlined report generation through process automation, reducing report delivery time by 50%
+        - >-
+          Built Python data pipelines and ETL workflows consolidating programme monitoring data
+          from 10 community centres into a central reporting system; reduced the reporting cycle
+          from two weeks to two days.
+        - >-
+          Designed reporting dashboards giving programme managers real-time visibility into
+          beneficiary outcomes across health, education, and economic programmes.
+        - >-
+          Automated manual data collection processes previously handled in spreadsheets,
+          improving data quality and reducing staff reporting time by an estimated 70%.
+        - >-
+          Worked directly with non-technical programme staff to translate operational data needs
+          into engineering requirements.
 
 - title: Education
   type: time_table
   contents:
-    - title: Software Engineering Bootcamp
-      institution: ALX-Africa (Holberton School), Nairobi, Kenya
-      year: Aug 2022 - Aug 2023
-      description:
-        - Intensive 12-month software engineering program (70 hours/week)
-        - "Focus: Low-Level Programming, High-Level Programming, DevOps"
-
-    - title: BSc. Mathematics and Computer Science
+    - title: BSc Mathematics and Computer Science
       institution: Kenyatta University, Nairobi, Kenya
-      year: Sep 2018 - Jul 2023
+      year: 2018 – 2023
       description:
-        - "Major: Applied Mathematics and Computer Science"
-        - title: Relevant Coursework
-          contents:
-            - Data Structures and Algorithms
-            - Probability and Statistics
-            - Linear Algebra
-            - Numerical Analysis
-            - Discrete Mathematics
-            - Object-Oriented Programming
-            - Database Systems
-            - Computer Networks
-            - Human-Computer Interaction
-            - Neural Networks
+        - >-
+          Relevant coursework: Linear Algebra, Calculus and Real Analysis, Probability and
+          Statistics, Discrete Mathematics, Data Structures and Algorithms, Database Systems,
+          Operating Systems, Computer Networks, Numerical Methods, Machine Learning, Artificial
+          Intelligence, Software Engineering.
 
-- title: Academic Interests
-  type: nested_list
+- title: Certifications
+  type: list
   contents:
-    - title: Artificial Intelligence & Machine Learning
-      items:
-        - Neural Networks and Deep Learning
-        - Distributed ML Systems
-        - AI Security and Privacy
-
-    - title: Systems Programming
-      items:
-        - Low-level System Design
-        - Operating Systems
-        - Computer Architecture
-
-    - title: Algorithms & Data Structures
-      items:
-        - Algorithm Analysis and Design
-        - Advanced Data Structures
-        - Computational Complexity
+    - AWS Certified AI Practitioner (2026)
+    - Advanced Learning Algorithms, Stanford University / Coursera (Nov 2025)
+    - "Supervised Machine Learning: Regression and Classification, Stanford University / Coursera (Sep 2025)"
+    - IBM AI Engineering, Coursera
+    - PCAP, Python Institute (2022)
+    - Cisco Certified Network Associate (CCNA)

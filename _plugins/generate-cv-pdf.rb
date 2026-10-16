@@ -1,9 +1,11 @@
 # _plugins/generate-cv-pdf.rb
 #
-# Jekyll hook that regenerates the CV PDF from _data/cv.yml
-# before the site is built, ensuring the PDF is always up to date.
+# Optional Jekyll hook for sites that generate a PDF from _data/cv.yml.
+# This site's supplied PDF is authoritative when generate_cv_pdf is false.
 
 Jekyll::Hooks.register :site, :after_init do |site|
+  next if site.config['generate_cv_pdf'] == false
+
   cv_yml = File.join(site.source, "_data", "cv.yml")
   script = File.join(site.source, "_scripts", "generate_cv_pdf.py")
 
