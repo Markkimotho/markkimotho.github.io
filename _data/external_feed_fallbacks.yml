@@ -1,5 +1,5 @@
-# Public post metadata for CI builds, synced automatically from Substack on the Mac.
-# GitHub-hosted runners cannot fetch the feed directly (HTTP 403).
+# Public post metadata retained for builds where Substack blocks GitHub's runner.
+# Live RSS takes precedence. Refresh this list when new posts are published.
 substack.com:
   - title: "Web Accessibility: Building an Inclusive Web"
     url: https://ktinega.substack.com/p/web-accessibility-building-an-inclusive

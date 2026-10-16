@@ -24,13 +24,6 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      # GitHub-hosted runners receive HTTP 403 from Substack. A separate
-      # scheduled sync commits the feed index before the deploy build runs.
-      if ENV['CI'] && src['name'] == 'substack.com'
-        process_cached_entries(site, src)
-        return
-      end
-
       feed = nil
 
       3.times do |attempt|
@@ -51,24 +44,20 @@ module ExternalPosts
       end
 
       unless feed
-        process_cached_entries(site, src)
+        cached_posts = site&.data&.dig('external_feed_fallbacks', src['name'])
+        if cached_posts&.any?
+          Jekyll.logger.warn 'External posts:', "Using #{cached_posts.length} cached #{src['name']} posts for this build."
+          entries = cached_posts.map do |post|
+            CachedEntry.new(post['url'], post['title'], post['summary'], post['summary'], Time.parse(post['published'].to_s))
+          end
+          process_entries(site, src, entries)
+        else
+          Jekyll.logger.warn 'External posts:', "Skipping #{src['name']} for this build; the next build will retry."
+        end
         return
       end
 
       process_entries(site, src, feed.entries)
-    end
-
-    def process_cached_entries(site, src)
-      cached_posts = site&.data&.dig('external_feed_fallbacks', src['name'])
-      if cached_posts&.any?
-        Jekyll.logger.info 'External posts:', "Using #{cached_posts.length} synced #{src['name']} posts."
-        entries = cached_posts.map do |post|
-          CachedEntry.new(post['url'], post['title'], post['summary'], post['summary'], Time.parse(post['published'].to_s))
-        end
-        process_entries(site, src, entries)
-      else
-        Jekyll.logger.warn 'External posts:', "No synced #{src['name']} posts available for this build."
-      end
     end
 
     def process_entries(site, src, entries)
