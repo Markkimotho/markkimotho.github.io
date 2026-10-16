@@ -55,6 +55,17 @@ ninja.data = [{
           window.location.href = "/blog/2026/separating-users-from-customers/";
         
       },
+    },{id: "post-web-accessibility-building-an-inclusive-web",
+      
+        title: 'Web Accessibility: Building an Inclusive Web <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/web-accessibility-building-an-inclusive", "_blank");
+        
+      },
     },{id: "post-building-a-pos-system-with-flask-order-management-and-real-time-inventory",
       
         title: "Building a POS System with Flask: Order Management and Real-Time Inventory",
@@ -66,6 +77,17 @@ ninja.data = [{
           window.location.href = "/blog/2026/building-pos-system-flask/";
         
       },
+    },{id: "post-join-my-new-subscriber-chat",
+      
+        title: 'Join my new subscriber chat <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "A private space for us to converse and connect",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/join-my-new-subscriber-chat", "_blank");
+        
+      },
     },{id: "post-building-a-local-rag-chatbot-to-actually-understand-how-ai-reads-documents",
       
         title: "Building a Local RAG Chatbot to Actually Understand How AI Reads Documents",
@@ -75,6 +97,17 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2026/building-rag-chatbot/";
+        
+      },
+    },{id: "post-responsive-web-design-designing-for-all-devices",
+      
+        title: 'Responsive Web Design: Designing for All Devices <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/responsive-web-design-designing-for", "_blank");
         
       },
     },{id: "post-sketchtogether-my-self-hosted-drawing-app",
@@ -97,6 +130,94 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/building-production-grade-json-parser/";
+        
+      },
+    },{id: "post-modern-web-development-tools",
+      
+        title: 'Modern Web Development Tools <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/modern-web-development-tools", "_blank");
+        
+      },
+    },{id: "post-html-css-and-javascript-the-building-blocks",
+      
+        title: 'HTML, CSS, and JavaScript: The Building Blocks <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web.",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/html-css-and-javascript-the-building", "_blank");
+        
+      },
+    },{id: "post-web-hosting-and-domains-a-comprehensive-guide-for-beginners",
+      
+        title: 'Web Hosting and Domains: A Comprehensive Guide for Beginners <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web.",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/web-hosting-and-domains-a-comprehensive", "_blank");
+        
+      },
+    },{id: "post-web-browsers-gateways-to-the-web",
+      
+        title: 'Web Browsers: Gateways to the Web <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/web-browsers-gateways-to-the-web", "_blank");
+        
+      },
+    },{id: "post-the-architecture-of-the-web",
+      
+        title: 'The Architecture of the Web <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/the-architecture-of-the-web", "_blank");
+        
+      },
+    },{id: "post-introduction-to-the-web",
+      
+        title: 'Introduction to the Web <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Exploring the Wonders of the Web.",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/introduction-to-the-web", "_blank");
+        
+      },
+    },{id: "post-creating-a-3d-world-using-c-and-sdl",
+      
+        title: 'Creating a 3D world using C and SDL. <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "Making a maze using Raycasting technique",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/creating-a-3d-world-using-c-and-sdl", "_blank");
+        
+      },
+    },{id: "post-exploring-the-wonders-of-the-web-understanding-the-process-of-url-request-and-response",
+      
+        title: 'Exploring the Wonders of the Web: Understanding the Process of URL Request and... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "What happens when you type google.com in your browser and press Enter",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://ktinega.substack.com/p/exploring-the-wonders-of-the-web", "_blank");
         
       },
     },{id: "news-announcing-a-series-about-the-web",
