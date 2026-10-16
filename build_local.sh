@@ -17,6 +17,7 @@ usage() {
     '' \
     'Build the site into a temporary preview directory.' \
     'Add --serve to preview it at http://127.0.0.1:4000/.' \
+    'Rerunning --serve replaces an earlier preview from this script on the same port.' \
     'The server serves the completed build; rerun the script after editing.'
 }
 
@@ -60,9 +61,38 @@ if [[ "$serve" == true ]]; then
     printf '%s\n' 'Python 3 is needed to serve the built site.' >&2
     exit 1
   fi
-  if command -v lsof >/dev/null 2>&1 && lsof -nP -iTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1; then
-    printf 'Port %s is already in use. Stop the old server or choose another with --port.\n' "$port" >&2
-    exit 1
+  if command -v lsof >/dev/null 2>&1; then
+    listeners=()
+    while IFS= read -r pid; do
+      [[ -n "$pid" ]] && listeners+=("$pid")
+    done < <(lsof -nP -t -iTCP:"$port" -sTCP:LISTEN)
+
+    # Only reclaim a preview started by this script, serving this build directory.
+    for pid in "${listeners[@]}"; do
+      owner=$(ps -p "$pid" -o uid= | tr -d ' ')
+      command_line=$(ps -ww -p "$pid" -o args=)
+      if [[ "$owner" != "$(id -u)" || "$command_line" != *" -m http.server $port --bind 127.0.0.1 --directory $build_dir" ]]; then
+        printf 'Port %s is in use by another process (PID %s); refusing to stop it. Choose another with --port.\n' "$port" "$pid" >&2
+        exit 1
+      fi
+    done
+
+    if (( ${#listeners[@]} > 0 )); then
+      printf 'Stopping previous portfolio preview on port %s.\n' "$port"
+      for pid in "${listeners[@]}"; do
+        kill -TERM "$pid"
+      done
+      for (( attempt=0; attempt<25; attempt++ )); do
+        if ! lsof -nP -iTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1; then
+          break
+        fi
+        sleep 0.2
+      done
+      if lsof -nP -iTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1; then
+        printf 'Port %s did not clear after stopping the previous preview.\n' "$port" >&2
+        exit 1
+      fi
+    fi
   fi
 fi
 

@@ -77,17 +77,6 @@ ninja.data = [{
           window.location.href = "/blog/2026/building-pos-system-flask/";
         
       },
-    },{id: "post-join-my-new-subscriber-chat",
-      
-        title: 'Join my new subscriber chat <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-      
-      description: "A private space for us to converse and connect",
-      section: "Posts",
-      handler: () => {
-        
-          window.open("https://ktinega.substack.com/p/join-my-new-subscriber-chat", "_blank");
-        
-      },
     },{id: "post-building-a-local-rag-chatbot-to-actually-understand-how-ai-reads-documents",
       
         title: "Building a Local RAG Chatbot to Actually Understand How AI Reads Documents",
@@ -235,6 +224,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_5/";
+            },},{id: "news-join-my-new-subscriber-chat",
+          title: 'Join my new subscriber chat',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_6/";
             },},{id: "projects-video-publishing-automation",
           title: 'Video Publishing Automation',
           description: "A private tool for scheduling and uploading videos across social platforms",
