@@ -25,3 +25,5 @@ jobs:
           curl -sSL --max-time 15 -o /dev/null -w '%{http_code} %{content_type}\n' 'https://ktinega.substack.com/archive'
           printf 'Posts API, curl default: '
           curl -sSL --max-time 15 -o /dev/null -w '%{http_code} %{content_type}\n' 'https://ktinega.substack.com/api/v1/posts?limit=1'
+          printf 'Public profile, curl default: '
+          curl -sSL --max-time 15 -o /dev/null -w '%{http_code} %{content_type}\n' 'https://substack.com/@ktinega'
