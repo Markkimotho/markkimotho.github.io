@@ -370,10 +370,11 @@ h6 {
     max-width: 39rem;
 
     h2 {
-      font-size: clamp(1.65rem, 3.4vw, 2.6rem);
-      font-weight: 600;
-      line-height: 1.2;
-      margin: 0 0 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.5;
+      margin: 0 0 1rem;
     }
 
     > p:not(.people-label) {

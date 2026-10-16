@@ -131,6 +131,7 @@ external_sources:
     rss_url: https://ktinega.substack.com/feed
     exclude_urls:
       - https://ktinega.substack.com/p/coming-soon
+      - https://ktinega.substack.com/p/join-my-new-subscriber-chat
 
 # -----------------------------------------------------------------------------
 # Newsletter
