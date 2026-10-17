@@ -7,6 +7,6 @@ importance: 23
 category: fun
 ---
 
-The public browser workbench processes JSON on your device with the browser's native parser. The same interface can run locally through Flask, using the original hand-written Python lexer/parser and its test suite. The Python edition is not hosted publicly yet.
+The browser workbench processes JSON on your device with the browser's native parser. The hosted Python edition uses the original hand-written lexer/parser through Flask; submitted JSON goes to that server.
 
-[Open the browser workbench](https://markkimotho.github.io/json-parser/) · [Run the Python version](https://github.com/Markkimotho/json-parser#python-version) · [View the code](https://github.com/Markkimotho/json-parser)
+[Open the browser workbench](https://markkimotho.github.io/json-parser/) · [Open the Python workbench](https://json-parser-python.onrender.com/python/) · [View the code](https://github.com/Markkimotho/json-parser)
