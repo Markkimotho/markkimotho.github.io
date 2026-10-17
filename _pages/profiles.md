@@ -45,5 +45,6 @@ portfolio_section: people
 <div class="people-story">
   <p class="people-label">Where it started</p>
   <p>Some of my earliest experiments with a computer were a meal-planning menu made in Word and afternoons spent building cities in <em>SimCity</em>. I still like figuring out how a system works, then trying to make one of my own.</p>
+  <p>I also spent a few years trying dropshipping. It did not become a successful business, but it taught me resilience. One part I still value is learning how to set up a US LLC and seeing how much legal and payment infrastructure matters when starting a business. I kept what I learned in a <a href="https://markkimotho.github.io/dropshipping-guide/">dropshipping guide</a>.</p>
   <a href="{{ '/about-me/' | relative_url }}">Read the longer story <span aria-hidden="true">→</span></a>
 </div>
