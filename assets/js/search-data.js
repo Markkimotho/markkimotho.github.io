@@ -254,6 +254,11 @@ ninja.data = [{
           description: "A keyboard-friendly calculator with a small history of results.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/calculator-x/";
+            },},{id: "projects-carousel-maker-x",
+          title: 'Carousel Maker X',
+          description: "A local Qwen3-assisted editor for text-led carousels and SVG slides.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/carousel-maker-x/";
             },},{id: "projects-ccwc-custom-file-statistics-tool",
           title: 'ccwc - Custom File Statistics Tool',
           description: "A command-line utility providing file statistics similar to Unix wc",
@@ -334,6 +339,11 @@ ninja.data = [{
           description: "A real-time collaborative drawing application with stylus support and pressure sensitivity",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sketchbook/";
+            },},{id: "projects-traceroute-x",
+          title: 'Traceroute X',
+          description: "A local command-line tool for inspecting the hops to a host.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/traceroute-x/";
             },},{id: "projects-tropehaven",
           title: 'Tropehaven',
           description: "A fiction wiki with article editing, discussion, and a draft-to-publication path",
