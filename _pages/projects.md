@@ -15,6 +15,13 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
 
 <!-- pages/projects.md -->
 
+<nav class="project-filters" id="all" aria-label="Filter projects">
+  <a class="project-filter is-active" href="#all" data-project-filter="all" aria-current="true">All</a>
+  <a class="project-filter" href="#work" data-project-filter="work">Work</a>
+  <a class="project-filter" href="#open-source" data-project-filter="open-source">Open Source</a>
+  <a class="project-filter" href="#fun" data-project-filter="fun">Fun</a>
+</nav>
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
@@ -22,9 +29,14 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
   {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
   {% if sorted_projects.size > 0 %}
-  <div class="project-group-heading" id="{{ category }}">
-    <h2>{{ category | replace: '-', ' ' }}</h2>
-    <span>{{ sorted_projects.size }} projects</span>
+  {% if category == 'open-source' %}
+    {% assign category_label = 'Open Source' %}
+  {% else %}
+    {% assign category_label = category | capitalize %}
+  {% endif %}
+  <section class="project-group" id="{{ category }}" data-project-category="{{ category }}" aria-labelledby="{{ category }}-heading">
+  <div class="project-group-heading">
+    <h2 id="{{ category }}-heading">{{ category_label }}</h2>
   </div>
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
@@ -42,6 +54,7 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
     {% endfor %}
   </div>
   {% endif %}
+  </section>
   {% endif %}
   {% endfor %}
 
@@ -71,3 +84,4 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
   {% endif %}
 {% endif %}
 </div>
+<script src="{{ '/assets/js/projects-filter.js' | relative_url }}" defer></script>
