@@ -251,7 +251,7 @@ ninja.data = [{
               window.location.href = "/projects/batch-image-generator/";
             },},{id: "projects-calculator-x",
           title: 'Calculator X',
-          description: "A keyboard-friendly calculator with a small history of results.",
+          description: "Seventeen small calculators for decisions about time, money, work, and everyday life.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/calculator-x/";
             },},{id: "projects-carousel-maker-x",
