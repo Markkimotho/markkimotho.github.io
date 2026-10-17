@@ -1,0 +1,24 @@
+{% assign available_tags = site.tags | sort %}
+{% if available_tags.size > 0 %}
+  <nav class="blog-filters" aria-label="Filter blog posts by tag">
+    <a
+      class="filter-chip{% if include.active_tag == blank %} is-active{% endif %}"
+      href="{{ '/blog/' | relative_url }}"
+      {% if include.active_tag == blank %}
+        aria-current="page"
+      {% endif %}
+      >All</a
+    >
+    {% for tag in available_tags %}
+      <a
+        class="filter-chip{% if tag[0] == include.active_tag %} is-active{% endif %}"
+        href="{{ tag[0] | slugify | prepend: '/blog/tag/' | append: '/' | relative_url }}"
+        {% if tag[0] == include.active_tag %}
+          aria-current="page"
+        {% endif %}
+      >
+        {{- tag[0] | escape -}}
+      </a>
+    {% endfor %}
+  </nav>
+{% endif %}

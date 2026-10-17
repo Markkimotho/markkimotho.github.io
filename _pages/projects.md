@@ -16,10 +16,10 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
 <!-- pages/projects.md -->
 
 <nav class="project-filters" id="all" aria-label="Filter projects">
-  <a class="project-filter is-active" href="#all" data-project-filter="all" aria-current="true">All</a>
-  <a class="project-filter" href="#work" data-project-filter="work">Work</a>
-  <a class="project-filter" href="#open-source" data-project-filter="open-source">Open Source</a>
-  <a class="project-filter" href="#fun" data-project-filter="fun">Fun</a>
+  <a class="filter-chip project-filter is-active" href="#all" data-project-filter="all" aria-current="true">All</a>
+  <a class="filter-chip project-filter" href="#work" data-project-filter="work">Work</a>
+  <a class="filter-chip project-filter" href="#open-source" data-project-filter="open-source">Open Source</a>
+  <a class="filter-chip project-filter" href="#fun" data-project-filter="fun">Fun</a>
 </nav>
 
 <div class="projects">
