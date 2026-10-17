@@ -234,6 +234,11 @@ ninja.data = [{
           description: "A private tool for scheduling and uploading videos across social platforms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/adspower-video-automation/";
+            },},{id: "projects-adventure-game",
+          title: 'Adventure Game',
+          description: "A small choice-driven browser game with rooms, items, and a final encounter.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/adventure-game/";
             },},{id: "projects-automation-scripts-amp-utils",
           title: 'Automation Scripts &amp;amp; Utils',
           description: "Reusable bash &amp; Python automation for the everyday tasks developers repeat",
@@ -244,11 +249,21 @@ ninja.data = [{
           description: "A desktop app that turns spreadsheet prompts into batches of generated images",
           section: "Projects",handler: () => {
               window.location.href = "/projects/batch-image-generator/";
+            },},{id: "projects-calculator-x",
+          title: 'Calculator X',
+          description: "A keyboard-friendly calculator with a small history of results.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/calculator-x/";
             },},{id: "projects-ccwc-custom-file-statistics-tool",
           title: 'ccwc - Custom File Statistics Tool',
           description: "A command-line utility providing file statistics similar to Unix wc",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ccwc/";
+            },},{id: "projects-domain-desk",
+          title: 'Domain Desk',
+          description: "Look up DNS records and domain registration dates without a made-up safety score.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dns-resolver-x/";
             },},{id: "projects-edusight-africa-ai-student-risk-assessment-platform",
           title: 'EduSight Africa - AI Student Risk Assessment Platform',
           description: "Machine learning platform predicting student learning risk across African schools with cultural context and multilingual support",
@@ -264,11 +279,21 @@ ninja.data = [{
           description: "Comprehensive financial tracking platform with Django, PostgreSQL, and Redis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/financial-monitoring-tool/";
+            },},{id: "projects-json-workbench",
+          title: 'JSON Workbench',
+          description: "Validate, format, minify, and inspect JSON locally in a browser.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/json-workbench/";
             },},{id: "projects-lead-scoring-amp-routing-pipeline",
           title: 'Lead Scoring &amp;amp; Routing Pipeline',
           description: "An internal workflow for evaluating prospect websites and routing qualified leads",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lead-scoring-pipeline/";
+            },},{id: "projects-lisp-interpreter-x",
+          title: 'Lisp Interpreter X',
+          description: "A small browser REPL for exploring expressions, functions, and evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lisp-interpreter-x/";
             },},{id: "projects-lumina-analytics-dashboard",
           title: 'Lumina Analytics Dashboard',
           description: "High-performance interactive data visualization with real-time updates and AI insights",
