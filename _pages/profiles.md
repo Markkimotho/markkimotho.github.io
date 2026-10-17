@@ -30,10 +30,10 @@ portfolio_section: people
 <section class="people-play" aria-labelledby="people-play-heading">
   <p class="people-label">Away from work</p>
   <h2 id="people-play-heading">I also build things just to see what happens.</h2>
-  <p>Small games, language experiments, and tools that are useful because they are fun to make. These run in the browser:</p>
+  <p>Small games, language experiments, and tools that are useful because they are fun to make. Calculator X now has 17 calculators for everyday decisions; pick one to try. These run in the browser:</p>
   <ul>
     <li><a href="https://markkimotho.github.io/adventure_game/"><span>Adventure Game</span><span>Play a short story →</span></a></li>
-    <li><a href="https://markkimotho.github.io/calculator-x/"><span>Calculator X</span><span>Use the calculator →</span></a></li>
+    <li><a href="https://calculator-x-qcvh.onrender.com/"><span>Calculator X</span><span>Explore 17 calculators →</span></a></li>
     <li><a href="https://markkimotho.github.io/lisp-interpreter-x/"><span>Lisp Interpreter X</span><span>Try the REPL →</span></a></li>
     <li><a href="https://markkimotho.github.io/json-parser/"><span>JSON Workbench</span><span>Format some JSON →</span></a></li>
     <li><a href="https://markkimotho.github.io/dns-resolver-x/"><span>Domain Desk</span><span>Look up a domain →</span></a></li>
