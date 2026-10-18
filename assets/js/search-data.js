@@ -284,6 +284,11 @@ ninja.data = [{
           description: "Comprehensive financial tracking platform with Django, PostgreSQL, and Redis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/financial-monitoring-tool/";
+            },},{id: "projects-hadithi",
+          title: 'Hadithi',
+          description: "A playful, browser-based story anthology with a Fante Anansi tale at its heart.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/hadithi/";
             },},{id: "projects-json-workbench",
           title: 'JSON Workbench',
           description: "Validate, format, minify, and inspect JSON locally in a browser.",
