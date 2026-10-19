@@ -324,6 +324,11 @@ ninja.data = [{
           description: "A custom C implementation of the printf standard library function",
           section: "Projects",handler: () => {
               window.location.href = "/projects/printf/";
+            },},{id: "projects-rock-paper-scissors",
+          title: 'Rock Paper Scissors',
+          description: "An animated browser game with a spoken countdown and first-to-five matches.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rock-paper-scissors/";
             },},{id: "projects-sdl-c-raycasting-engine",
           title: 'SDL C Raycasting Engine',
           description: "A lightweight Wolfenstein 3D-inspired raycasting engine built with SDL2",
