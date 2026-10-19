@@ -33,6 +33,7 @@ portfolio_section: people
   <p>Small games, language experiments, and tools that are useful because they are fun to make. Calculator X now has 17 calculators for everyday decisions; pick one to try. These run in the browser:</p>
   <ul>
     <li><a href="https://hadithi-i2us.onrender.com/"><span>Hadithi</span><span>Play four tales →</span></a></li>
+    <li><a href="https://markkimotho.github.io/rock-paper-scissors-/"><span>Rock Paper Scissors</span><span>Play a match →</span></a></li>
     <li><a href="https://calculator-x-qcvh.onrender.com/"><span>Calculator X</span><span>Explore 17 calculators →</span></a></li>
     <li><a href="https://markkimotho.github.io/lisp-interpreter-x/"><span>Lisp Interpreter X</span><span>Try the REPL →</span></a></li>
     <li><a href="https://markkimotho.github.io/json-parser/"><span>JSON Workbench</span><span>Format some JSON →</span></a></li>
