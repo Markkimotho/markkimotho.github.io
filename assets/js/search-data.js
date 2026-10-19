@@ -234,11 +234,6 @@ ninja.data = [{
           description: "A private tool for scheduling and uploading videos across social platforms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/adspower-video-automation/";
-            },},{id: "projects-adventure-game",
-          title: 'Adventure Game',
-          description: "A small choice-driven browser game with rooms, items, and a final encounter.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/adventure-game/";
             },},{id: "projects-automation-scripts-amp-utils",
           title: 'Automation Scripts &amp;amp; Utils',
           description: "Reusable bash &amp; Python automation for the everyday tasks developers repeat",
