@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: page
 title: Adventure Game
 description: A small choice-driven browser game with rooms, items, and a final encounter.

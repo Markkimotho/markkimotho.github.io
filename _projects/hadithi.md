@@ -11,4 +11,6 @@ Hadithi is a small, joyful step in my work to tell African stories through games
 
 Explore each world, gather clues, make choices, and roll dice with honest odds. The story remembers what you learn, so a return journey can reveal a path you could not see before.
 
+Hadithi takes the place of the earlier Adventure Game in this project archive.
+
 [Play Hadithi](https://hadithi-i2us.onrender.com) · [View the code](https://github.com/Markkimotho/hadithi)
