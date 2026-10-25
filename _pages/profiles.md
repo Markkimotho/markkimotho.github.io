@@ -37,7 +37,7 @@ portfolio_section: people
     <li><a href="https://calculator-x-qcvh.onrender.com/"><span>Calculator X</span><span>Explore 17 calculators →</span></a></li>
     <li><a href="https://markkimotho.github.io/lisp-interpreter-x/"><span>Lisp Interpreter X</span><span>Try the REPL →</span></a></li>
     <li><a href="https://markkimotho.github.io/json-parser/"><span>JSON Workbench</span><span>Format some JSON →</span></a></li>
-    <li><a href="https://markkimotho.github.io/dns-resolver-x/"><span>Domain Desk</span><span>Look up a domain →</span></a></li>
+    <li><a href="https://markkimotho.github.io/domain-desk/"><span>Domain Desk</span><span>Look up a domain →</span></a></li>
     <li><a href="https://markkimotho.github.io/etch_a_sketch/"><span>Etch a Sketch</span><span>Draw something →</span></a></li>
   </ul>
   <a class="people-play-more" href="{{ '/projects/' | relative_url }}#fun">Browse the fun projects →</a>
