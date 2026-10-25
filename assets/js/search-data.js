@@ -261,9 +261,9 @@ ninja.data = [{
               window.location.href = "/projects/ccwc/";
             },},{id: "projects-domain-desk",
           title: 'Domain Desk',
-          description: "Look up DNS records and domain registration dates without a made-up safety score.",
+          description: "Inspect DNS, registration, and email setup without a made-up safety score.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/dns-resolver-x/";
+              window.location.href = "/projects/domain-desk/";
             },},{id: "projects-edusight-africa-ai-student-risk-assessment-platform",
           title: 'EduSight Africa - AI Student Risk Assessment Platform',
           description: "Machine learning platform predicting student learning risk across African schools with cultural context and multilingual support",
