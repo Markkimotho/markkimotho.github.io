@@ -128,7 +128,7 @@ h6 {
   }
 }
 
-// Project archive: a list of work, not a uniform card grid.
+// Project archive: compact cards grouped by kind of work.
 .portfolio-projects {
   > article > p:first-child {
     color: var(--global-text-color-light);
@@ -137,17 +137,14 @@ h6 {
     max-width: 44rem;
   }
 
-  .projects .container {
-    padding: 0;
+  .projects .project-grid {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .projects .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .projects .col {
-    padding: 0;
+  .projects .project-tile {
+    min-width: 0;
   }
 }
 
@@ -236,18 +233,24 @@ h6 {
 }
 
 .projects a.project-entry {
-  align-items: center;
-  border-bottom: 1px solid var(--global-divider-color);
+  align-items: flex-start;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.6rem;
   color: var(--global-text-color);
   display: flex;
-  gap: 1.35rem;
-  min-height: 7rem;
-  padding: 0.65rem 0;
-  transition: padding 160ms ease;
+  gap: 0.9rem;
+  height: 100%;
+  min-height: 8rem;
+  padding: 1rem;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
 
   &:hover,
   &:focus-visible {
-    padding-left: 0.4rem;
+    border-color: var(--global-theme-color);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     text-decoration: none;
 
     h3,
@@ -258,7 +261,7 @@ h6 {
 }
 
 .project-entry-image {
-  flex: 0 0 7.5rem;
+  flex: 0 0 5.5rem;
 
   img.project-list-thumb {
     aspect-ratio: 4 / 3;
@@ -288,7 +291,7 @@ h6 {
 }
 
 .project-entry-arrow {
-  align-self: center;
+  align-self: flex-start;
   font-size: 1.2rem;
   margin-left: auto;
 }
@@ -528,6 +531,10 @@ h6 {
 }
 
 @media (max-width: 575.98px) {
+  .portfolio-projects .projects .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .news .table th {
     white-space: normal;
     width: 6rem !important;
@@ -553,12 +560,13 @@ h6 {
   }
 
   .projects a.project-entry {
-    align-items: flex-start;
     gap: 0.8rem;
+    min-height: 0;
+    padding: 0.85rem;
   }
 
   .project-entry-image {
-    flex-basis: 5.5rem;
+    flex-basis: 5rem;
   }
 
   .project-entry-arrow {

@@ -40,12 +40,10 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
   </div>
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1">
+  <div class="project-grid">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
-    </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
@@ -68,13 +66,11 @@ The selected work on the [homepage]({{ '/' | relative_url }}) is a starting poin
 
 {% if page.horizontal %}
 
-<div class="container">
-    <div class="row row-cols-1">
+<div class="project-grid">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
-    </div>
-  </div>
+</div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
