@@ -371,7 +371,7 @@ The platform welcomes contributions:
 
 ## Repository
 
-[View on GitHub](https://github.com/Markkimotho/edusight-africa)
+[View on GitHub](https://github.com/uzi-org/edusight-africa)
 
 ## Status
 

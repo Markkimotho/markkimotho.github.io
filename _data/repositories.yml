@@ -6,7 +6,7 @@ repo_description_lines_max: 2
 # Public repositories selected for the GitHub-backed cards.
 github_repos:
   - Markkimotho/automation-scripts-utils
-  - Markkimotho/edusight-africa
+  - uzi-org/edusight-africa
   - Markkimotho/SketchTogether
   - Markkimotho/PreparationPalAI
   - Markkimotho/etch_a_sketch
