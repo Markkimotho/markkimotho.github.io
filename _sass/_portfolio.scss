@@ -393,8 +393,8 @@ h6 {
   .people-intro {
     align-items: start;
     display: grid;
-    gap: clamp(2rem, 6vw, 5rem);
-    grid-template-columns: minmax(0, 1fr) minmax(15rem, 36%);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
   }
 
   .people-intro-copy {
@@ -425,6 +425,7 @@ h6 {
 
   .people-portrait {
     margin: 0;
+    max-width: 16rem;
 
     img {
       aspect-ratio: 4 / 5;
@@ -470,7 +471,7 @@ h6 {
 
   .people-play {
     border-top: 1px solid var(--global-divider-color);
-    margin-top: clamp(3rem, 7vw, 5rem);
+    margin-top: 2rem;
     padding-top: 1.2rem;
 
     h2 {
@@ -486,22 +487,52 @@ h6 {
     }
 
     ul {
-      border-top: 1px solid var(--global-divider-color);
+      display: grid;
+      gap: 1rem 0;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       list-style: none;
-      margin: 1.8rem 0 0;
+      margin: 2rem 0 0;
       padding: 0;
     }
 
     li {
-      border-bottom: 1px solid var(--global-divider-color);
+      min-width: 0;
+      position: relative;
+      transform: rotate(-2deg) translateY(0.25rem);
+      transition: transform 180ms ease;
+      z-index: 1;
+
+      &:not(:nth-child(4n + 1)) {
+        margin-left: -0.7rem;
+      }
+
+      &:nth-child(3n + 2) {
+        transform: rotate(2.5deg) translateY(-0.35rem);
+        z-index: 2;
+      }
+
+      &:nth-child(3n) {
+        transform: rotate(-1deg) translateY(0.5rem);
+      }
+
+      &:hover,
+      &:focus-within {
+        transform: rotate(0) translateY(-0.45rem);
+        z-index: 3;
+      }
     }
 
     li a {
-      align-items: baseline;
+      align-items: flex-start;
+      background: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.07);
       display: flex;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 0.75rem;
       justify-content: space-between;
-      padding: 0.9rem 0;
+      min-height: 8.5rem;
+      padding: 1rem;
       text-decoration: none;
 
       span:first-child {
@@ -530,6 +561,20 @@ h6 {
   }
 }
 
+@media (max-width: 991.98px) and (min-width: 576px) {
+  .portfolio-people .people-play ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .portfolio-people .people-play li:not(:nth-child(4n + 1)) {
+    margin-left: 0;
+  }
+
+  .portfolio-people .people-play li:not(:nth-child(3n + 1)) {
+    margin-left: -0.7rem;
+  }
+}
+
 @media (max-width: 575.98px) {
   .portfolio-projects .projects .project-grid {
     grid-template-columns: 1fr;
@@ -546,13 +591,21 @@ h6 {
   }
 
   .portfolio-people .people-portrait {
-    max-width: 24rem;
+    max-width: 15rem;
+    order: -1;
   }
 
-  .portfolio-people .people-play li a {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.2rem;
+  .portfolio-people .people-play ul {
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-people .people-play li:not(:nth-child(4n + 1)) {
+    margin-left: 0;
+  }
+
+  .portfolio-people .people-play li:nth-child(even) {
+    margin-left: -0.5rem;
   }
 
   .github-repository-grid .repo {
