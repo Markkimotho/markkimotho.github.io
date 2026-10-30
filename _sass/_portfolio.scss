@@ -139,12 +139,35 @@ h6 {
 
   .projects .project-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.4rem 0;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .projects .project-tile {
     min-width: 0;
+    position: relative;
+    transform: rotate(-2deg) translateY(0.25rem);
+    transition: transform 180ms ease;
+    z-index: 1;
+
+    &:not(:nth-child(3n + 1)) {
+      margin-left: -0.7rem;
+    }
+
+    &:nth-child(3n + 2) {
+      transform: rotate(2.5deg) translateY(-0.35rem);
+      z-index: 2;
+    }
+
+    &:nth-child(3n) {
+      transform: rotate(-1deg) translateY(0.5rem);
+    }
+
+    &:hover,
+    &:focus-within {
+      transform: rotate(0) translateY(-0.45rem);
+      z-index: 3;
+    }
   }
 }
 
@@ -235,7 +258,7 @@ h6 {
 .projects a.project-entry {
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.65rem;
+  box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.07);
   color: var(--global-text-color);
   display: flex;
   flex-direction: column;
@@ -245,15 +268,13 @@ h6 {
   padding: 1.15rem;
   transition:
     border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
+    box-shadow 160ms ease;
 
   &:hover,
   &:focus-visible {
     border-color: var(--global-theme-color);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.6rem 1.3rem rgba(0, 0, 0, 0.1);
     text-decoration: none;
-    transform: translateY(-3px);
 
     h3,
     .project-entry-arrow {
@@ -573,6 +594,14 @@ h6 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .portfolio-projects .projects .project-grid .project-tile {
+    margin-left: 0;
+
+    &:nth-child(even) {
+      margin-left: -0.7rem;
+    }
+  }
+
   .portfolio-people .people-play ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -588,7 +617,12 @@ h6 {
 
 @media (max-width: 575.98px) {
   .portfolio-projects .projects .project-grid {
+    gap: 0.7rem;
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-projects .projects .project-grid .project-tile {
+    margin-left: 0;
   }
 
   .news .table th {
