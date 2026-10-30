@@ -2,7 +2,7 @@
   <a class="project-entry" href="{{ project.url | relative_url }}" aria-label="Read about {{ project.title | escape }}">
     {% if project.img %}
       <div class="project-entry-image">
-        {% include figure.liquid loading="lazy" path=project.img sizes="(max-width: 575px) 80px, 88px" alt=project.title class="project-list-thumb" %}
+        {% include figure.liquid loading="lazy" path=project.img sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 33vw" alt=project.title class="project-list-thumb" %}
       </div>
     {% endif %}
     <div class="project-entry-content">

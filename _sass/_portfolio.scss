@@ -128,7 +128,7 @@ h6 {
   }
 }
 
-// Project archive: compact cards grouped by kind of work.
+// Project archive: cards grouped by kind of work.
 .portfolio-projects {
   > article > p:first-child {
     color: var(--global-text-color-light);
@@ -139,8 +139,8 @@ h6 {
 
   .projects .project-grid {
     display: grid;
-    gap: 0.85rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .projects .project-tile {
@@ -233,25 +233,27 @@ h6 {
 }
 
 .projects a.project-entry {
-  align-items: flex-start;
-  background: var(--global-bg-color);
+  background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.6rem;
+  border-radius: 0.65rem;
   color: var(--global-text-color);
   display: flex;
-  gap: 0.9rem;
+  flex-direction: column;
   height: 100%;
-  min-height: 8rem;
-  padding: 1rem;
+  min-height: 11rem;
+  overflow: hidden;
+  padding: 1.15rem;
   transition:
     border-color 160ms ease,
-    box-shadow 160ms ease;
+    box-shadow 160ms ease,
+    transform 160ms ease;
 
   &:hover,
   &:focus-visible {
     border-color: var(--global-theme-color);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
     text-decoration: none;
+    transform: translateY(-3px);
 
     h3,
     .project-entry-arrow {
@@ -261,18 +263,21 @@ h6 {
 }
 
 .project-entry-image {
-  flex: 0 0 5.5rem;
+  margin: -1.15rem -1.15rem 1rem;
+
+  figure {
+    margin: 0;
+  }
 
   img.project-list-thumb {
-    aspect-ratio: 4 / 3;
-    border-radius: 0.3rem;
+    aspect-ratio: 16 / 9;
+    display: block;
     object-fit: cover;
     width: 100%;
   }
 }
 
 .project-entry-content {
-  flex: 1;
   min-width: 0;
 
   h3 {
@@ -291,9 +296,11 @@ h6 {
 }
 
 .project-entry-arrow {
-  align-self: flex-start;
+  align-self: flex-end;
   font-size: 1.2rem;
-  margin-left: auto;
+  line-height: 1;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 // Project pages keep the content easy to scan without altering their claims.
@@ -562,6 +569,10 @@ h6 {
 }
 
 @media (max-width: 991.98px) and (min-width: 576px) {
+  .portfolio-projects .projects .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .portfolio-people .people-play ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -613,13 +624,12 @@ h6 {
   }
 
   .projects a.project-entry {
-    gap: 0.8rem;
-    min-height: 0;
-    padding: 0.85rem;
+    min-height: 9rem;
+    padding: 1rem;
   }
 
   .project-entry-image {
-    flex-basis: 5rem;
+    margin: -1rem -1rem 0.9rem;
   }
 
   .project-entry-arrow {
