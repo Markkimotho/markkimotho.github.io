@@ -13,10 +13,10 @@ serve=false
 
 usage() {
   printf '%s\n' \
-    'Usage: ./build_local.sh [--serve] [--port NUMBER]' \
+    'Usage: ./build_local.sh [--serve [NUMBER]] [--port NUMBER]' \
     '' \
     'Build the site into a temporary preview directory.' \
-    'Add --serve to preview it at http://127.0.0.1:4000/.' \
+    'Add --serve to preview it at http://127.0.0.1:4000/ (or pass a port).' \
     'Rerunning --serve replaces an earlier preview from this script on the same port.' \
     'The server serves the completed build; rerun the script after editing.'
 }
@@ -26,6 +26,10 @@ while (( $# > 0 )); do
     --serve)
       serve=true
       shift
+      if (( $# > 0 )) && [[ "$1" =~ ^[0-9]+$ ]]; then
+        port=$1
+        shift
+      fi
       ;;
     --port)
       if (( $# < 2 )) || [[ ! "$2" =~ ^[0-9]+$ ]]; then
@@ -33,10 +37,6 @@ while (( $# > 0 )); do
         exit 2
       fi
       port=$2
-      if (( 10#$port < 1 || 10#$port > 65535 )); then
-        printf '%s\n' '--port must be between 1 and 65535.' >&2
-        exit 2
-      fi
       serve=true
       shift 2
       ;;
@@ -51,6 +51,11 @@ while (( $# > 0 )); do
   esac
 done
 
+if (( 10#$port < 1 || 10#$port > 65535 )); then
+  printf '%s\n' 'Port must be between 1 and 65535.' >&2
+  exit 2
+fi
+
 if ! command -v bundle >/dev/null 2>&1; then
   printf '%s\n' 'Bundler is not installed. Install the Ruby dependencies first.' >&2
   exit 1
@@ -62,26 +67,23 @@ if [[ "$serve" == true ]]; then
     exit 1
   fi
   if command -v lsof >/dev/null 2>&1; then
-    listeners=()
-    while IFS= read -r pid; do
-      [[ -n "$pid" ]] && listeners+=("$pid")
-    done < <(lsof -nP -t -iTCP:"$port" -sTCP:LISTEN)
+    listener_pids=$(lsof -nP -t -iTCP:"$port" -sTCP:LISTEN || true)
 
     # Only reclaim a preview started by this script, serving this build directory.
-    for pid in "${listeners[@]}"; do
-      owner=$(ps -p "$pid" -o uid= | tr -d ' ')
-      command_line=$(ps -ww -p "$pid" -o args=)
-      if [[ "$owner" != "$(id -u)" || "$command_line" != *" -m http.server $port --bind 127.0.0.1 --directory $build_dir" ]]; then
-        printf 'Port %s is in use by another process (PID %s); refusing to stop it. Choose another with --port.\n' "$port" "$pid" >&2
-        exit 1
-      fi
-    done
+    if [[ -n "$listener_pids" ]]; then
+      while IFS= read -r pid; do
+        owner=$(ps -p "$pid" -o uid= | tr -d ' ')
+        command_line=$(ps -ww -p "$pid" -o args=)
+        if [[ "$owner" != "$(id -u)" || "$command_line" != *" -m http.server $port --bind 127.0.0.1 --directory $build_dir" ]]; then
+          printf 'Port %s is in use by another process (PID %s); refusing to stop it. Choose another with --port.\n' "$port" "$pid" >&2
+          exit 1
+        fi
+      done <<< "$listener_pids"
 
-    if (( ${#listeners[@]} > 0 )); then
       printf 'Stopping previous portfolio preview on port %s.\n' "$port"
-      for pid in "${listeners[@]}"; do
+      while IFS= read -r pid; do
         kill -TERM "$pid"
-      done
+      done <<< "$listener_pids"
       for (( attempt=0; attempt<25; attempt++ )); do
         if ! lsof -nP -iTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1; then
           break
