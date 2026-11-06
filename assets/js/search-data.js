@@ -81,7 +81,7 @@ ninja.data = [{
       
         title: "Building a Local RAG Chatbot to Actually Understand How AI Reads Documents",
       
-      description: "A fully local, privacy-first document chatbot built with LangChain, Ollama, and ChromaDB to learn how LLMs, retrieval-augmented generation, vector databases, and conversation memory actually work under the hood.",
+      description: "How PreparationPalAI uses FastAPI, React, Ollama, LangChain, and ChromaDB for local document chat, exam practice, and technical interview preparation.",
       section: "Posts",
       handler: () => {
         
