@@ -180,6 +180,32 @@ h6 {
   max-width: calc(50% - 0.25rem);
 }
 
+.repo-text-card {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 9.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.3rem;
+  color: var(--global-text-color);
+  text-align: left;
+  overflow-wrap: anywhere;
+
+  > span {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  > .repo-text-card-action {
+    color: var(--global-theme-color);
+  }
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
 .project-filters,
 .blog-filters {
   display: flex;
