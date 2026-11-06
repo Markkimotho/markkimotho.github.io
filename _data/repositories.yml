@@ -3,6 +3,10 @@ github_users:
 
 repo_description_lines_max: 2
 
+# Keep the link when a repository cannot provide a public stats card.
+github_repo_fallbacks:
+  uzi-org/edusight-africa: Repository details are not publicly available. Open on GitHub if you have access.
+
 # Public repositories selected for the GitHub-backed cards.
 github_repos:
   - Markkimotho/automation-scripts-utils
